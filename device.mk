@@ -58,6 +58,9 @@ PRODUCT_PACKAGES += \
     init.samsung.power.rc \
     init.samsung.rc
 
+# Namespaces
+PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
