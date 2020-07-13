@@ -137,7 +137,6 @@ BOARD_ROOT_EXTRA_FOLDERS := \
     efs
 
 # Platform
-BOARD_VENDOR := samsung
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := kalama
 
