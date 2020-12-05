@@ -9,9 +9,6 @@
          successfully placing the OTA call -->
     <integer name="OtaShowListeningScreen">1</integer>
 
-    <!-- DEPRECATED: Use CarrierConfigManager#KEY_WORLD_PHONE_BOOL -->
-    <bool name="world_phone">true</bool>
-
     <!-- DEPRECATED: Use CarrierConfigManager#KEY_DTMF_TYPE_ENABLED_BOOL -->
     <bool name="dtmf_type_enabled">true</bool>
 
