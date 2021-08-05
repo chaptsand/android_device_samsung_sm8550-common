@@ -89,9 +89,6 @@ on fs
     mkdir /mnt/vendor/persist/secnvm 0770 system system
     mkdir /mnt/vendor/persist/data 0700 system system
 
-on property:ro.boot.product.vendor.sku=kalama
-    setprop ro.soc.model kalama
-
 on post-fs
     #Execute virtualization manager
     enable vendor.qvirtmgr
