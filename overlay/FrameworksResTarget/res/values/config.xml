@@ -42,7 +42,6 @@
     <string-array name="config_defaultPinnerServiceFiles" translatable="false">
         <item>/system/framework/arm64/boot-QPerformance.oat</item>
         <item>/system/framework/arm64/boot-UxPerformance.oat</item>
-        <item>/apex/com.android.media/javalib/updatable-media.jar</item>
         <item>/system/lib64/libsurfaceflinger.so</item>
         <item>/vendor/lib64/libllvm-qgl.so</item>
         <item>/system/lib64/libhwui.so</item>
