@@ -34,6 +34,7 @@ ro.security.keystore.keytype=sakv2,gak,sgak,rkp
 
 # Media
 debug.stagefright.c2inputsurface=-1
+vendor.media.omx=0
 
 # NFC
 ro.camera.notify_nfc=1
