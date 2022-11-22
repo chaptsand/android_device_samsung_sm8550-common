@@ -103,7 +103,6 @@ on post-fs-data
     write /sys/kernel/cnss/fs_ready 1
 
 on early-boot
-    start vendor.sensors
     verity_update_state
 
 on boot
