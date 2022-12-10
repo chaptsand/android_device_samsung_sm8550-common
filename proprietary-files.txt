@@ -875,11 +875,6 @@ system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # HyPer
-vendor/bin/hw/vendor.samsung.hardware.hyper-service
-vendor/etc/init/hyper-default-sec.rc
-vendor/etc/vintf/manifest/hyper-default-sec.xml
-vendor/lib64/libhyper.so;MODULE_SUFFIX=_vendor
-vendor/lib64/libhypervintf.so
 vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk.so
 
 # IMS
