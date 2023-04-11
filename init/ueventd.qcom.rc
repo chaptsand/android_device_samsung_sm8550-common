@@ -1,7 +1,5 @@
 # Copyright (c) 2012-2015, 2017-2021, The Linux Foundation. All rights reserved.
 #
-# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
-#
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
 #     * Redistributions of source code must retain the above copyright
@@ -467,6 +465,11 @@ subsystem mem_buf_vm
 /sys/class/dual_role_usb/*	data_role	0660	system	system
 /sys/class/dual_role_usb/*	power_role	0660	system	system
 /sys/class/dual_role_usb/*	mode		0660	system	system
+
+/sys/class/typec/port0		data_role	0660	system	usb
+/sys/class/typec/port0		power_role	0660	system	usb
+/sys/class/typec/port0		port_type	0660	system	usb
+/sys/class/typec/port0-partner	accessory_mode	0440	system	usb
 
 # USB Dynamic Disable
 /sys/bus/platform/devices/a600000.ssusb	dynamic_disable	0220	root	usb
