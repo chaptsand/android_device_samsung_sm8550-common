@@ -115,11 +115,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.keymaster</name>
-        <transport>hwbinder</transport>
-        <fqname>@4.0::IKeymasterDevice/strongbox</fqname>
-    </hal>
-    <hal format="hidl">
        <name>android.hardware.gatekeeper</name>
        <transport>hwbinder</transport>
        <impl level="generic"></impl>
