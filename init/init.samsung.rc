@@ -162,3 +162,6 @@ service factory_ssc /vendor/bin/factory.ssc
 
 on property:sys.boot_completed=1
     setprop ro.factory.sensor.delay.init 1
+
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
