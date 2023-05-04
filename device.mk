@@ -49,5 +49,14 @@ PRODUCT_PACKAGES += \
     ueventd-odm.rc \
     ueventd.qcom.rc
 
+PRODUCT_PACKAGES += \
+    init.dm2q.rc \
+    init.samsung.bsp.rc \
+    init.samsung.connector.rc \
+    init.samsung.display.rc \
+    init.samsung.dp.rc \
+    init.samsung.power.rc \
+    init.samsung.rc
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true

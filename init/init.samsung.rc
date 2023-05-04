@@ -1,0 +1,131 @@
+#
+# Copyright (C) 2023 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+import /vendor/etc/init/hw/init.samsung.bsp.rc
+import /vendor/etc/init/hw/init.samsung.power.rc
+import /vendor/etc/init/hw/init.samsung.display.rc
+import /vendor/etc/init/hw/init.samsung.dp.rc
+import /vendor/etc/init/hw/init.samsung.connector.rc
+
+on early-init
+    mkdir /mnt/vendor/efs 0771 radio system
+    mkdir /mnt/vendor/persist 0771 root system
+
+    # foreground boost enable
+    mkdir /dev/cpuctl/foreground-boost/
+    chown system system /dev/cpuctl/foreground-boost
+    chown system system /dev/cpuctl/foreground-boost/tasks
+    chown system system /dev/cpuctl/foreground-boost/cgroup.procs
+    chmod 0664 /dev/cpuctl/foreground-boost/tasks
+    chmod 0664 /dev/cpuctl/foreground-boost/cgroup.procs
+
+    mkdir /dev/cpuset/foreground-boost
+    copy /dev/cpuset/cpus /dev/cpuset/foreground-boost/cpus
+    copy /dev/cpuset/mems /dev/cpuset/foreground-boost/mems
+
+    chown system system /dev/cpuset/foreground-boost
+    chown system system /dev/cpuset/foreground-boost/tasks
+    chown system system /dev/cpuset/foreground-boost/cgroup.procs
+    chmod 0664 /dev/cpuset/foreground-boost/tasks
+    chmod 0664 /dev/cpuset/foreground-boost/cgroup.procs
+
+    # set property to boost-optimize
+    setprop sys.perf.boostopt true
+
+on init
+    symlink /dev/block/bootdevice/by-name/steady  /dev/block/steady
+    symlink /dev/block/bootdevice/by-name/persistent  /dev/block/persistent
+
+    chown system system /dev/cpuset/foreground/cpus
+    chown system system /dev/cpuset/foreground-boost/cpus
+    chown system system /dev/cpuset/background/cpus
+    chmod 0664 /dev/cpuset/foreground/cpus
+    chmod 0664 /dev/cpuset/foreground-boost/cpus
+    chmod 0664 /dev/cpuset/background/cpus
+
+# Create carrier folder for HiddenMenu
+on post-fs
+    mkdir /efs/carrier 0755 system system
+    restorecon_recursive /efs
+
+    restorecon_recursive /mnt/vendor/efs
+    chown radio system /mnt/vendor/efs
+    chmod 0771 /mnt/vendor/efs
+
+    chown system radio /efs
+    chmod 0771 /efs
+    restorecon /efs
+
+on post-fs-data
+    # carrier partition
+    chown system system /carrier
+    chmod 0771 /carrier
+    restorecon /carrier
+
+# sensors
+    chown system system /mnt/vendor/persist/sensors/registry/registry/sns_cm
+
+# Meta event
+    chown system radio /sys/class/sensors/sensor_dev/flush
+
+on early-boot
+
+on early-boot && property:ro.binary.type=factory
+    umount /vendor/vm-system
+
+on boot
+    # set cpuset value by performance team
+    write /dev/cpuset/top-app/cpus 0-7
+    write /dev/cpuset/foreground/cpus 0-6
+    write /dev/cpuset/background/cpus 0-2
+    write /dev/cpuset/system-background/cpus 0-2
+    write /dev/cpuset/sf/cpus 0-6
+    write /dev/cpuset/foreground-boost 0-7
+    # write /dev/cpuset/restricted/cpus 0-2
+    # write /dev/cpuset/audio-app/cpus 0-3
+
+    # HyPer Permission
+    chown root system /dev/cpuctl/top-app/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/top-app/cpu.uclamp.min
+    chown root system /sys/devices/system/cpu/bus_dcvs/DDR/memlat/adaptive_low_freq
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/memlat/adaptive_low_freq
+    chown root system /sys/devices/system/cpu/bus_dcvs/DDR/memlat/adaptive_high_freq
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/memlat/adaptive_high_freq
+    chown root system /sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:prime-latfloor/max_freq
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:prime-latfloor/max_freq
+
+    # Perfmond Atrace Buffer Size
+    setprop debug.perfmond.atrace.buffer 16384
+
+    # System Performance Restricted cpuset
+    chown root system dev/cpuset/restricted/cpus
+    chmod 0664 /dev/cpuset/restricted/cpus
+
+    # for BT MAC address
+    mkdir /mnt/vendor/efs/bluetooth 0770 system bluetooth
+    # if already exist
+    chown system bluetooth /mnt/vendor/efs/bluetooth
+    chown system bluetooth /mnt/vendor/efs/bluetooth/bt_addr
+    chmod 0770 /mnt/vendor/efs/bluetooth
+    chmod 0660 /mnt/vendor/efs/bluetooth/bt_addr
+
+    # permissions for bluetooth.
+    setprop ro.bt.bdaddr_path "/mnt/vendor/efs/bluetooth/bt_addr"
+    chown bluetooth bluetooth ro.bt.bdaddr_path
+
+    # Allow access to emmc rawdump block partition and dload sysfs node
+    chown root system /dev/block/bootdevice/by-name/rawdump
+    chmod 0660 /dev/block/bootdevice/by-name/rawdump
+
+# For CDSP crash
+on property:ro.boot.debug_level=0x494d
+    setprop vendor.fastrpc.process.attrs 0x40000001
+    setprop vendor.fastrpc.debug.trace 1
+
+service factory_ssc /vendor/bin/factory.ssc
+    class core
+    user system
+    group system radio inet diag net_admin net_raw sdcard_rw sdcard_r media_rw

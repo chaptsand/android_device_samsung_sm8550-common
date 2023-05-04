@@ -10,6 +10,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.dm2q.rc",
+    src: "init.dm2q.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.qcom.rc",
     src: "init.qcom.rc",
     sub_dir: "init/hw",
@@ -21,6 +28,48 @@ prebuilt_etc {
     src: "init.recovery.qcom.rc",
     sub_dir: "init",
     recovery: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.bsp.rc",
+    src: "init.samsung.bsp.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.connector.rc",
+    src: "init.samsung.connector.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.display.rc",
+    src: "init.samsung.display.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.dp.rc",
+    src: "init.samsung.dp.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.power.rc",
+    src: "init.samsung.power.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.rc",
+    src: "init.samsung.rc",
+    sub_dir: "init/hw",
+    vendor: true,
 }
 
 prebuilt_etc {
