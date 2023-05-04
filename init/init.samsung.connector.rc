@@ -1,0 +1,8 @@
+on late-init
+    # Permissions for sec_abc_detect_conn.ko
+    chown system system /sys/class/sec/sec_detect_conn/connector_state
+    chmod 0440 /sys/class/sec/sec_detect_conn/connector_state
+    chown system system /sys/class/sec/sec_detect_conn/connector_count
+    chmod 0440 /sys/class/sec/sec_detect_conn/connector_count
+    chown system system /sys/class/sec/sec_detect_conn/connector_disconnected_count
+    chmod 0600 /sys/class/sec/sec_detect_conn/connector_disconnected_count
