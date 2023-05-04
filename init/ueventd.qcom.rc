@@ -90,7 +90,7 @@ subsystem mem_buf_vm
 /dev/dma_heap/qcom,*      0444   system     system
 /dev/rtc0                 0660   system     system
 /dev/smd0                 0660   system     system
-/dev/smd4                 0660   system     system
+/dev/smd4                 0660   system     bridge_rw
 /dev/smd_cxm_qmi          0640   radio      radio
 /dev/smd5                 0660   system     system
 /dev/smd6                 0660   system     system
@@ -183,7 +183,7 @@ subsystem mem_buf_vm
 /dev/mhi_*_pipe_16        0640   radio      radio
 /dev/mhi_*_pipe_32        0640   radio      radio
 /dev/at_usb0              0640   radio      radio
-/dev/at_mdm0              0640   radio      radio
+/dev/at_mdm0              0640   system      radio
 /dev/video*               0660   system     camera
 /dev/cvp*                 0660   system     camera
 /dev/media*               0660   system     camera
@@ -569,7 +569,7 @@ subsystem mem_buf_vm
 /sys/devices/platform/soc/*.i2c/i2c-*/*-*/iio:device*   in_temp_scale_available         0664    system  system
 
 # devcoredump data attributes
-/sys/class/devcoredump/devcd*                           data                            0600    system  system
+/sys/class/devcoredump/devcd*                           data                            0660    system  system
 
 # hdmi cec hal
 /dev/cec*                                            0660    system  system
