@@ -31,7 +31,498 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # Base path for all VM's
-firmware_directories /vendor/vm-system/
+firmware_directories /vendor/firmware-modem/image/ /vendor/vm-system/
+
+# the DIAG device node is not world writable/readable.
+/dev/input/event*         0660   system     input
+
+# dev ril bridge
+/dev/drb                  0660   system     radio
+
+# SSR node for SRIL
+/sys/devices/platform/soc/4080000.remoteproc-mss	ssr	0660	system	radio
+
+#permissions for USB
+/dev/usb_mtp_gadget      0660     system        mtp
+/dev/android_ssusbcon    0660     system        system
+/sys/class/android_usb/android0  f_rndis/ethaddr      0660  system   system
+/sys/class/android_usb/android0  terminal_version     0660  system   system
+
+#permissions for UVDM
+/dev/ccic_misc           0664     system        usb
+
+#permissions for MUIC
+/sys/class/sec/switch      otg_test               0664     system        radio
+/sys/class/sec/switch      uart_sel               0664     system        radio
+/sys/class/sec/switch      usb_sel                0664     system        radio
+/sys/class/sec/switch      afc_disable            0664     system        radio
+/sys/class/sec/switch      apo_factory            0664     system        radio
+/sys/class/sec/switch      afc_set_voltage        0664     system        radio
+/sys/class/sec/switch      vbus_value             0444     system        radio
+/sys/class/sec/switch      vbus_value_pd          0444     system        radio
+/sys/class/sec/switch      hiccup                 0644     system        radio
+
+#permissions for CCIC
+/sys/class/sec/ccic      lpm_mode                 0644     system        radio
+
+#permissions for CCIC control option
+/sys/class/sec/ccic      ccic_control_option      0644     system        radio
+/sys/class/sec/ccic      fw_update                0220     system        radio
+/sys/class/sec/ccic      control_gpio             0644     system        radio
+/sys/class/sec/ccic      hmd_power                0220     system        system
+/sys/class/sec/ccic      dex_fan_uvdm             0220     root          root
+
+#permissions for Host notify
+/sys/class/host_notify/usb_otg      booster      0660     system        radio
+
+#permissions for usb notify
+/sys/class/usb_notify/usb_control   disable      0660     system        radio
+
+#permissions usb whitelist
+/sys/class/usb_notify/usb_control   whitelist_for_mdm      0664     system        usb
+
+/dev/ttyHS5               0660   root       radio
+/dev/ttyHS8               0660   root       radio
+
+# grip sensor access
+/sys/devices/virtual/input/input*                   enable           0660  root     input
+
+# Range Sensor
+/dev/range_sensor	0660	system system
+
+/sys/class/sensors/range_sensor	ambient		0440	 system	radio
+/sys/class/sensors/range_sensor	cal01		0440	 system	radio
+/sys/class/sensors/range_sensor	cal02		0440	 system	radio
+/sys/class/sensors/range_sensor	cal_uid		0440	 system	radio
+/sys/class/sensors/range_sensor	calibration	0660	 system	radio
+/sys/class/sensors/range_sensor	open_calibration	0660	 system	radio
+/sys/class/sensors/range_sensor	enable		0660	 system	radio
+/sys/class/sensors/range_sensor	frame_rate	0440	 system	radio
+/sys/class/sensors/range_sensor	fw_version	0440	 system	radio
+/sys/class/sensors/range_sensor	mode		0440	 system	radio
+/sys/class/sensors/range_sensor	name		0440	 system	radio
+/sys/class/sensors/range_sensor	range_sigma	0440	 system	radio
+/sys/class/sensors/range_sensor	status		0440	 system	radio
+/sys/class/sensors/range_sensor	target_status	0440	 system	radio
+/sys/class/sensors/range_sensor	temp		0440	 system	radio
+/sys/class/sensors/range_sensor	test01		0440	 system	radio
+/sys/class/sensors/range_sensor	test02		0440	 system	radio
+/sys/class/sensors/range_sensor	test03		0440	 system	radio
+/sys/class/sensors/range_sensor	test_mode	0660	 system	radio
+/sys/class/sensors/range_sensor	uid			0440	 system	radio
+/sys/class/sensors/range_sensor	vendor		0440	 system	radio
+/sys/class/sensors/range_sensor	zone		0440	 system	radio
+
+# Google FRP solution
+/dev/block/by-name/persistent    0660    system    system
+
+# Reactivation lock
+/dev/block/by-name/steady    0660    system    system
+
+# Param permission
+/dev/block/platform/soc/1d84000.ufshc/by-name/param     0660   root       system
+
+# flicker sensor
+/sys/class/sensors/als_rear    name                    0444    system    radio
+/sys/class/sensors/als_rear    vendor                  0444    system    radio
+/sys/class/sensors/als_rear    part_type               0444    system    radio
+/sys/class/sensors/als_rear    device_id               0444    system    radio
+/sys/class/sensors/als_rear    als_flush               0220    system    radio
+/sys/class/sensors/als_rear    write_reg               0220    system    system
+/sys/class/sensors/als_rear    read_reg                0664    system    system
+/sys/class/sensors/als_rear    eol_mode                0664    system    system
+/sys/class/sensors/als_rear    osc_cal                 0664    system    system
+/sys/class/sensors/als_rear    als_factory_cmd         0444    system    system
+/sys/class/sensors/als_rear    als_red                 0444    system    system
+/sys/class/sensors/als_rear    als_green               0444    system    system
+/sys/class/sensors/als_rear    als_blue                0444    system    system
+/sys/class/sensors/als_rear    als_ir                  0444    system    system
+/sys/class/sensors/als_rear    als_clear               0444    system    system
+/sys/class/sensors/als_rear    als_uv                  0444    system    system
+/sys/class/sensors/als_rear    als_wideband            0444    system    system
+/sys/class/sensors/als_rear    als_version             0444    system    system
+/sys/class/sensors/als_rear    als_raw_data            0444    system    system
+/sys/class/sensors/als_rear    als_debug               0664    system    system
+/sys/class/sensors/als_rear    flicker_data            0444    system    system
+/sys/class/sensors/als_rear    i2c_err_cnt             0664    system    system
+/sys/class/sensors/als_rear    int_pin_check           0444    system    system
+/sys/class/sensors/als_rear    mode_cnt                0664    system    system
+/sys/class/sensors/als_rear    curr_adc                0664    system    system
+/sys/class/sensors/als_rear    sensor_info             0444    system    system
+/sys/class/sensors/als_rear    als_enable              0664    system    system
+/sys/class/sensors/als_rear    als_data                0444    system    system
+/dev/als_rear                                          0600    system    system
+/sys/devices/virtual/input/input*    enable            0660    system    input
+/sys/devices/virtual/input/input*    poll_delay        0660    system    input
+
+# Camera Start
+# Camera::Rear Start
+# Camera::Rear1
+/sys/class/camera/rear    companion_ic_check        0444    system    system
+/sys/class/camera/rear    isp_core                  0664    system    system
+/sys/class/camera/rear    rear_camfw                0664    system    system
+/sys/class/camera/rear    rear_camfw_full           0664    system    system
+/sys/class/camera/rear    rear_camfw_load           0664    system    system
+/sys/class/camera/rear    rear_camtype              0444    system    system
+/sys/class/camera/rear    rear_companionfw_full     0664    system    system
+/sys/class/camera/rear    rear_calcheck             0664    system    system
+/sys/class/camera/rear    rear_fwcheck              0664    system    system
+/sys/class/camera/rear    rear_checkfw_user         0664    system    system
+/sys/class/camera/rear    rear_checkfw_factory      0664    system    system
+/sys/class/camera/rear    rear_moduleinfo           0664    system    system
+/sys/class/camera/rear    rear_afcal                0444    system    system
+/sys/class/camera/rear    rear_caminfo              0664    system    system
+/sys/class/camera/rear    rear_sensorid_exif        0664    system    system
+/sys/class/camera/rear    rear_moduleid             0444    system    system
+/sys/class/camera/rear    rear_mtf_exif             0664    system    system
+/sys/class/camera/rear    rear_mtf2_exif            0664    system    system
+/sys/class/camera/rear    rear_paf_offset_mid       0444    system    system
+/sys/class/camera/rear    rear_paf_offset_far       0444    system    system
+/sys/class/camera/rear    rear_paf_cal_check        0444    system    system
+/sys/class/camera/rear    rear_f2_paf_offset_mid    0444    system    system
+/sys/class/camera/rear    rear_f2_paf_offset_far    0444    system    system
+/sys/class/camera/rear    rear_f2_paf_cal_check     0444    system    system
+/sys/class/camera/rear    rear_dualcal              0444    system    system
+/sys/class/camera/rear    rear_dualcal_size         0444    system    system
+/sys/class/camera/rear    rear_hwparam              0664    system    system
+/sys/class/camera/rear    ssrm_camera_info          0664    system    system
+/sys/class/camera/rear    rear_frs_test             0444    system    system
+/sys/class/camera/rear    cam_ln_test               0444    system    system
+/sys/class/camera/rear    supported_cameraIds       0664    system    system
+/sys/class/camera/rear    rear_aperture_halltest    0444    system    system
+/sys/class/camera/rear    rear_tofcal               0444    system    system
+/sys/class/camera/rear    rear_tofcal_extra         0444    system    system
+/sys/class/camera/rear    rear_tofcal_size          0444    system    system
+/sys/class/camera/rear    rear_tofcal_uid           0444    system    system
+/sys/class/camera/rear    rear_tof_dual_cal         0444    system    system
+/sys/class/camera/rear    rear_actuator_power       0440    system    system
+/sys/class/camera/rear    rear_otp_bpc0             0664    system    system
+/sys/class/camera/rear    rear_otp_bpc1             0664    system    system
+/sys/class/camera/rear    rear_otp_bpc2             0664    system    system
+/sys/class/camera/rear    rear_otp_bpc3             0664    system    system
+/sys/class/camera/rear    rear_otp_bpc4             0664    system    system
+/sys/class/camera/rear    rear_otp_bpc5             0664    system    system
+/sys/class/camera/rear    rear_otp_bpc6             0664    system    system
+/sys/class/camera/rear    rear_otp_bpc7             0664    system    system
+/sys/class/camera/rear    rear_otp_bpc8             0664    system    system
+/sys/class/camera/rear    cam_cdr_value             0664    system    system
+/sys/class/camera/rear    cam_cdr_result            0664    system    system
+/sys/class/camera/rear    cam_cdr_fastaec           0664    system    system
+/sys/class/camera/rear    rear_i2c_rfinfo           0664    system    system
+/sys/class/camera/rear    rear_eeprom_retry         0664    system    system
+
+# Camera::Rear2
+/sys/class/camera/rear    rear2_camfw               0664    system    system
+/sys/class/camera/rear    rear2_camfw_full          0664    system    system
+/sys/class/camera/rear    rear2_camfw_load          0444    system    system
+/sys/class/camera/rear    rear2_camtype             0444    system    system
+/sys/class/camera/rear    rear2_companionfw_full    0444    system    system
+/sys/class/camera/rear    rear2_calcheck            0444    system    system
+/sys/class/camera/rear    rear2_fwcheck             0444    system    system
+/sys/class/camera/rear    rear2_checkfw_user        0664    system    system
+/sys/class/camera/rear    rear2_checkfw_factory     0664    system    system
+/sys/class/camera/rear    rear2_moduleinfo          0664    system    system
+/sys/class/camera/rear    rear2_afcal               0444    system    system
+/sys/class/camera/rear    rear2_caminfo             0664    system    system
+/sys/class/camera/rear    rear2_sensorid_exif       0664    system    system
+/sys/class/camera/rear    rear2_moduleid            0444    system    system
+/sys/class/camera/rear    rear2_mtf_exif            0664    system    system
+/sys/class/camera/rear    rear2_mtf2_exif           0444    system    system
+/sys/class/camera/rear    rear2_paf_offset_mid      0444    system    system
+/sys/class/camera/rear    rear2_paf_offset_far      0444    system    system
+/sys/class/camera/rear    rear2_paf_cal_check       0444    system    system
+/sys/class/camera/rear    rear2_f2_paf_offset_mid   0444    system    system
+/sys/class/camera/rear    rear2_f2_paf_offset_far   0444    system    system
+/sys/class/camera/rear    rear2_f2_paf_cal_check    0444    system    system
+/sys/class/camera/rear    rear2_dualcal             0444    system    system
+/sys/class/camera/rear    rear2_dualcal_size        0444    system    system
+/sys/class/camera/rear    rear2_hwparam             0664    system    system
+/sys/class/camera/rear    rear2_tilt                0444    system    system
+/sys/class/camera/rear    rear2_tof_tilt            0444    system    system
+/sys/class/camera/rear    rear2_eeprom_retry         0664    system    system
+
+# Camera::Rear3
+/sys/class/camera/rear    rear3_camfw               0664    system    system
+/sys/class/camera/rear    rear3_camfw_full          0664    system    system
+/sys/class/camera/rear    rear3_camfw_load          0444    system    system
+/sys/class/camera/rear    rear3_camtype             0444    system    system
+/sys/class/camera/rear    rear3_companionfw_full    0444    system    system
+/sys/class/camera/rear    rear3_calcheck            0444    system    system
+/sys/class/camera/rear    rear3_fwcheck             0444    system    system
+/sys/class/camera/rear    rear3_checkfw_user        0664    system    system
+/sys/class/camera/rear    rear3_checkfw_factory     0664    system    system
+/sys/class/camera/rear    rear3_moduleinfo          0664    system    system
+/sys/class/camera/rear    rear3_afcal               0444    system    system
+/sys/class/camera/rear    rear3_caminfo             0664    system    system
+/sys/class/camera/rear    rear3_sensorid_exif       0664    system    system
+/sys/class/camera/rear    rear3_moduleid            0444    system    system
+/sys/class/camera/rear    rear3_mtf_exif            0664    system    system
+/sys/class/camera/rear    rear3_mtf2_exif           0444    system    system
+/sys/class/camera/rear    rear3_paf_offset_mid      0664    system    system
+/sys/class/camera/rear    rear3_paf_offset_far      0664    system    system
+/sys/class/camera/rear    rear3_paf_cal_check       0444    system    system
+/sys/class/camera/rear    rear3_f2_paf_offset_mid   0664    system    system
+/sys/class/camera/rear    rear3_f2_paf_offset_far   0664    system    system
+/sys/class/camera/rear    rear3_f2_paf_cal_check    0664    system    system
+/sys/class/camera/rear    rear3_dualcal             0444    system    system
+/sys/class/camera/rear    rear3_dualcal_size        0444    system    system
+/sys/class/camera/rear    rear3_hwparam             0664    system    system
+/sys/class/camera/rear    rear3_tilt                0444    system    system
+/sys/class/camera/rear    rear3_eeprom_retry         0664    system    system
+
+# Camera::Rear4
+/sys/class/camera/rear    rear4_camfw               0664    system    system
+/sys/class/camera/rear    rear4_camfw_full          0664    system    system
+/sys/class/camera/rear    rear4_camfw_load          0664    system    system
+/sys/class/camera/rear    rear4_camtype             0444    system    system
+/sys/class/camera/rear    rear4_companionfw_full    0664    system    system
+/sys/class/camera/rear    rear4_calcheck            0664    system    system
+/sys/class/camera/rear    rear4_fwcheck             0664    system    system
+/sys/class/camera/rear    rear4_checkfw_user        0664    system    system
+/sys/class/camera/rear    rear4_checkfw_factory     0664    system    system
+/sys/class/camera/rear    rear4_moduleinfo          0664    system    system
+/sys/class/camera/rear    rear4_afcal               0444    system    system
+/sys/class/camera/rear    rear4_caminfo             0664    system    system
+/sys/class/camera/rear    rear4_sensorid_exif       0664    system    system
+/sys/class/camera/rear    rear4_moduleid            0444    system    system
+/sys/class/camera/rear    rear4_mtf_exif            0664    system    system
+/sys/class/camera/rear    rear4_mtf2_exif           0664    system    system
+/sys/class/camera/rear    rear4_paf_offset_mid      0664    system    system
+/sys/class/camera/rear    rear4_paf_offset_far      0664    system    system
+/sys/class/camera/rear    rear4_paf_cal_check       0444    system    system
+/sys/class/camera/rear    rear4_f2_paf_offset_mid   0664    system    system
+/sys/class/camera/rear    rear4_f2_paf_offset_far   0664    system    system
+/sys/class/camera/rear    rear4_f2_paf_cal_check    0664    system    system
+/sys/class/camera/rear    rear4_dualcal             0444    system    system
+/sys/class/camera/rear    rear4_dualcal_size        0444    system    system
+/sys/class/camera/rear    rear4_hwparam             0664    system    system
+/sys/class/camera/rear    rear4_tilt                0444    system    system
+/sys/class/camera/rear    rear4_eeprom_retry        0664    system    system
+
+# Camera::Rear End
+
+# Camera::Front Start
+# Camera::Front1
+/sys/class/camera/front    front_camfw              0664    system    system
+/sys/class/camera/front    front_camtype            0444    system    system
+/sys/class/camera/front    front_caminfo            0664    system    system
+/sys/class/camera/front    front_camfw_full         0664    system    system
+/sys/class/camera/front    front_camfw_load         0664    system    system
+/sys/class/camera/front    front_checkfw_user       0664    system    system
+/sys/class/camera/front    front_checkfw_factory    0664    system    system
+/sys/class/camera/front    front_moduleinfo         0664    system    system
+/sys/class/camera/front    front_afcal              0444    system    system
+/sys/class/camera/front    front_sensorid_exif      0664    system    system
+/sys/class/camera/front    front_moduleid           0444    system    system
+/sys/class/camera/front    front_mtf_exif           0664    system    system
+/sys/class/camera/front    front_hwparam            0664    system    system
+/sys/class/camera/front    front_mipi_clock         0444    system    system
+/sys/class/camera/front    front_paf_cal_check      0444    system    system
+/sys/class/camera/front    front_tofcal             0664    system    system
+/sys/class/camera/front    front_tofcal_extra       0664    system    system
+/sys/class/camera/front    front_tofcal_size        0664    system    system
+/sys/class/camera/front    front_tofcal_uid         0664    system    system
+/sys/class/camera/front    front_eeprom_retry       0664    system    system
+
+# Camera::Front2
+/sys/class/camera/front    front2_camfw             0664    system    system
+/sys/class/camera/front    front2_camtype           0444    system    system
+/sys/class/camera/front    front2_caminfo           0664    system    system
+/sys/class/camera/front    front2_camfw_full        0664    system    system
+/sys/class/camera/front    front2_checkfw_user      0664    system    system
+/sys/class/camera/front    front2_checkfw_factory   0664    system    system
+/sys/class/camera/front    front2_moduleinfo        0664    system    system
+/sys/class/camera/front    front2_moduleid          0444    system    system
+/sys/class/camera/front    front2_mtf_exif          0664    system    system
+/sys/class/camera/front    front2_hwparam           0664    system    system
+/sys/class/camera/front    front2_dualcal           0444    system    system
+/sys/class/camera/front    front2_dualcal_size      0444    system    system
+/sys/class/camera/front    front2_tilt              0444    system    system
+
+# Camera::Front3
+/sys/class/camera/front    front3_camfw             0664    system    system
+/sys/class/camera/front    front3_camtype           0444    system    system
+/sys/class/camera/front    front3_caminfo           0664    system    system
+/sys/class/camera/front    front3_camfw_full        0664    system    system
+/sys/class/camera/front    front3_camfw_load        0664    system    system
+/sys/class/camera/front    front3_checkfw_user      0664    system    system
+/sys/class/camera/front    front3_checkfw_factory   0664    system    system
+/sys/class/camera/front    front3_moduleinfo        0664    system    system
+/sys/class/camera/front    front3_afcal             0444    system    system
+/sys/class/camera/front    front3_moduleid          0444    system    system
+/sys/class/camera/front    front3_mtf_exif          0664    system    system
+/sys/class/camera/front    front3_hwparam           0664    system    system
+
+# Camera::Front End
+
+# Camera::Secure
+/sys/class/camera/secure    iris_camfw             0664    system    system
+/sys/class/camera/secure    iris_camfw_full        0664    system    system
+/sys/class/camera/secure    iris_checkfw_factory   0664    system    system
+/sys/class/camera/secure    iris_checkfw_user      0664    system    system
+/sys/class/camera/secure    iris_caminfo           0664    system    system
+/sys/class/camera/secure    iris_hwparam           0664    system    system
+
+# Camera::Flash
+/sys/class/camera/flash    rear_flash              0664    system    system
+
+# Camera::Ois
+/sys/class/camera/ois    selftest                       0444    system    system
+/sys/class/camera/ois    calibrationtest                0444    system    system
+/sys/class/camera/ois    ois_noise_stdev                0444    system    system
+/sys/class/camera/ois    ois_power                      0200    system    system
+/sys/class/camera/ois    ois_rawdata                    0664    system    system
+/sys/class/camera/ois    oisfw                          0664    system    system
+/sys/class/camera/ois    ois_diff                       0664    system    system
+/sys/class/camera/ois    ois_exif                       0664    system    system
+/sys/class/camera/ois    autotest                       0664    system    system
+/sys/class/camera/ois    autotest_2nd                   0664    system    system
+/sys/class/camera/ois    ois_gain_rear                  0444    system    system
+/sys/class/camera/ois    ois_gain_rear3                 0444    system    system
+/sys/class/camera/ois    ois_supperssion_ratio_rear     0444    system    system
+/sys/class/camera/ois    ois_supperssion_ratio_rear3    0444    system    system
+/sys/class/camera/ois    ois_hall_position              0444    system    system
+/sys/class/camera/ois    reset_check                    0444    system    system
+/sys/class/camera/ois    ois_set_mode                   0200    system    system
+/sys/class/camera/ois    check_cross_talk               0444    system    system
+/sys/class/camera/ois    check_ois_valid                0444    system    system
+/sys/class/camera/ois    rear3_read_cross_talk          0444    system    system
+/sys/class/camera/ois    ois_ext_clk                    0664    system    system
+/sys/class/camera/ois    check_hall_cal                 0444    system    system
+
+# Camera::Ssm
+/sys/class/camera/ssm    ssm_frame_id                0664    system    system
+/sys/class/camera/ssm    ssm_flicker_max_r           0664    system    system
+/sys/class/camera/ssm    ssm_flicker_max_g           0664    system    system
+/sys/class/camera/ssm    ssm_flicker_max_b           0664    system    system
+/sys/class/camera/ssm    ssm_flicker_coeff           0664    system    system
+
+# Camera::Af
+/sys/class/camera/af    af_position           0664    system    system
+
+# Camera::Boost				cameraserver cameraserver
+/sys/kernel/mm/vmscan    mem_boost_mode           0664    cameraserver    cameraserver
+
+# Camera::Dual
+/sys/class/camera/dual    fallback           0664    system    system
+
+# Camera::Adaptive mipi
+/sys/class/camera/test    adaptive_test           0664    system    system
+
+#Camera SVC
+/sys/devices/svc/Camera    SVC_rear_module            0444    system    system
+/sys/devices/svc/Camera    SVC_rear_module2           0444    system    system
+/sys/devices/svc/Camera    SVC_rear_module3           0444    system    system
+/sys/devices/svc/Camera    SVC_rear_module4           0444    system    system
+/sys/devices/svc/Camera    SVC_front_module           0444    system    system
+/sys/devices/svc/Camera    SVC_front_module2          0444    system    system
+
+#Camera SETCAL
+/mnt/vendor/efs    camera           0775    system    system
+
+# Camera End
+
+#
+# Permissions for Vibrator [
+#
+
+# Vibrator nodes permission (timed_output)
+/sys/class/timed_output/vibrator    enable    			0664	system system
+/sys/class/timed_output/vibrator    motor_type    		0664	system system
+/sys/class/timed_output/vibrator    intensity  			0664	system system
+/sys/class/timed_output/vibrator    haptic_engine   	0664	system system
+/sys/class/timed_output/vibrator    multi_freq	    	0664	system system
+/sys/class/timed_output/vibrator    num_waves    		0664	system system
+/sys/class/timed_output/vibrator    cp_trigger_index    0664	system system
+/sys/class/timed_output/vibrator    cp_trigger_queue    0664	system system
+/sys/class/timed_output/vibrator    pwle			    0664	system system
+/sys/class/timed_output/vibrator    virtual_composite_indexes   0664	system system
+/sys/class/timed_output/vibrator    virtual_pwle_indexes    	0664	system system
+/sys/class/timed_output/vibrator    event_cmd    		0664	system system
+/sys/class/timed_output/vibrator    intensities    		0664	system system
+/sys/class/timed_output/vibrator    haptic_intensities  0664	system system
+/sys/class/timed_output/vibrator    haptic_durations    0664	system system
+/sys/class/timed_output/vibrator    use_sep_index	    0220	system system
+
+# Vibrator nodes permission - inputff
+/sys/class/sec_vib_inputff/control	i2s_test			0664	system system
+/sys/class/sec_vib_inputff/control	firmware_load		0664	system system
+/sys/class/sec_vib_inputff/control	current_temp		0664	system system
+/sys/class/sec_vib_inputff/control	ach_percent			0664	system system
+/sys/class/sec_vib_inputff/control	trigger_calibration	0664	system system
+/sys/class/sec_vib_inputff/control	f0_measured			0664	system system
+/sys/class/sec_vib_inputff/control	f0_offset			0664	system system
+/sys/class/sec_vib_inputff/control	f0_stored			0664	system system
+/sys/class/sec_vib_inputff/control	le_stored_param		0664	system system
+/sys/class/sec_vib_inputff/control	le_est				0444	system system
+/sys/class/sec_vib_inputff/control	use_sep_index		0220	system system
+/sys/class/sec_vib_inputff/control	event_cmd			0664	system system
+
+# Vibrator nodes permission (vib_info)
+/sys/class/vib_info_class/vib_support_info	intensities			0664	system system
+/sys/class/vib_info_class/vib_support_info	haptic_intensities	0664	system system
+/sys/class/vib_info_class/vib_support_info	functions			0664	system system
+
+#
+# ] Permissions for Vibrator
+#
+
+# TSP
+/sys/class/sec/tsp				cmd							0660	system radio
+/sys/class/sec/tsp				enabled						0660	system system
+/sys/class/sec/tsp/input		enabled						0660	system system
+/sys/class/sec/tsp				sensitivity_mode			0664	system system
+/sys/class/sec/tsp				prox_power_off				0664	system system
+/sys/class/sec/tsp				ear_detect_enable			0664	system system
+/sys/class/sec/tsp				virtual_prox				0664	system system
+/sys/class/sec/tsp				hw_param					0664	system system
+/sys/class/sec/tsp				dualscreen_policy			0660	system system
+
+# TSP-1 (DUAL)
+/sys/class/sec/tsp1				cmd							0660	system radio
+/sys/class/sec/tsp1/input		enabled						0660	system system
+/sys/class/sec/tsp1				sensitivity_mode			0664	system system
+/sys/class/sec/tsp1				prox_power_off				0664	system system
+/sys/class/sec/tsp1				hw_param					0664	system system
+/sys/class/sec/tsp1				dualscreen_policy			0660	system system
+
+# TSP-2 (DUAL)
+/sys/class/sec/tsp2				cmd							0660	system radio
+/sys/class/sec/tsp2/input		enabled						0660	system system
+/sys/class/sec/tsp2				sensitivity_mode			0664	system system
+/sys/class/sec/tsp2				prox_power_off				0664	system system
+/sys/class/sec/tsp2				hw_param					0664	system system
+/sys/class/sec/tsp2				dualscreen_policy			0660	system system
+
+# Securetouch
+/sys/class/sec/ss_touch/secure	secure_touch_enable			0664	system system
+
+# WACOM
+/sys/class/sec/sec_epen/input	enabled 					0660	system system
+/sys/class/sec/sec_epen			enabled 					0660	system system
+/sys/class/sec/sec_epen 		cmd 						0220	system radio
+/sys/class/sec/sec_epen 		epen_firm_update			0220	system radio
+/sys/class/sec/sec_epen 		epen_reset					0220	system radio
+/sys/class/sec/sec_epen 		epen_reset_result			0444	system radio
+/sys/class/sec/sec_epen 		epen_checksum				0220	system radio
+/sys/class/sec/sec_epen 		epen_checksum_result		0444	system radio
+/sys/class/sec/sec_epen 		epen_saving_mode			0220	system radio
+/sys/class/sec/sec_epen 		epen_wcharging_mode 		0664	system radio
+/sys/class/sec/sec_epen 		epen_ble_charging_mode		0664	system radio
+/sys/class/sec/sec_epen 		keyboard_mode				0660	system radio
+/sys/class/sec/sec_epen 		epen_disable_mode			0660	system system
+/sys/class/sec/sec_epen 		aod_enable					0220	system radio
+/sys/class/sec/sec_epen 		aod_lcd_onoff_status		0220	system radio
+/sys/class/sec/sec_epen 		screen_off_memo_enable		0220	system radio
+/sys/class/sec/sec_epen 		epen_fac_garage_mode		0664	system radio
+/sys/class/sec/sec_epen 		epen_fac_select_firmware	0220	system radio
+/sys/class/sec/sec_epen 		hw_param					0664	system system
+
+# Pogo Keyboard
+/sys/class/sec/sec_keypad		fw_update					0220	system system
+
+# Folding digital hall ic
+/sys/class/sec/digital_hall		digital_hall_thd			0644	system system
 
 # TrustedUI VM
 external_firmware_handler /devices/platform/soc/soc:qcom,guestvm_loader@f3c00000/firmware/trustedvm.mdt system "/vendor/bin/vmmgr -r"
@@ -50,17 +541,11 @@ external_firmware_handler /devices/platform/soc/soc:gh-secure-vm-loader@0/firmwa
 external_firmware_handler /devices/platform/soc/soc:gh-secure-vm-loader@0/firmware/trustedvm.b04 system "/vendor/bin/vmmgr -r"
 external_firmware_handler /devices/platform/soc/soc:gh-secure-vm-loader@0/firmware/trustedvm.b05 system "/vendor/bin/vmmgr -r"
 
-# OEM VM
-external_firmware_handler /devices/platform/soc/soc:qcom,guestvm_loader@f8000000/firmware/oemvm.mdt system "/vendor/bin/vmmgr -r"
-external_firmware_handler /devices/platform/soc/soc:qcom,guestvm_loader@f8000000/firmware/oemvm.b01 system "/vendor/bin/vmmgr -r"
-external_firmware_handler /devices/platform/soc/soc:qcom,guestvm_loader@f8000000/firmware/oemvm.b02 system "/vendor/bin/vmmgr -r"
-external_firmware_handler /devices/platform/soc/soc:qcom,guestvm_loader@f8000000/firmware/oemvm.b03 system "/vendor/bin/vmmgr -r"
-external_firmware_handler /devices/platform/soc/soc:qcom,guestvm_loader@f8000000/firmware/oemvm.b04 system "/vendor/bin/vmmgr -r"
-external_firmware_handler /devices/platform/soc/soc:qcom,guestvm_loader@f8000000/firmware/oemvm.b05 system "/vendor/bin/vmmgr -r"
+# PROCA dev config
+/dev/proca_config         0440   system     system
 
-external_firmware_handler /devices/platform/soc/soc:gh-secure-vm-loader@1/firmware/oemvm.mdt system "/vendor/bin/vmmgr -r"
-external_firmware_handler /devices/platform/soc/soc:gh-secure-vm-loader@1/firmware/oemvm.b01 system "/vendor/bin/vmmgr -r"
-external_firmware_handler /devices/platform/soc/soc:gh-secure-vm-loader@1/firmware/oemvm.b02 system "/vendor/bin/vmmgr -r"
-external_firmware_handler /devices/platform/soc/soc:gh-secure-vm-loader@1/firmware/oemvm.b03 system "/vendor/bin/vmmgr -r"
-external_firmware_handler /devices/platform/soc/soc:gh-secure-vm-loader@1/firmware/oemvm.b04 system "/vendor/bin/vmmgr -r"
-external_firmware_handler /devices/platform/soc/soc:gh-secure-vm-loader@1/firmware/oemvm.b05 system "/vendor/bin/vmmgr -r"
+# SecNVM
+/dev/k250a                0660   system     system
+
+# Power on alarm
+/dev/power_on_alarm       0664   system     radio

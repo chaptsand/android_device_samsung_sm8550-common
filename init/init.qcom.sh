@@ -463,3 +463,36 @@ case "$buildvariant" in
         echo "4 4 1 4" > /proc/sys/kernel/printk
         ;;
 esac
+
+#add permission for block_size, mem_type, mem_size nodes to collect diag over QDSS by ODL
+#application by "oem_2902" group
+chown -h root.oem_2902 /sys/devices/platform/soc/10048000.tmc/coresight-tmc-etr/block_size
+chmod 660 /sys/devices/platform/soc/10048000.tmc/coresight-tmc-etr/block_size
+chown -h root.oem_2902 /sys/devices/platform/soc/10048000.tmc/coresight-tmc-etr/buffer_size
+chmod 660 /sys/devices/platform/soc/10048000.tmc/coresight-tmc-etr/buffer_size
+chmod 660 /sys/devices/platform/soc/10048000.tmc/coresight-tmc-etr/out_mode
+chown -h root.oem_2902 /sys/devices/platform/soc/1004f000.tmc/coresight-tmc-etr1/block_size
+chmod 660 /sys/devices/platform/soc/1004f000.tmc/coresight-tmc-etr1/block_size
+chown -h root.oem_2902 /sys/devices/platform/soc/1004f000.tmc/coresight-tmc-etr1/buffer_size
+chmod 660 /sys/devices/platform/soc/1004f000.tmc/coresight-tmc-etr1/buffer_size
+chmod 660 /sys/devices/platform/soc/1004f000.tmc/coresight-tmc-etr1/out_mode
+chmod 660 /sys/devices/platform/soc/1004f000.tmc/coresight-tmc-etr1/enable_sink
+chmod 660 /sys/devices/platform/soc/soc:modem_diag/coresight-modem-diag/enable_source
+chown -h root.oem_2902 /sys/bus/coresight/reset_source_sink
+chmod 660 /sys/bus/coresight/reset_source_sink
+
+# qcom case 05386569
+mkdir /config/stp-policy/coresight-stm:p_ost.policy
+chmod 660 /config/stp-policy/coresight-stm:p_ost.policy
+mkdir /config/stp-policy/coresight-stm:p_ost.policy/default
+chmod 660 /config/stp-policy/coresight-stm:p_ost.policy/default
+echo 0x10 > /sys/bus/coresight/devices/coresight-stm/traceid
+
+# disable ftrace log on coresight stm buffer 
+case "$buildvariant" in
+    "eng")
+        echo 0 > /sys/bus/coresight/devices/coresight-stm/port_enable
+        echo 0x10000003 > /sys/bus/coresight/devices/coresight-stm/port_select
+        echo 0xffffffff > /sys/bus/coresight/devices/coresight-stm/port_enable
+        ;;
+esac
