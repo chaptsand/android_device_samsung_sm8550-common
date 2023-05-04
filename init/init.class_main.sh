@@ -73,13 +73,15 @@ case "$baseband" in
 
     case "$datamode" in
         "tethered")
-            start vendor.dataqti
+# This daemon was also disabled in sm8450 as a qualcomm tethering interface.
+# start vendor.dataqti
             if [ "$low_ram" != "true" ]; then
               start vendor.dataadpl
             fi
             ;;
         "concurrent")
-            start vendor.dataqti
+# This daemon was also disabled in sm8450 as a qualcomm tethering interface.
+# start vendor.dataqti
             if [ "$low_ram" != "true" ]; then
               start vendor.dataadpl
             fi
