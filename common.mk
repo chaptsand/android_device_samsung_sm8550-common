@@ -38,7 +38,16 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 
 PRODUCT_PACKAGES += \
-    fstab.qcom
+    fstab.qcom \
+    init.class_main.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.rc \
+    init.qcom.sh \
+    init.recovery.qcom.rc \
+    init.target.rc \
+    ueventd-odm.rc \
+    ueventd.qcom.rc
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
