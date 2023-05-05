@@ -58,6 +58,13 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
 
+# HIDL
+DEVICE_MANIFEST_FILE := \
+    $(COMMON_PATH)/vintf/manifest_kalama.xml
+
+DEVICE_MATRIX_FILE := \
+    $(COMMON_PATH)/vintf/compatibility_matrix.xml
+
 # Init Boot
 BOARD_INIT_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
