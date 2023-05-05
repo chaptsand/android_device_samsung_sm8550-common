@@ -484,6 +484,9 @@ subsystem mem_buf_vm
 /sys/bus/usb/devices/*      power/control              0660  system  usb
 /sys/bus/usb/devices/*      power/wakeup               0660  system  usb
 
+#USB root hub authorize setting
+/sys/bus/usb/devices/usb*   authorized                 0660  system  usb
+
 #Memory Offline
 /sys/devices/system/memory/memory* state    0660 system system
 
