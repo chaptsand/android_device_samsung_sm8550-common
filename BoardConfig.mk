@@ -63,6 +63,13 @@ TARGET_SCREEN_DENSITY := 450
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
+# HIDL
+DEVICE_MANIFEST_FILE := \
+    $(DEVICE_PATH)/vintf/manifest_kalama.xml
+
+DEVICE_MATRIX_FILE := \
+    $(DEVICE_PATH)/vintf/compatibility_matrix.xml
+
 # Init Boot
 BOARD_INIT_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
