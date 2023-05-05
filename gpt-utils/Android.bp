@@ -23,23 +23,16 @@ ufsbsg_cc_defaults {
 }
 
 cc_library {
-    name: "librecovery_updater",
+    name: "libgptutils.dm2q",
     vendor: true,
     recovery_available: true,
-    defaults: ["libion_header_paths" ,"ufsbsg_defaults"],
+    defaults: ["ufsbsg_defaults"],
     srcs: [
         "gpt-utils.cpp",
-        "oem-updater.cpp",
         "recovery-ufs-bsg.cpp",
-    ],
-    static_libs: [
-            "libbase",
-            "libedify",
-            "libotautil",
     ],
     shared_libs: [
             "libcutils",
-            "libion",
             "liblog",
             "libz",
     ],
