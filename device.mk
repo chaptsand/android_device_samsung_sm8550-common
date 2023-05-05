@@ -67,6 +67,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
     FrameworksResCommon \
+    FrameworksResDm2q \
     FrameworksResTarget \
     SystemUIResCommon \
     TelecommResCommon \
