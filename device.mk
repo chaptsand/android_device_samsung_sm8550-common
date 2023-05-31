@@ -39,6 +39,21 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti.recovery \
     android.hardware.boot@1.2-servic
 
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider-V1-ndk.vendor \
+    android.hardware.camera.provider@2.4.vendor \
+    vendor.qti.hardware.camera.aon@1.3.vendor \
+    vendor.qti.hardware.camera.postproc@1.0.vendor
+
+PRODUCT_COPY_FILES += \
+vendor/etc/permissions/android.hardware.camera.concurrent.xml
+vendor/etc/permissions/android.hardware.camera.flash-autofocus.xml
+vendor/etc/permissions/android.hardware.camera.front.xml
+vendor/etc/permissions/android.hardware.camera.full.xml
+vendor/etc/permissions/android.hardware.camera.raw.xml
+vendor/etc/permissions/vendor.android.hardware.camera.preview-dis.back.xml
+
 # Fastboot
 PRODUCT_PACKAGES += \
     fastbootd
