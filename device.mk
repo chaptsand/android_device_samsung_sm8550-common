@@ -97,3 +97,6 @@ PRODUCT_COPY_FILES += \
 BOARD_API_LEVEL := 33
 BOARD_SHIPPING_API_LEVEL := $(BOARD_API_LEVEL)
 PRODUCT_SHIPPING_API_LEVEL := $(BOARD_API_LEVEL)
+
+# Inherit from the proprietary files makefile.
+$(call inherit-product, vendor/samsung/dm2q/dm2q-vendor.mk)
