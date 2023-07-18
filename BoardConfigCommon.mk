@@ -92,6 +92,9 @@ BOARD_USES_GENERIC_KERNEL_IMAGE := true
 
 TARGET_KERNEL_SOURCE := kernel/samsung/sm8550
 
+# Kernel modules
+TARGET_KERNEL_EXT_MODULE_ROOT := kernel/samsung/sm8550-modules
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 

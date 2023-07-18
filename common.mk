@@ -251,7 +251,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/samsung \
-    kernel/samsung/sm8550
+    kernel/samsung/sm8550 \
+    kernel/samsung/sm8550-modules
 
 # Net
 PRODUCT_PACKAGES += \
