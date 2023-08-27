@@ -106,7 +106,6 @@ vendor/lib/libhfp_pal.so
 vendor/lib/liblistensoundmodel2vendor.so
 vendor/lib/liblx-ar_util.so
 -vendor/lib/liblx-osal.so
-vendor/lib/libpalclient.so
 vendor/lib/libprofileparamstorage.so
 vendor/lib/libqtigefar.so
 vendor/lib/librecordalive.so
@@ -139,8 +138,6 @@ vendor/lib64/libhfp_pal.so
 vendor/lib64/liblistensoundmodel2vendor.so
 vendor/lib64/liblx-ar_util.so
 -vendor/lib64/liblx-osal.so
-vendor/lib64/libpal_net_if.so
-vendor/lib64/libpalclient.so
 vendor/lib64/libqtigefar.so
 vendor/lib64/libsecaudiocoreutils.so
 vendor/lib64/libsecaudioinfo.so
@@ -150,22 +147,9 @@ vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
 -vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
 
 # Audio AGM
-vendor/bin/agmcap
-vendor/bin/agmcompressplay
-vendor/bin/agmplay
 -vendor/lib/libagm.so
-vendor/lib/libagm_compress_plugin.so
-vendor/lib/libagm_mixer_plugin.so
-vendor/lib/libagm_pcm_plugin.so
-vendor/lib/libagmclient.so
-vendor/lib/libagmmixer.so
 -vendor/lib/vendor.qti.hardware.AGMIPC@1.0-impl.so
 -vendor/lib64/libagm.so
-vendor/lib64/libagm_compress_plugin.so
-vendor/lib64/libagm_mixer_plugin.so
-vendor/lib64/libagm_pcm_plugin.so
-vendor/lib64/libagmclient.so
-vendor/lib64/libagmmixer.so
 -vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
 
 # Audio configs
