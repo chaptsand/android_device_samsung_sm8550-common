@@ -582,3 +582,6 @@ subsystem mem_buf_vm
 
 #Virtualization Attributes
 /dev/gunyah                 0666   root     root
+
+# Q2SPI UWB device
+/dev/q2spiuwb    0660    uwb    uwb
