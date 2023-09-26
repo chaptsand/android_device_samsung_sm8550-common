@@ -61,7 +61,7 @@ OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
 ==========================================================================
 -->
-<manifest version="1.0" type="device" target-level="7">
+<manifest version="5.0" type="device" target-level="7">
     <!-- CapabilityConfigStore HAL Service  -->
     <hal format="hidl">
         <name>vendor.qti.hardware.capabilityconfigstore</name>
