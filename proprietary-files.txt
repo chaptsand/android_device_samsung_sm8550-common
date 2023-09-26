@@ -165,8 +165,6 @@ vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so
 
 # Audio configs
-vendor/etc/audio/sku_kalama/audio_effects.conf
-vendor/etc/audio/sku_kalama/audio_effects.xml
 vendor/etc/audio/sku_kalama/mixer_paths.xml
 vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp.xml
 vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp_wsa883x.xml
@@ -178,16 +176,12 @@ vendor/etc/audio/sku_kalama/resourcemanager_kalama_cdp.xml
 vendor/etc/audio/sku_kalama/resourcemanager_kalama_grd.xml
 vendor/etc/audio/sku_kalama/resourcemanager_kalama_mtp.xml
 vendor/etc/audio/sku_kalama/resourcemanager_kalama_qrd.xml
-vendor/etc/audio/sku_kalama_qssi/audio_policy_configuration.xml
 vendor/etc/audio_effects.xml
 vendor/etc/audio_effects_haptic.xml
 vendor/etc/audio_effects_sec.xml
 vendor/etc/audio_effects_spatializer.xml
-vendor/etc/audio_policy_configuration.xml
 vendor/etc/audio_policy_configuration_base.xml
-vendor/etc/audio_policy_volumes.xml
 vendor/etc/card-defs.xml
-vendor/etc/default_volume_tables.xml
 vendor/etc/microphone_characteristics.xml
 vendor/etc/usecaseKvManager.xml
 
