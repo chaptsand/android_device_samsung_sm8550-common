@@ -1,4 +1,4 @@
-# All unpinned blobs are extracted from S9160ZHU1AWCA
+# All unpinned blobs are extracted from S9160ZHU2AWH1
 
 # ACDB
 vendor/etc/audconf/OPEN/acdb_cal.acdb
@@ -106,7 +106,6 @@ vendor/lib/libhfp_pal.so
 vendor/lib/liblistensoundmodel2vendor.so
 vendor/lib/liblx-ar_util.so
 vendor/lib/liblx-osal.so
-vendor/lib/libpal_net_if.so
 vendor/lib/libpalclient.so
 vendor/lib/libprofileparamstorage.so
 vendor/lib/libqtigefar.so
@@ -257,7 +256,10 @@ vendor/lib64/vendor.samsung.hardware.bluetooth.audio-impl.so
 vendor/lib64/vendor.samsung.hardware.bluetooth@2.0.so
 
 # Camera
+vendor/bin/hw/android.hardware.camera.provider@2.7-external-service
 vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+vendor/etc/external_camera_config.xml
+vendor/etc/init/android.hardware.camera.provider@2.7-external-service.rc
 vendor/etc/init/camera.unihal.rc
 vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc
 vendor/etc/permissions/vendor.android.hardware.camera.preview-dis.back.xml
@@ -502,6 +504,9 @@ vendor/lib64/libLocalTM_wrapper.camera.samsung.so
 vendor/lib64/libMoireDetection.camera.samsung.so
 vendor/lib64/libMoireDetectionWrapper.camera.samsung.so
 vendor/lib64/libMoonVerifier_v1.camera.samsung.so
+vendor/lib64/libMotionEstimator.camera.samsung.so
+vendor/lib64/libMotionEstimator.uniplugin@1.0.so
+vendor/lib64/libMotionEstimatorWrapper.camera.samsung.so
 vendor/lib64/libObjectDetector_v1.camera.samsung.so
 vendor/lib64/libOpenCv.camera.samsung.so
 vendor/lib64/libPersonal_capture.camera.samsung.so
@@ -556,6 +561,7 @@ vendor/lib64/libipebpsstriping170.so
 vendor/lib64/libipebpsstriping480.so
 vendor/lib64/libisphwsetting.so
 vendor/lib64/libjpegQtable_interface.so
+vendor/lib64/libjpegQtable_interface.so
 vendor/lib64/libjpege.so
 vendor/lib64/libjpegencoder_sw.unifunc.so
 vendor/lib64/libjpegsq.media.samsung.so
@@ -564,6 +570,7 @@ vendor/lib64/liblivefocus_capture_engine.so
 vendor/lib64/liblivefocus_capture_interface.so
 vendor/lib64/liblivefocus_preview_engine.so
 vendor/lib64/liblivefocus_preview_interface.so
+vendor/lib64/libmcaimegpu.samsung.so
 vendor/lib64/libmctfengine_stub.so
 vendor/lib64/libmfGhostDetection.so
 vendor/lib64/libmfec.so
@@ -750,8 +757,6 @@ vendor/lib64/libnlnetmgr.so
 vendor/lib64/libqcmaputils.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
-vendor/lib64/vendor.qti.hardware.embmssl@1.0.so
-vendor/lib64/vendor.qti.hardware.embmssl@1.1.so
 
 # Diag
 system_ext/lib/vendor.qti.diaghal@1.0.so
@@ -842,8 +847,6 @@ system_ext/etc/init/tcmd.rc
 system_ext/etc/seccomp_policy/tcmd.policy
 system_ext/framework/dpmapi.jar
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
-vendor/lib64/vendor.qti.hardware.dpmservice@1.0.so
-vendor/lib64/vendor.qti.hardware.dpmservice@1.1.so
 
 # DSP
 vendor/bin/dspservice
@@ -1053,6 +1056,15 @@ product/priv-app/HotwordEnrollmentXGoogleEx4HEXAGON/HotwordEnrollmentXGoogleEx4H
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
+# Hyper
+vendor/bin/hw/vendor.samsung.hardware.hyper-service
+vendor/etc/hyper/config_chipset.json
+vendor/etc/hyper/config_hyper_permission.json
+vendor/etc/hyper/config_model.json
+vendor/etc/hyper/config_vendor.json
+vendor/lib64/libhypervintf.so
+vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk.so
+
 # IFAA
 vendor/bin/hw/vendor.samsung.hardware.ifaa@1.0-service
 vendor/etc/init/vendor.samsung.hardware.ifaa@1.0-service.rc
@@ -1066,27 +1078,8 @@ system_ext/lib64/libdiag_system.so
 vendor/etc/init/ims_rtp_daemon.rc
 vendor/etc/init/imsdaemon.rc
 vendor/etc/seccomp_policy/imsrtp.policy
-vendor/lib64/vendor.qti.ims.callcapability@1.0.so
-vendor/lib64/vendor.qti.ims.configservice@1.0.so
-vendor/lib64/vendor.qti.ims.configservice@1.1.so
-vendor/lib64/vendor.qti.ims.connection@1.0.so
-vendor/lib64/vendor.qti.ims.factory@1.0.so
-vendor/lib64/vendor.qti.ims.factory@1.1.so
-vendor/lib64/vendor.qti.ims.factory@2.0.so
-vendor/lib64/vendor.qti.ims.factory@2.1.so
-vendor/lib64/vendor.qti.ims.factory@2.2.so
 vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
-vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
-vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
-vendor/lib64/vendor.qti.ims.rcssip@1.0.so
-vendor/lib64/vendor.qti.ims.rcssip@1.1.so
-vendor/lib64/vendor.qti.ims.rcssip@1.2.so
-vendor/lib64/vendor.qti.ims.rcsuce@1.0.so
-vendor/lib64/vendor.qti.ims.rcsuce@1.1.so
-vendor/lib64/vendor.qti.ims.rcsuce@1.2.so
-vendor/lib64/vendor.qti.imsrtpservice@3.0.so
-vendor/lib64/vendor.qti.imsrtpservice@3.1.so
 
 # IRQ balance
 vendor/etc/msm_irqbalance.conf
@@ -1333,12 +1326,6 @@ vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
 vendor/etc/seccomp_policy/qspm.policy
 vendor/lib64/vendor.qti.qspmhal@1.0.so
 
-# QTI service tracker
-vendor/bin/hw/vendor.qti.hardware.servicetracker@1.2-service
-vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc
-vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml
-vendor/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
-
 # RIL
 vendor/bin/hw/rild
 vendor/bin/ipacm-diag
@@ -1351,24 +1338,15 @@ vendor/etc/locale/plmn_delta_zh-rHK.bin
 vendor/etc/locale/plmn_delta_zh-rTW.bin
 vendor/etc/mtu-conf.xml
 vendor/etc/pdpcnt-conf.xml
-vendor/etc/plmn_delta.bin
-vendor/etc/plmn_delta_attaio.bin
 vendor/etc/plmn_delta_hktw.bin
-vendor/etc/plmn_delta_usagsm.bin
 vendor/etc/plmn_se13.bin
 vendor/etc/sec_config_oem
-vendor/lib/libril.so
 vendor/lib/libsecril-client.so
 vendor/lib64/libengmode_client.so
-vendor/lib64/liblqe.so
 vendor/lib64/libqdpr.so
-vendor/lib64/libril.so
-vendor/lib64/libsec-ril-dsds.so
 vendor/lib64/libsec-ril.so
 vendor/lib64/libsecril-client.so
 vendor/lib64/libvkmanager_vendor.so
-vendor/lib64/vendor.qti.hardware.data.connection@1.0.so
-vendor/lib64/vendor.qti.hardware.data.connection@1.1.so
 vendor/lib64/vendor.qti.hardware.data.connectionfactory-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.data.dataactivity-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.data.ka-V1-ndk.so
@@ -1464,7 +1442,7 @@ vendor/etc/saiv/image_understanding/db/sm_segmenter/sm_segmenter_cnn.dlc
 vendor/etc/saiv/image_understanding/db/sm_segmenter/sm_segmenter_cnn.info
 vendor/etc/saiv/personal_1.0/PhotoParsing6_AWB_FACE_256_DSP_iter_300000_v2.4_q.dlc
 vendor/saiv/ainr/db/AINRNetVendor-timestamp
-vendor/saiv/ainr/db/GRAW_3DISP_AI_NR_V5_5_0_832X1072X3_e3033-2.4.3.3958-FP16-sm8550.dlc
+vendor/saiv/ainr/db/GRAW_3DISP_AI_NR_V5_5_4_832X1072X3_e3188-2.4.3-FP16-sm8550.dlc
 vendor/saiv/image_understanding/db/aig_classifier/aig_classifier_cnn.tf
 vendor/saiv/image_understanding/db/aig_detector/aig_detector_cnn.tflite
 vendor/saiv/image_understanding/db/hdr_verifier/hdr_verifier_cnn.dlc
@@ -1476,13 +1454,10 @@ vendor/saiv/image_understanding/db/slens_classifier/slens_classifier_cnn.dlc
 vendor/saiv/image_understanding/db/slens_detector/slens_detector_cnn.dlc
 vendor/saiv/image_understanding/db/smartscan_rectifier/deep_dewarp_cnn.onnx
 vendor/saiv/image_understanding/db/srr_interaction/srr_interaction_cnn.tflite
-vendor/saiv/mpi_model/009/B2BSFNet.caffemodel
 vendor/saiv/mpi_model/009/B2BSFNet.dlc
 vendor/saiv/mpi_model/009/B2BSFNet.prototxt
-vendor/saiv/mpi_model/1000/B2BSFNet.caffemodel
 vendor/saiv/mpi_model/1000/B2BSFNet.dlc
 vendor/saiv/mpi_model/1000/B2BSFNet.prototxt
-vendor/saiv/mpi_model/999/B2BSFNet.caffemodel
 vendor/saiv/mpi_model/999/B2BSFNet.dlc
 vendor/saiv/mpi_model/999/B2BSFNet.prototxt
 vendor/saiv/mpi_model/B2BSFNetVendor-timestamp
@@ -1592,17 +1567,14 @@ vendor/bin/tftp_server
 vendor/etc/init/vendor.qti.tftp.rc
 
 # Thermal engine
-vendor/bin/hw/vendor.samsung.hardware.hyper-service
 vendor/bin/hw/vendor.samsung.hardware.thermal@1.0-service
 vendor/bin/thermal-engine-v2
 vendor/etc/init/init_thermal-engine-v2.rc
 vendor/etc/init/vendor.samsung.hardware.thermal@1.0-service.rc
 vendor/etc/thermal-engine.conf
 vendor/etc/vintf/manifest/vendor.samsung.hardware.thermal@1.0-manifest.xml
-vendor/lib64/libhypervintf.so
 vendor/lib64/liblmthermallistner.so
 vendor/lib64/libthermalclient.so
-vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk.so
 vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
 
 # Time services
@@ -1638,15 +1610,6 @@ vendor/lib64/vendor.qti.hardware.trustedui@1.0.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.1.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.2.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
-
-# VPP
-vendor/lib64/libvpphcp.so
-vendor/lib64/libvpphvx.so
-vendor/lib64/libvppimmotion.so
-vendor/lib64/vendor.qti.hardware.vpp@1.1.so
-vendor/lib64/vendor.qti.hardware.vpp@1.2.so
-vendor/lib64/vendor.qti.hardware.vpp@1.3.so
-vendor/lib64/vendor.qti.hardware.vpp@2.0.so
 
 # VPU firmware
 vendor/firmware/vpu20_4v.mbn
