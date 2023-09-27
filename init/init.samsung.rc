@@ -71,6 +71,26 @@ on post-fs-data
 # Meta event
     chown system radio /sys/class/sensors/sensor_dev/flush
 
+# If AP debug_level is low, recovery mode for ALL peripheral will be endabled
+on post-fs-data && property:ro.boot.debug_level=0x4f4c
+   setprop persist.vendor.ssr.restart_level ALL_ENABLE
+    
+# Enable recovery mode for modem only (CP Ramdump OFF && dbg_level MID)
+on post-fs-data && property:ro.boot.cp_debug_level=0x55FF && property:ro.boot.debug_level=0x494d
+   setprop persist.vendor.ssr.restart_level mss
+
+# Enable recovery mode for modem only (CP Ramdump OFF && dbg_level HI)
+on post-fs-data && property:ro.boot.cp_debug_level=0x55FF && property:ro.boot.debug_level=0x4948
+   setprop persist.vendor.ssr.restart_level mss
+
+# Disable recovery mode for modem only (CP Ramdump ON && dbg_level MID)
+on post-fs-data && property:ro.boot.cp_debug_level=0x5500 && property:ro.boot.debug_level=0x494d
+   setprop persist.vendor.ssr.restart_level ALL_DISABLE
+
+# Disable recovery mode for modem only (CP Ramdump ON && dbg_level HI)
+on post-fs-data && property:ro.boot.cp_debug_level=0x5500 && property:ro.boot.debug_level=0x4948
+   setprop persist.vendor.ssr.restart_level ALL_DISABLE
+
 on early-boot
 
 on early-boot && property:ro.binary.type=factory
