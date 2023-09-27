@@ -64,7 +64,7 @@ on boot
 	chown system system /sys/class/dp_sec/dp_error_info
 
 	# DP monitor info
-	chmod 0440 /sys/class/dp_sec/monitor_info
+	chmod 0444 /sys/class/dp_sec/monitor_info
 	chown system system /sys/class/dp_sec/monitor_info
 
 on shutdown

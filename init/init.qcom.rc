@@ -228,6 +228,7 @@ on boot
     chown system system /sys/class/backlight/panel1-backlight/brightness
     chown system system /sys/class/backlight/panel1-backlight/max_brightness
 
+    # Allow access to sensors device attributes
     # SS_SLPI_PROJECT
     #chown system system /sys/class/sensors/MPU6050-accel/enable
     #chown system system /sys/class/sensors/MPU6050-accel/poll_delay
@@ -278,7 +279,7 @@ on post-fs-data
     # Create directory for apps access via QTEEConnector
     mkdir /data/vendor/qtee 0770 system system
 
-    #Create folder of camera
+    # Create folder of camera
     #mkdir /data/vendor/camera 0770 camera camera
 
     # SAMSUNG_CAMERA
@@ -487,7 +488,7 @@ on property:persist.sys.modem_auth_timeout=*
 on property:persist.sys.pil_proxy_timeout=*
     write /sys/module/peripheral_loader/parameters/proxy_timeout_ms ${persist.sys.pil_proxy_timeout}
 
-on property:persist.vendor.ssr.restart_level=*
+on property:persist.vendor.ssr.restart_level=* && property:vendor.spdaemon.spss.available=*
     start vendor.ssr_setup
 
 on property:persist.vendor.ssr.enable_ramdumps=1
@@ -632,16 +633,6 @@ service ptt_ffbm /system/vendor/bin/ptt_socket_app -f -d
     group root
     disabled
     oneshot
-
-service wifi_ftmd /system/vendor/bin/wifi_ftmd
-    user system
-    group system inet net_admin
-    socket wififtmd_server dgram 0660 system system
-    disabled
-    oneshot
-
-on property:vendor.wifi.ftmd.load=true
-    insmod /system/lib/modules/pronto/pronto_wlan.ko con_mode=5
 
 service cnss-daemon /system/vendor/bin/cnss-daemon -n -l
     class late_start
