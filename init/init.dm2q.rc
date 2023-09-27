@@ -122,7 +122,6 @@ on post-fs-data && property:ro.csc.sales_code=DSA
     mkdir /mnt/temp
     mount none /system/carrier/DSH /mnt/temp bind
     mount none /system/carrier/DSA /system/carrier bind
-    mount none /mnt/temp/priv-app/NetworkCompanion /system/carrier/priv-app/NetworkCompanion bind
     mount none /mnt/temp/priv-app/VisualVoicemailDsh_Stub /system/carrier/priv-app/VisualVoicemailDsh_Stub bind
     umount /mnt/temp
     rmdir /mnt/temp

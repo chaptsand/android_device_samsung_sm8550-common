@@ -521,5 +521,34 @@ on post-fs-data
 
 	chown system system /sys/class/lcd/panel1/night_dim
 	chmod 0660 /sys/class/lcd/panel1/night_dim
+	
+# vendor graphics trace points - perfetto-trace
+    chmod 0660 /sys/kernel/debug/tracing/events/drm/enable
+    chmod 0660 /sys/kernel/tracing/events/drm/enable
+    chmod 0660 /sys/kernel/debug/events/tracing/sde/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/enable
+
+    chmod 0660 /sys/kernel/debug/tracing/events/sde/sde_cmd_release_bw/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/sde_cmd_release_bw/enable
+    chmod 0660 /sys/kernel/debug/tracing/events/sde/sde_encoder_underrun/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/sde_encoder_underrun/enable
+    chmod 0660 /sys/kernel/debug/tracing/events/sde/sde_evtlog/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/sde_evtlog/enable
+    chmod 0660 /sys/kernel/debug/tracing/events/sde/sde_perf_calc_crtc/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/sde_perf_calc_crtc/enable
+    chmod 0660 /sys/kernel/debug/tracing/events/sde/sde_perf_crtc_update/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/sde_perf_crtc_update/enable
+    chmod 0660 /sys/kernel/debug/tracing/events/sde/sde_perf_set_ot/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/sde_perf_set_ot/enable
+    chmod 0660 /sys/kernel/debug/tracing/events/sde/sde_perf_set_qos_luts/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/sde_perf_set_qos_luts/enable
+    chmod 0660 /sys/kernel/debug/tracing/events/sde/sde_perf_uidle_cntr/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/sde_perf_uidle_cntr/enable
+    chmod 0660 /sys/kernel/debug/tracing/events/sde/sde_perf_uidle_status/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/sde_perf_uidle_status/enable
+    chmod 0660 /sys/kernel/debug/tracing/events/sde/sde_perf_update_bus/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/sde_perf_update_bus/enable
+    chmod 0660 /sys/kernel/debug/tracing/events/sde/tracing_mark_write/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/tracing_mark_write/enable	
 
 	setprop system.display_driver.ready true
