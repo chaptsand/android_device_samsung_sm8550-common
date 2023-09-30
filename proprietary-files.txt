@@ -847,9 +847,6 @@ vendor/etc/dax3_media_codecs_dolby_audio.xml
 vendor/etc/dolby/dax-default.xml
 vendor/etc/media_codecs_dolby_audio.xml
 
-# ESE
-vendor/lib64/vendor.qti.esepowermanager@1.0.so
-
 # EVA
 vendor/etc/eva/facedetection/model3.dat
 vendor/lib64/libcv_common.so
@@ -1087,6 +1084,7 @@ vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqtikeymaster4.so
 vendor/lib64/libspcom.so
+vendor/lib64/vendor.samsung.hardware.keymint-V2-ndk.so
 
 # Media
 system_ext/lib/libmmosal.so
@@ -1306,11 +1304,6 @@ vendor/lib64/libqrtr.so
 vendor/lib64/libqsocket.so
 vendor/lib64/libsmemlog.so
 vendor/lib64/libsystem_health_mon.so
-
-# QSPM
-vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
-vendor/etc/seccomp_policy/qspm.policy
-vendor/lib64/vendor.qti.qspmhal@1.0.so
 
 # RIL
 vendor/bin/hw/rild
@@ -1595,7 +1588,6 @@ vendor/lib64/libtrustedapploader.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.0.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.1.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.2.so
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # VPU firmware
 vendor/firmware/vpu20_4v.mbn
@@ -1653,11 +1645,6 @@ vendor/lib/libvideotxr.so
 vendor/lib/libvideoutils.so
 vendor/lib64/libvideotxr.so
 vendor/lib64/libvideoutils.so
-
-# Keyprovisionsing
-vendor/bin/hw/vendor.samsung.hardware.security.hdcp.keyprovisioning@1.0-service
-vendor/etc/init/vendor.samsung.hardware.security.hdcp.keyprovisioning@1.0-service.rc
-vendor/lib64/vendor.samsung.hardware.security.hdcp.keyprovisioning@1.0.so
 
 # Widevine DRM
 vendor/bin/hw/android.hardware.drm-service.widevine

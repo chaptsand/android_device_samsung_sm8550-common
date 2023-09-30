@@ -79,8 +79,9 @@ TARGET_SCREEN_DENSITY := 450
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
 
 # HIDL
-DEVICE_MANIFEST_FILE := \
-    $(DEVICE_PATH)/vintf/manifest_kalama.xml
+DEVICE_MANIFEST_FILE += \
+    $(DEVICE_PATH)/vintf/manifest_kalama.xml \
+    $(DEVICE_PATH)/vintf/manifest_samsung.xml
 
 DEVICE_MATRIX_FILE := \
     $(DEVICE_PATH)/vintf/compatibility_matrix.xml
@@ -184,6 +185,9 @@ BOARD_AVB_SYSTEM_DLKM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 BOARD_AVB_VENDOR_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 BOARD_AVB_VENDOR_DLKM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 BOARD_AVB_ODM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
+
+# Vibrator
+$(call soong_config_set,samsungVibratorVars,duration_amplitude,true)
 
 # WiFi
 BOARD_WLAN_DEVICE := qcwcn
