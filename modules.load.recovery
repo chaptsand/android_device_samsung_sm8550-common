@@ -389,14 +389,9 @@ mac80211.ko
 qrtr-smd.ko
 qrtr-mhi.ko
 qrtr-gunyah.ko
-tz_log_dlkm.ko
-hdcp_qseecom_dlkm.ko
 smcinvoke_dlkm.ko
 msm_drm.ko
 msm_ext_display.ko
 sync_fence.ko
 msm_hw_fence.ko
 msm-mmrm.ko
-tz_log_dlkm.ko
-hdcp_qseecom_dlkm.ko
-smcinvoke_dlkm.ko

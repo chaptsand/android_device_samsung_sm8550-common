@@ -122,3 +122,4 @@ sec_qc_debug.ko
 sec_qc_summary.ko
 sec_qc_dbg_partition.ko
 sec_qc_param.ko
+qrng_dlkm.ko
