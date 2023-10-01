@@ -83,6 +83,10 @@ TARGET_SCREEN_DENSITY := 450
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
 
 # HIDL
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(DEVICE_PATH)/vintf/device_framework_matrix.xml \
+    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml
+
 DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/vintf/manifest_kalama.xml \
     $(DEVICE_PATH)/vintf/manifest_samsung.xml
