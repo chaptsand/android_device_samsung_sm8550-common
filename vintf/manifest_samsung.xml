@@ -145,16 +145,6 @@
         </interface>
         <fqname>@1.0::ISehBluetoothA2dpSinkProvidersFactory/default</fqname>
     </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.ifaa</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISehIfaa</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISehIfaa/default</fqname>
-    </hal>
     <hal format="aidl">
         <name>vendor.samsung.hardware.keymint</name>
         <version>2</version>
@@ -236,15 +226,5 @@
         </interface>
         <fqname>ISehRadioSim/slot1</fqname>
         <fqname>ISehRadioSim/slot2</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.soter</name>
-        <transport>hwbinder</transport>
-        <version>3.0</version>
-        <interface>
-            <name>ISehSoter</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@3.0::ISehSoter/default</fqname>
     </hal>
 </manifest>

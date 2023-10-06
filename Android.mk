@@ -6,7 +6,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter dm2q,$(TARGET_DEVICE)),)
+ifneq ($(filter dm1q dm2q dm3q,$(TARGET_DEVICE)),)
 
 # A/B builds require us to create the mount points at compile time.
 # Just creating it for all cases since it does not hurt.
@@ -75,7 +75,7 @@ $(RFS_MSM_MPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /mnt/vendor/persist/rfs/msm/mpss $@/readwrite
 	$(hide) ln -sf /mnt/vendor/persist/rfs/shared $@/shared
 	$(hide) ln -sf /mnt/vendor/persist/hlos_rfs/shared $@/hlos
-	$(hide) ln -sf /vendor/firmware_mnt $@/readonly/firmware
+	$(hide) ln -sf /vendor/firmware-modem $@/readonly/firmware
 	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
 
 RFS_MSM_SLPI_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/msm/slpi/
@@ -87,7 +87,7 @@ $(RFS_MSM_SLPI_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /mnt/vendor/persist/rfs/msm/slpi $@/readwrite
 	$(hide) ln -sf /mnt/vendor/persist/rfs/shared $@/shared
 	$(hide) ln -sf /mnt/vendor/persist/hlos_rfs/shared $@/hlos
-	$(hide) ln -sf /vendor/firmware-modem $@/readonly/firmware
+	$(hide) ln -sf /vendor/firmware_mnt $@/readonly/firmware
 	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
 
 RFS_MSM_WPSS_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/msm/wpss/
@@ -102,20 +102,11 @@ $(RFS_MSM_WPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /vendor/firmware_mnt $@/readonly/firmware
 	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
 
-WIFI_FIRMWARE_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/
-$(WIFI_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating WiFi firmware symlinks: $@"
-	@mkdir -p $@/wlan/qca_cld/qca6490
-	$(hide) ln -sf /data/vendor/firmware/wlanmdsp.mbn $@/wlanmdsp.otaupdate
-	$(hide) ln -sf /mnt/vendor/persist/qca6490/wlan_mac.bin $@/wlan/qca_cld/qca6490/wlan_mac.bin
-	$(hide) ln -sf /vendor/etc/wifi/qca6490/WCNSS_qcom_cfg.ini $@/wlan/qca_cld/qca6490/WCNSS_qcom_cfg.ini
-
 ALL_DEFAULT_INSTALLED_MODULES += \
     $(RFS_MSM_ADSP_SYMLINKS) \
     $(RFS_MSM_CDSP_SYMLINKS) \
     $(RFS_MSM_MPSS_SYMLINKS) \
     $(RFS_MSM_SLPI_SYMLINKS) \
-    $(RFS_MSM_WPSS_SYMLINKS) \
-    $(WIFI_FIRMWARE_SYMLINKS)
+    $(RFS_MSM_WPSS_SYMLINKS)
 
 endif

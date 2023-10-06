@@ -6,8 +6,7 @@
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-
-DEVICE_PATH := device/samsung/dm2q
+COMMON_PATH := device/samsung/sm8550-common
 
 # A/B
 AB_OTA_UPDATER := true
@@ -76,23 +75,20 @@ TARGET_BOOTLOADER_BOARD_NAME := kalama
 # DTB
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 
-# Display
-TARGET_SCREEN_DENSITY := 450
-
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(DEVICE_PATH)/vintf/device_framework_matrix.xml \
+    $(COMMON_PATH)/vintf/device_framework_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml
 
-DEVICE_MANIFEST_FILE += \
-    $(DEVICE_PATH)/vintf/manifest_kalama.xml \
-    $(DEVICE_PATH)/vintf/manifest_samsung.xml
+DEVICE_MANIFEST_FILE := \
+    $(COMMON_PATH)/vintf/manifest_kalama.xml \
+    $(COMMON_PATH)/vintf/manifest_samsung.xml
 
 DEVICE_MATRIX_FILE := \
-    $(DEVICE_PATH)/vintf/compatibility_matrix.xml
+    $(COMMON_PATH)/vintf/compatibility_matrix.xml
 
 # Init Boot
 BOARD_INIT_BOOT_HEADER_VERSION := 4
@@ -146,15 +142,9 @@ TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := kalama
 
-# Properties
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
-TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
-TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
-TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
-
 # Recovery
 BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
@@ -211,4 +201,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Include the proprietary files BoardConfig.
-include vendor/samsung/dm2q/BoardConfigVendor.mk
+include vendor/samsung/sm8550-common/BoardConfigVendor.mk

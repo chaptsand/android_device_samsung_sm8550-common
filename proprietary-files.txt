@@ -252,7 +252,6 @@ vendor/etc/init/android.hardware.camera.provider@2.7-external-service.rc
 vendor/etc/init/camera.unihal.rc
 vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc
 vendor/etc/permissions/vendor.android.hardware.camera.preview-dis.back.xml
-vendor/etc/permissions/vendor.android.hardware.camera.preview-dis.back.xml
 vendor/etc/str/str_preference_data.dat
 vendor/etc/vintf/manifest/vendor.qti.camera.aon-impl-1.3.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.postproc-impl.xml
@@ -322,7 +321,6 @@ vendor/lib/libsocial_image_enhancement.uniplugin@1.0.so
 vendor/lib/libswregistrationalgo.so
 vendor/lib/libsynx.so
 vendor/lib/libthreadutils.so
-vendor/lib/libtriplecam_image_optical_zoom.so
 vendor/lib/libuniplugin.so
 vendor/lib/libvdis_core.so
 vendor/lib/libvideobeauty.arcsoft.so
@@ -338,14 +336,10 @@ vendor/lib64/camera/com.samsung.sensor.s5k3k1.so
 vendor/lib64/camera/com.samsung.sensor.s5k3lu.so
 vendor/lib64/camera/com.samsung.sensor.s5kgn3.so
 vendor/lib64/camera/com.samsung.sensor.s5khp2.so
-vendor/lib64/camera/com.samsung.sensormodule.0_lsi_s5kgn3.bin
 vendor/lib64/camera/com.samsung.sensormodule.12_lsi_s5k3lu_full.bin
 vendor/lib64/camera/com.samsung.sensormodule.1_lsi_s5k3lu.bin
 vendor/lib64/camera/com.samsung.sensormodule.2_sony_imx564.bin
-vendor/lib64/camera/com.samsung.sensormodule.3_lsi_s5k3k1.bin
-vendor/lib64/camera/com.samsung.tuned.lsi_s5k3k1.bin
 vendor/lib64/camera/com.samsung.tuned.lsi_s5k3lu.bin
-vendor/lib64/camera/com.samsung.tuned.lsi_s5kgn3.bin
 vendor/lib64/camera/com.samsung.tuned.sony_imx564.bin
 vendor/lib64/camera/components/com.qti.eisv2.so
 vendor/lib64/camera/components/com.qti.eisv3.so
@@ -419,7 +413,6 @@ vendor/lib64/camera/components/com.ss.stats.af.so
 vendor/lib64/camera/components/com.ss.stats.awb.so
 vendor/lib64/camera/components/com.ss.stats.pdlib.so
 vendor/lib64/camera/components/libTsAeFront_dm3.so
-vendor/lib64/camera/components/libTsAe_dm2.so
 vendor/lib64/camera/components/libdepthmapwrapper_secure.so
 vendor/lib64/camera/f_dual_calibration.bin
 vendor/lib64/camera/fdconfigpreview.bin
@@ -598,7 +591,6 @@ vendor/lib64/libtensorflowlite.camera.samsung.so
 vendor/lib64/libtensorflowlite_gpu.camera.samsung.so
 vendor/lib64/libtfestriping.so
 vendor/lib64/libthreadutils.so
-vendor/lib64/libtriplecam_image_optical_zoom.so
 vendor/lib64/libubifocus.so
 vendor/lib64/libuniplugin.so
 vendor/lib64/libvdis_core.so
@@ -827,10 +819,6 @@ vendor/lib64/libtestutils.so
 vendor/lib64/libtinyxml2_1.so
 vendor/lib64/libvmfilexfer.so
 
-# Display calibration data
-vendor/etc/display/qdcm_calib_data_DM2_S6E3FAC_AMB655AY01.json
-vendor/firmware/DM2_S6E3FAC_AMB655AY01.dat
-
 # DPM
 system_ext/etc/init/tcmd.rc
 system_ext/etc/seccomp_policy/tcmd.policy
@@ -1049,12 +1037,6 @@ vendor/etc/hyper/config_model.json
 vendor/etc/hyper/config_vendor.json
 vendor/lib64/libhypervintf.so
 vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk.so
-
-# IFAA
-vendor/bin/hw/vendor.samsung.hardware.ifaa@1.0-service
-vendor/etc/init/vendor.samsung.hardware.ifaa@1.0-service.rc
-vendor/lib64/libIfaaCa.so
-vendor/lib64/vendor.samsung.hardware.ifaa@1.0.so
 
 # IMS
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
@@ -1389,68 +1371,6 @@ vendor/bin/ssr_diag
 vendor/bin/ssr_setup
 vendor/bin/subsystem_ramdump
 
-# Saiv
-vendor/etc/saiv/aisolution_1.0/BrightModel-timestamp
-vendor/etc/saiv/aisolution_1.0/CIGSOL_face-hair-seg-v22.06_384_20221106_HTP_FP16.dlc
-vendor/etc/saiv/aisolution_1.0/CIGSOL_lowlight_v9_tunable_HTP_FP16.dlc
-vendor/etc/saiv/aisolution_1.0/CIGSOL_model0915_face_1024_HTP_FP16.dlc
-vendor/etc/saiv/aisolution_1.0/CIGSOL_redrawing_with_quality_v11_HTP_A16W8_cached.dlc
-vendor/etc/saiv/aisolution_1.0/CIGSOL_srcb_face_hair_det_v35_device_lowversion_HTP_FP16.dlc
-vendor/etc/saiv/frc/db/qfrc/qfrc.dlc
-vendor/etc/saiv/gae/MeanFea.bin
-vendor/etc/saiv/gae/ParaFea.bin
-vendor/etc/saiv/gae/PmAgeFeatSelIdx.bin
-vendor/etc/saiv/gae/PmAgeModel.bin
-vendor/etc/saiv/gae/PmExpFeatSelIdx.bin
-vendor/etc/saiv/gae/PmExpModel.bin
-vendor/etc/saiv/gae/PmGenModel.bin
-vendor/etc/saiv/gae/PmGenderFeatSelIdx.bin
-vendor/etc/saiv/image_understanding/db/SS_segmenter/SS_segmenter_cnn.dlc
-vendor/etc/saiv/image_understanding/db/SS_segmenter/SS_segmenter_cnn.info
-vendor/etc/saiv/image_understanding/db/af_segmenter/af_segmenter_cnn.dlc
-vendor/etc/saiv/image_understanding/db/af_segmenter/af_segmenter_cnn.info
-vendor/etc/saiv/image_understanding/db/aic_classifier/aic_classifier_cnn.dlc
-vendor/etc/saiv/image_understanding/db/aic_classifier/aic_classifier_cnn.info
-vendor/etc/saiv/image_understanding/db/aic_detector/aic_detector_cnn.dlc
-vendor/etc/saiv/image_understanding/db/aic_detector/aic_detector_cnn.info
-vendor/etc/saiv/image_understanding/db/aic_g_o_detector/aic_g_o_detector_cnn.dlc
-vendor/etc/saiv/image_understanding/db/aic_g_o_detector/aic_g_o_detector_cnn.info
-vendor/etc/saiv/image_understanding/db/aic_g_o_detector/aic_g_o_detector_cnn_system.dlc
-vendor/etc/saiv/image_understanding/db/aic_l_o_detector/aic_l_o_detector_cnn.dlc
-vendor/etc/saiv/image_understanding/db/aic_l_o_detector/aic_l_o_detector_cnn.info
-vendor/etc/saiv/image_understanding/db/awb_segmenter/awb_segmenter_cnn.dlc
-vendor/etc/saiv/image_understanding/db/awb_segmenter/awb_segmenter_cnn.info
-vendor/etc/saiv/image_understanding/db/sm_segmenter/sm_segmenter_cnn.dlc
-vendor/etc/saiv/image_understanding/db/sm_segmenter/sm_segmenter_cnn.info
-vendor/etc/saiv/personal_1.0/PhotoParsing6_AWB_FACE_256_DSP_iter_300000_v2.4_q.dlc
-vendor/saiv/ainr/db/AINRNetVendor-timestamp
-vendor/saiv/ainr/db/GRAW_3DISP_AI_NR_V5_5_4_832X1072X3_e3188-2.4.3-FP16-sm8550.dlc
-vendor/saiv/image_understanding/db/aig_classifier/aig_classifier_cnn.tf
-vendor/saiv/image_understanding/db/aig_detector/aig_detector_cnn.tflite
-vendor/saiv/image_understanding/db/hdr_verifier/hdr_verifier_cnn.dlc
-vendor/saiv/image_understanding/db/hdr_verifier/hdr_verifier_cnn.info
-vendor/saiv/image_understanding/db/moon_verifier/moon_verifier_cnn.info
-vendor/saiv/image_understanding/db/moon_verifier/moon_verifier_cnn.onnx
-vendor/saiv/image_understanding/db/sce_detector/sce_detector_cnn.tflite
-vendor/saiv/image_understanding/db/slens_classifier/slens_classifier_cnn.dlc
-vendor/saiv/image_understanding/db/slens_detector/slens_detector_cnn.dlc
-vendor/saiv/image_understanding/db/smartscan_rectifier/deep_dewarp_cnn.onnx
-vendor/saiv/image_understanding/db/srr_interaction/srr_interaction_cnn.tflite
-vendor/saiv/mpi_model/009/B2BSFNet.dlc
-vendor/saiv/mpi_model/009/B2BSFNet.prototxt
-vendor/saiv/mpi_model/1000/B2BSFNet.dlc
-vendor/saiv/mpi_model/1000/B2BSFNet.prototxt
-vendor/saiv/mpi_model/999/B2BSFNet.dlc
-vendor/saiv/mpi_model/999/B2BSFNet.prototxt
-vendor/saiv/mpi_model/B2BSFNetVendor-timestamp
-vendor/saiv/sr_engine_model/All_mnetv2_mini_p256x256_b16_00834_20210809.tflite
-vendor/saiv/sr_engine_model/nima_crop_pair_v0.0.2_mobilenetv2.tflite
-vendor/saiv/swisp_1.0/db/SWISPNetVendor-timestamp
-vendor/saiv/swisp_1.0/db/denoise_model_e214_832X1088X4_v9_4_IS_C3P123_v8_2ref_2_DS_allLosses.dlc
-vendor/saiv/swisp_1.0/db/denoise_model_e3000_832X1088X4_v10.0_S22Realgfjdndm_l115ssim35dists25lpips25.dlc
-vendor/saiv/swisp_1.0/db/denoise_model_e3000_832X1088X4_v9.4_C3P3S22Real_l113ssim35dists25lpips25.dlc
-vendor/saiv/swisp_1.0/db/denoise_model_e3100_832X1088X4_v9.5_TL_S22RealFrontgfrefisp_l115ssim35dists25lpips25.dlc
-
 # Sensors
 vendor/bin/factory.ssc
 vendor/bin/init.qcom.sensors.sh
@@ -1473,6 +1393,7 @@ vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libsnsutils.so
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
+vendor/lib64/sensors.flicker.so
 vendor/lib64/sensors.grip.so
 vendor/lib64/sensors.ssc.so
 
@@ -1494,7 +1415,6 @@ vendor/etc/sensors/config/kailua_irq.json
 vendor/etc/sensors/config/kailua_lps22hh_0.json
 vendor/etc/sensors/config/kailua_lsm6dso_0_0.json
 vendor/etc/sensors/config/kailua_lsm6dso_0_1.json
-vendor/etc/sensors/config/kailua_lsm6dso_0_2.json
 vendor/etc/sensors/config/kailua_power_0.json
 vendor/etc/sensors/config/kailua_qsh_ble_0.json
 vendor/etc/sensors/config/kailua_stk3a9x_0.json
@@ -1521,28 +1441,6 @@ vendor/etc/sensors/config/sns_tilt_sw_enabled.json
 vendor/etc/sensors/config/sns_transport_ppe.json
 vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
-
-# Singletake
-vendor/etc/singletake/aifilter/filter.polarr.db
-vendor/etc/singletake/aifilter/render.polarr.db
-vendor/etc/singletake/aifilter/scene.polarr.db
-vendor/etc/singletake/bestmoment/facedetV2.polarr.db
-vendor/etc/singletake/bestmoment/facedetV3.polarr.db
-vendor/etc/singletake/bestmoment/scoreV2.polarr.db
-vendor/etc/singletake/blur_detection/BlurDetectionModel_20210527.tflite
-vendor/etc/singletake/dynamic_viewing/DynamicViewingModel.tflite
-vendor/etc/singletake/dynamic_viewing/DynamicViewingModelHumanDetection.tflite
-vendor/etc/singletake/dynamic_viewing/FaceEngine_model/FERDetModel.dat
-vendor/etc/singletake/dynamic_viewing/FaceEngine_model/FERTrackModel.dat
-vendor/etc/singletake/dynamic_viewing/HighlightModel.tflite
-vendor/etc/singletake/jumpshot/ActionShotPose.dlc
-vendor/etc/singletake/jumpshot/ActionShotPosture.dlc
-
-# Soter
-vendor/bin/hw/vendor.samsung.hardware.soter@3.0-service
-vendor/etc/init/vendor.samsung.hardware.soter@3.0-service.rc
-vendor/lib64/libSoterServiceImpl.so
-vendor/lib64/vendor.samsung.hardware.soter@3.0.so
 
 # TFTP
 vendor/bin/tftp_server
@@ -1603,42 +1501,13 @@ vendor/firmware/vpu33_4v_unsigned.mbn
 # Vendor Firmware
 vendor/firmware/Data.msc
 vendor/firmware/bt_nvm_loading.xml
-vendor/firmware/bt_nvm_loading_2nd.xml
 vendor/firmware/hmtbtfw20.tlv
 vendor/firmware/hmtnv20.bin
-vendor/firmware/hpbtfw21.tlv
-vendor/firmware/hpnv21.b9a
-vendor/firmware/hpnv21.b9b
-vendor/firmware/hpnv21.baa
-vendor/firmware/hpnv21.bin
-vendor/firmware/hpnv21g.b9a
-vendor/firmware/hpnv21g.b9b
-vendor/firmware/hpnv21g.baa
-vendor/firmware/hpnv21g.bin
 vendor/firmware/mfc/mfc_fw_flash.bin
 vendor/firmware/mfc/mfc_fw_flash_cps4038.bin
-vendor/firmware/mfc/mfc_fw_flash_s2miw04.bin
 vendor/firmware/panel_data_main
 vendor/firmware/panel_data_sub
-vendor/firmware/qca6490/amss20.bin
-vendor/firmware/qca6490/bdwlan.elf
-vendor/firmware/qca6490/bdwlan.elf1
-vendor/firmware/qca6490/bdwlan.elf10
-vendor/firmware/qca6490/bdwlan.elf2
-vendor/firmware/qca6490/bdwlang.elf
-vendor/firmware/qca6490/bdwlang.elf.nxp
-vendor/firmware/qca6490/bdwlang.elf1
-vendor/firmware/qca6490/bdwlang.elf1.nxp
-vendor/firmware/qca6490/bdwlang.elf10
-vendor/firmware/qca6490/bdwlang.elf10.nxp
-vendor/firmware/qca6490/bdwlang.elf2
-vendor/firmware/qca6490/bdwlang.elf2.nxp
-vendor/firmware/qca6490/m3.bin
-vendor/firmware/qca6490/regdb.bin
 vendor/firmware/ss_dsi_panel_PBA_BOOTING_FHD.dat
-vendor/firmware/tsp_stm/fts2ba61y_dm2q.bin
-vendor/firmware/uwb/libsr200t_dev_fw.bin
-vendor/firmware/uwb/libsr200t_prod_fw.so
 vendor/firmware/wlan-connection-roaming-backup.ini
 vendor/firmware/wlan-connection-roaming.ini
 
@@ -1662,5 +1531,4 @@ vendor/bin/cnss-daemon
 vendor/bin/pktlogconf
 vendor/etc/wifi/indoorchannel.info
 vendor/etc/wifi/p2p_supplicant_overlay.conf
-vendor/etc/wifi/qca6490/WCNSS_qcom_cfg.ini
 vendor/etc/wifi/wpa_supplicant_overlay.conf

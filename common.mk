@@ -226,7 +226,6 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
-    init.dm2q.rc \
     init.samsung.bsp.rc \
     init.samsung.connector.rc \
     init.samsung.display.rc \
@@ -294,7 +293,6 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
     FrameworksResCommon \
-    FrameworksResDm2q \
     FrameworksResTarget \
     SystemUIResCommon \
     TelecommResCommon \
@@ -424,4 +422,4 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
 
 # Inherit from the proprietary files makefile.
-$(call inherit-product, vendor/samsung/dm2q/dm2q-vendor.mk)
+$(call inherit-product, vendor/samsung/sm8550-common/sm8550-common-vendor.mk)
