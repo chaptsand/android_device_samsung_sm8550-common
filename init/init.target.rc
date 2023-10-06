@@ -63,7 +63,8 @@
 import /vendor/etc/init/hw/init.qti.kernel.rc
 
 import /vendor/etc/init/hw/init.samsung.rc
-import /vendor/etc/init/hw/init.dm2q.rc
+import /vendor/etc/init/hw/init.${ro.product.vendor.device}.rc
+import /vendor/etc/init/hw/init.${ro.product.vendor.name}.rc
 
 on early-init
     write /proc/sys/kernel/printk_devkmsg ratelimited

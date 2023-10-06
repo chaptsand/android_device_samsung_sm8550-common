@@ -10,13 +10,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.dm2q.rc",
-    src: "init.dm2q.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.qcom.rc",
     src: "init.qcom.rc",
     sub_dir: "init/hw",

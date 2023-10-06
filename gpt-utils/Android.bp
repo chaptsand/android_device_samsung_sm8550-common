@@ -23,7 +23,7 @@ ufsbsg_cc_defaults {
 }
 
 cc_library {
-    name: "libgptutils.dm2q",
+    name: "libgptutils.samsung_sm8550",
     vendor: true,
     recovery_available: true,
     defaults: ["ufsbsg_defaults"],

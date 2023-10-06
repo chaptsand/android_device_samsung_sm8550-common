@@ -6,8 +6,7 @@
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-
-DEVICE_PATH := device/samsung/dm2q
+COMMON_PATH := device/samsung/sm8550-common
 
 # A/B
 AB_OTA_UPDATER := true
@@ -75,25 +74,21 @@ TARGET_BOOTLOADER_BOARD_NAME := kalama
 
 # DTB
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-BOARD_KERNEL_SEPARATED_DTBO := true
-
-# Display
-TARGET_SCREEN_DENSITY := 450
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(DEVICE_PATH)/vintf/device_framework_matrix.xml \
+    $(COMMON_PATH)/vintf/device_framework_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml
 
-DEVICE_MANIFEST_FILE += \
-    $(DEVICE_PATH)/vintf/manifest_kalama.xml \
-    $(DEVICE_PATH)/vintf/manifest_samsung.xml
+DEVICE_MANIFEST_FILE := \
+    $(COMMON_PATH)/vintf/manifest_kalama.xml \
+    $(COMMON_PATH)/vintf/manifest_samsung.xml
 
 DEVICE_MATRIX_FILE := \
-    $(DEVICE_PATH)/vintf/compatibility_matrix.xml
+    $(COMMON_PATH)/vintf/compatibility_matrix.xml
 
 # Init Boot
 BOARD_INIT_BOOT_HEADER_VERSION := 4
@@ -106,43 +101,10 @@ BOARD_BOOTCONFIG := \
     androidboot.usbcontroller=a600000.dwc3
 
 BOARD_KERNEL_CMDLINE := \
-    printk.devkmsg=on \
-    firmware_class.path=/vendor/firmware_mnt/image \
     video=vfb:640x400,bpp=32,memsize=3072000
 
-BOARD_BOOTCONFIG += androidboot.selinux=permissive
-
 BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
-
-KERNEL_LTO := none
-
-TARGET_FORCE_PREBUILT_KERNEL := true
-TARGET_KERNEL_SOURCE := kernel/samsung/sm8550
-TARGET_KERNEL_CONFIG := \
-    gki_defconfig \
-    vendor/kalama_GKI.config
-
-# Prebuilt kernel
-TARGET_KERNEL_DIR := $(DEVICE_PATH)-kernel
-KERNEL_MODULE_DIR := $(TARGET_KERNEL_DIR)/modules
-BOARD_PREBUILT_DTBIMAGE_DIR := $(TARGET_KERNEL_DIR)
-BOARD_PREBUILT_DTBOIMAGE := $(TARGET_KERNEL_DIR)/dtbo.img
-TARGET_PREBUILT_KERNEL := $(TARGET_KERNEL_DIR)/kernel
-
-# Kernel modules
-KERNEL_MODULES := $(wildcard $(KERNEL_MODULE_DIR)/*.ko)
-BOARD_VENDOR_KERNEL_MODULES := $(addprefix $(KERNEL_MODULE_DIR)/, $(notdir $(BOARD_VENDOR_KERNEL_MODULES_LOAD)))
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(addprefix $(KERNEL_MODULE_DIR)/, $(notdir $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)))
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_ARCHIVE := $(KERNEL_MODULE_DIR)/vendor_ramdisk_include.zip
-BOARD_SYSTEM_KERNEL_MODULES := $(strip $(shell cat $(DEVICE_PATH)/modules.include.system_dlkm))
-BOARD_SYSTEM_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load.system_dlkm))
-BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/modules.blocklist
-BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE)
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load.vendor_boot))
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load.recovery))
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -180,15 +142,9 @@ TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := kalama
 
-# Properties
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
-TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
-TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
-TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
-
 # Recovery
 BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
@@ -245,4 +201,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Include the proprietary files BoardConfig.
-include vendor/samsung/dm2q/BoardConfigVendor.mk
+include vendor/samsung/sm8550-common/BoardConfigVendor.mk
