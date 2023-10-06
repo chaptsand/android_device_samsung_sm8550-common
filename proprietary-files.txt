@@ -1,9 +1,5 @@
 # All unpinned blobs are extracted from S9160ZHU2AWH1
 
-# ACDB
-vendor/etc/audconf/OPEN/acdb_cal.acdb
-vendor/etc/audconf/OPEN/workspaceFileXml.qwsp
-
 # ADSP
 vendor/bin/adsprpcd
 vendor/bin/loadalgo
@@ -153,7 +149,6 @@ vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
 -vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
 
 # Audio configs
-vendor/etc/audio/sku_kalama/mixer_paths.xml
 vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp.xml
 vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp_wsa883x.xml
 vendor/etc/audio/sku_kalama/mixer_paths_kalama_grd.xml
@@ -329,139 +324,26 @@ vendor/lib/libvideobeauty_interface.so
 vendor/lib/unihal_uniplugin@1.0.so
 vendor/lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 vendor/lib/vendor.qti.hardware.camera.postproc@1.0.so
-vendor/lib64/camera/com.samsung.ois.mcu_stm32g.so
 vendor/lib64/camera/com.samsung.sensor.imx564.so
 vendor/lib64/camera/com.samsung.sensor.imx754.so
 vendor/lib64/camera/com.samsung.sensor.s5k3k1.so
 vendor/lib64/camera/com.samsung.sensor.s5k3lu.so
 vendor/lib64/camera/com.samsung.sensor.s5kgn3.so
 vendor/lib64/camera/com.samsung.sensor.s5khp2.so
-vendor/lib64/camera/com.samsung.sensormodule.12_lsi_s5k3lu_full.bin
-vendor/lib64/camera/com.samsung.sensormodule.1_lsi_s5k3lu.bin
-vendor/lib64/camera/com.samsung.sensormodule.2_sony_imx564.bin
 vendor/lib64/camera/com.samsung.tuned.lsi_s5k3lu.bin
 vendor/lib64/camera/com.samsung.tuned.sony_imx564.bin
-vendor/lib64/camera/components/com.qti.eisv2.so
-vendor/lib64/camera/components/com.qti.eisv3.so
-vendor/lib64/camera/components/com.qti.hvx.addconstant.so
-vendor/lib64/camera/components/com.qti.hvx.binning.so
-vendor/lib64/camera/components/com.qti.node.afbfusion.so
-vendor/lib64/camera/components/com.qti.node.aon.so
-vendor/lib64/camera/components/com.qti.node.customhwnode.so
-vendor/lib64/camera/components/com.qti.node.depth.so
-vendor/lib64/camera/components/com.qti.node.depthprovider.so
-vendor/lib64/camera/components/com.qti.node.dewarp.so
-vendor/lib64/camera/components/com.qti.node.dummydepth.so
-vendor/lib64/camera/components/com.qti.node.dummyrtb.so
-vendor/lib64/camera/components/com.qti.node.dummysat.so
-vendor/lib64/camera/components/com.qti.node.eisv2.so
-vendor/lib64/camera/components/com.qti.node.eisv3.so
-vendor/lib64/camera/components/com.qti.node.fcv.so
-vendor/lib64/camera/components/com.qti.node.formatconversion.so
-vendor/lib64/camera/components/com.qti.node.gme.so
-vendor/lib64/camera/components/com.qti.node.gpu.so
-vendor/lib64/camera/components/com.qti.node.gyrornn.so
-vendor/lib64/camera/components/com.qti.node.hdr10pgen.so
-vendor/lib64/camera/components/com.qti.node.hdr10phist.so
-vendor/lib64/camera/components/com.qti.node.memcpy.so
-vendor/lib64/camera/components/com.qti.node.ml.so
-vendor/lib64/camera/components/com.qti.node.muxer.so
-vendor/lib64/camera/components/com.qti.node.remosaic.so
-vendor/lib64/camera/components/com.qti.node.seg.so
-vendor/lib64/camera/components/com.qti.node.stich.so
-vendor/lib64/camera/components/com.qti.node.swaidenoiser.so
-vendor/lib64/camera/components/com.qti.node.swbestats.so
-vendor/lib64/camera/components/com.qti.node.swcac.so
-vendor/lib64/camera/components/com.qti.node.swec.so
-vendor/lib64/camera/components/com.qti.node.swfusion.so
-vendor/lib64/camera/components/com.qti.node.swhme.so
-vendor/lib64/camera/components/com.qti.node.swlsc.so
-vendor/lib64/camera/components/com.qti.node.swmctf.so
-vendor/lib64/camera/components/com.qti.node.swpdpc.so
-vendor/lib64/camera/components/com.qti.node.swpreprocess.so
-vendor/lib64/camera/components/com.qti.node.swregistration.so
-vendor/lib64/camera/components/com.qti.node.swvrt.so
-vendor/lib64/camera/components/com.qti.stats.aecxcore.so
-vendor/lib64/camera/components/com.qti.stats.af.so
-vendor/lib64/camera/components/com.qti.stats.afd.so
-vendor/lib64/camera/components/com.qti.stats.afwrapper.so
-vendor/lib64/camera/components/com.qti.stats.asd.so
-vendor/lib64/camera/components/com.qti.stats.awb.so
-vendor/lib64/camera/components/com.qti.stats.awbwrapper.so
-vendor/lib64/camera/components/com.qti.stats.cnndriver.so
-vendor/lib64/camera/components/com.qti.stats.haf.so
-vendor/lib64/camera/components/com.qti.stats.hafoverride.so
-vendor/lib64/camera/components/com.qti.stats.localhistogram.so
-vendor/lib64/camera/components/com.qti.stats.pdlib.so
-vendor/lib64/camera/components/com.qti.stats.pdlibsony.so
-vendor/lib64/camera/components/com.qti.stats.pdlibwrapper.so
-vendor/lib64/camera/components/com.qti.stats.statsgenerator.so
-vendor/lib64/camera/components/com.qti.stats.tracker.so
-vendor/lib64/camera/components/com.qtistatic.stats.af.so
-vendor/lib64/camera/components/com.qtistatic.stats.awb.so
-vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so
-vendor/lib64/camera/components/com.samsung.node.capture_fusion.so
-vendor/lib64/camera/components/com.samsung.node.realtimebokeh.so
-vendor/lib64/camera/components/com.samsung.node.resolution.so
-vendor/lib64/camera/components/com.samsung.node.smooth_transition.so
-vendor/lib64/camera/components/com.samsung.node.uniplugin_capture.so
-vendor/lib64/camera/components/com.samsung.node.uniplugin_preview.so
-vendor/lib64/camera/components/com.samsung.node.uniplugin_recording.so
-vendor/lib64/camera/components/com.samsung.node.uniplugin_vdis.so
-vendor/lib64/camera/components/com.ss.stats.aec.so
-vendor/lib64/camera/components/com.ss.stats.af.so
-vendor/lib64/camera/components/com.ss.stats.awb.so
-vendor/lib64/camera/components/com.ss.stats.pdlib.so
-vendor/lib64/camera/components/libTsAeFront_dm3.so
-vendor/lib64/camera/components/libdepthmapwrapper_secure.so
 vendor/lib64/camera/f_dual_calibration.bin
 vendor/lib64/camera/fdconfigpreview.bin
 vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigsecure.bin
 vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
-vendor/lib64/camera/t_t10_dual_calibration.bin
-vendor/lib64/camera/uw_dual_calibration.bin
-vendor/lib64/camera/w_dual_calibration.bin
-vendor/lib64/com.qti.camx.chiiqutils.so
 vendor/lib64/com.qti.chiusecaseselector.so
-vendor/lib64/com.qti.feature2.afbrckt.so
-vendor/lib64/com.qti.feature2.anchorsync.so
-vendor/lib64/com.qti.feature2.demux.so
-vendor/lib64/com.qti.feature2.derivedoffline.so
-vendor/lib64/com.qti.feature2.frameselect.so
-vendor/lib64/com.qti.feature2.fusion.so
-vendor/lib64/com.qti.feature2.generic.so
-vendor/lib64/com.qti.feature2.gs.sm8550.so
-vendor/lib64/com.qti.feature2.hdr.so
-vendor/lib64/com.qti.feature2.mcreprocrt.so
-vendor/lib64/com.qti.feature2.memcpy.so
-vendor/lib64/com.qti.feature2.mfsr.so
-vendor/lib64/com.qti.feature2.ml.so
-vendor/lib64/com.qti.feature2.mux.so
-vendor/lib64/com.qti.feature2.qcfa.so
-vendor/lib64/com.qti.feature2.rawhdr.so
-vendor/lib64/com.qti.feature2.realtimeserializer.so
-vendor/lib64/com.qti.feature2.rt.so
-vendor/lib64/com.qti.feature2.rtmcx.so
-vendor/lib64/com.qti.feature2.serializer.so
-vendor/lib64/com.qti.feature2.statsregeneration.so
-vendor/lib64/com.qti.feature2.stub.so
-vendor/lib64/com.qti.feature2.swmf.so
 vendor/lib64/com.qti.qseeaon.so
 vendor/lib64/com.qti.qseeutils.so
 vendor/lib64/com.qti.settings.sm8550.so
 vendor/lib64/com.qti.stats.common.so
-vendor/lib64/com.qualcomm.mcx.distortionmapper.so
-vendor/lib64/com.qualcomm.mcx.linearmapper.so
-vendor/lib64/com.qualcomm.mcx.nonlinearmapper.so
-vendor/lib64/com.qualcomm.mcx.policy.mfl.so
-vendor/lib64/com.qualcomm.mcx.policy.xr.so
-vendor/lib64/com.qualcomm.qti.mcx.usecase.extension.so
-vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/camera.unihal.default.so
-vendor/lib64/hw/com.qti.chi.offline.so
-vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/libAFSegmenter_v1.camera.samsung.so
 vendor/lib64/libAIMFISP.camera.samsung.so
 vendor/lib64/libAIMFISP_core.camera.samsung.so
@@ -504,24 +386,16 @@ vendor/lib64/libaidenoiserv2.so
 vendor/lib64/libbeautyshot.arcsoft.so
 vendor/lib64/libbitmlengine.so
 vendor/lib64/libbitmlenginev2.so
-vendor/lib64/libcamerapostproc.so
-vendor/lib64/libcamxcommonutils.so
-vendor/lib64/libcamxexternalformatutils.so
 vendor/lib64/libcamxfacialfeatures.so
 vendor/lib64/libcamxfdalgo.so
 vendor/lib64/libcamxfdengine.so
 vendor/lib64/libcamxhwnodecontext.so
 vendor/lib64/libcamxifestriping.so
-vendor/lib64/libcamximageformatutils.so
 vendor/lib64/libcamxqsatalgo.so
-vendor/lib64/libcamxsettingsmanager.so
 vendor/lib64/libcamxstatscore.so
-vendor/lib64/libcamxswispiqmodule.so
 vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
-vendor/lib64/libchifeature2.so
 vendor/lib64/libchilog.so
-vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libcommonchiutils.so
 vendor/lib64/libdualcam_refocus_image.so
 vendor/lib64/libdualcam_refocus_video.so
@@ -636,7 +510,6 @@ vendor/firmware/CAMERA_ICP.elf
 vendor/firmware/CAMERA_ICP.mbn
 vendor/firmware/CAMERA_ICP.mdt
 vendor/firmware/CAMERA_ICP_170.elf
-vendor/firmware/ois_mcu_stm32g_fw.bin
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -833,7 +706,6 @@ vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # Dolby
 vendor/etc/dax3_media_codecs_dolby_audio.xml
-vendor/etc/dolby/dax-default.xml
 vendor/etc/media_codecs_dolby_audio.xml
 
 # EVA
@@ -1162,7 +1034,6 @@ vendor/lib64/snap/libQnnSystem.so
 
 # NFC
 vendor/etc/libnfc-nxp.conf
-vendor/etc/nfc/libnfc-nxp_RF.conf
 
 # NFC firmware
 vendor/firmware/nfc/libsn220u_fw.so
@@ -1371,7 +1242,6 @@ vendor/bin/ssr_setup
 vendor/bin/subsystem_ramdump
 
 # Sensors
-vendor/bin/factory.ssc
 vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
@@ -1392,17 +1262,10 @@ vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libsnsutils.so
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
-vendor/lib64/sensors.flicker.so
-vendor/lib64/sensors.grip.so
-vendor/lib64/sensors.ssc.so
 
 # Sensors config
 vendor/etc/sensors/config/akmlib.json
 vendor/etc/sensors/config/kailua_ak991x_0.json
-vendor/etc/sensors/config/kailua_ak991x_1.json
-vendor/etc/sensors/config/kailua_ak991x_2.json
-vendor/etc/sensors/config/kailua_ak991x_3.json
-vendor/etc/sensors/config/kailua_ak991x_8.json
 vendor/etc/sensors/config/kailua_default_sensors.json
 vendor/etc/sensors/config/kailua_dynamic_sensors_template.json
 vendor/etc/sensors/config/kailua_hdk_ak991x_0.json
@@ -1413,10 +1276,8 @@ vendor/etc/sensors/config/kailua_hhg_lsm6dsv_0.json
 vendor/etc/sensors/config/kailua_irq.json
 vendor/etc/sensors/config/kailua_lps22hh_0.json
 vendor/etc/sensors/config/kailua_lsm6dso_0_0.json
-vendor/etc/sensors/config/kailua_lsm6dso_0_1.json
 vendor/etc/sensors/config/kailua_power_0.json
 vendor/etc/sensors/config/kailua_qsh_ble_0.json
-vendor/etc/sensors/config/kailua_stk3a9x_0.json
 vendor/etc/sensors/config/lsm6dso_0.json
 vendor/etc/sensors/config/qsh_ble.json
 vendor/etc/sensors/config/sns_amd.json
@@ -1498,8 +1359,6 @@ vendor/firmware/vpu33_4v.mbn
 vendor/firmware/vpu33_4v_unsigned.mbn
 
 # Vendor Firmware
-vendor/firmware/Data.msc
-vendor/firmware/bt_nvm_loading.xml
 vendor/firmware/hmtbtfw20.tlv
 vendor/firmware/hmtnv20.bin
 vendor/firmware/mfc/mfc_fw_flash.bin
