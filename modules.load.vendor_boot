@@ -102,6 +102,7 @@ pmic_class.ko
 s2dos05-regulator.ko
 mfd_s2mpb02.ko
 s2mpb02-regulator.ko
+s2mpb03.ko
 secure_buffer.ko
 smem.ko
 socinfo.ko

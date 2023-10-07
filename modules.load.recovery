@@ -102,6 +102,7 @@ pmic_class.ko
 s2dos05-regulator.ko
 mfd_s2mpb02.ko
 s2mpb02-regulator.ko
+s2mpb03.ko
 secure_buffer.ko
 smem.ko
 socinfo.ko
@@ -346,11 +347,13 @@ sec-direct-charger.ko
 sec_pd.ko
 sec-battery.ko
 snvm.ko
+wez02.ko
 pdic_max77705.ko
 uwb.ko
 sec_thermistor.ko
+cps4038_charger.ko
 isg6320.ko
-s2miw04_charger.ko
+stmvl53l8.ko
 stm_ts_spi.ko
 slimbus.ko
 slim-qcom-ngd-ctrl.ko
@@ -389,6 +392,7 @@ mac80211.ko
 qrtr-smd.ko
 qrtr-mhi.ko
 qrtr-gunyah.ko
+hdcp_qseecom_dlkm.ko
 smcinvoke_dlkm.ko
 msm_drm.ko
 msm_ext_display.ko
