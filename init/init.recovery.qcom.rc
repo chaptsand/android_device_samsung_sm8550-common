@@ -26,6 +26,14 @@
 #
 
 on init
+    # unlink /efs > /mnt/vendor/efs
+    rm /efs
+    mkdir /efs
+    mkdir /sec_efs
+
+    #to cut charging battery path
+    write /sys/class/power_supply/battery/siop_level 0
+
     write /sys/class/backlight/panel0-backlight/brightness 200
     setprop sys.usb.configfs 1
 
