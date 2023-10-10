@@ -143,6 +143,9 @@ ENABLE_VENDOR_RIL_SERVICE := true
 BOOT_SECURITY_PATCH := 2023-08-05
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
+# SEPolicy
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
