@@ -202,6 +202,7 @@ ro.vendor.sec.radio.def_network=9
 ro.vendor.use_data_netmgrd=false
 
 # Sensor
+persist.vendor.sensors.debug.hal=0
 vendor.dynamic_sensor.setup.timeout.ms=2000
 
 # SoC
