@@ -64,6 +64,9 @@ function blob_fixup() {
             grep -q "android.hardware.security.rkp-V3-ndk.so" "${2}" || ${PATCHELF} --add-needed "android.hardware.security.rkp-V3-ndk.so" "${2}"
             ${PATCHELF} --replace-needed libcrypto.so libcrypto-v33.so "${2}"
             ;;
+        vendor/lib64/hw/gatekeeper.mdfpp.so)
+            ${PATCHELF} --replace-needed libcrypto.so libcrypto-v33.so "${2}"
+            ;;
         vendor/etc/vintf/manifest/sec_c2_manifest_default0_1_0.xml)
             sed -i 's/default0/software/g' "${2}"
             ;;
