@@ -1,9 +1,6 @@
 # CNE
 persist.vendor.cne.feature=1
 
-# Charger
-ro.charger.enable_suspend=1
-
 # DPM
 persist.vendor.dpm.feature=11
 
