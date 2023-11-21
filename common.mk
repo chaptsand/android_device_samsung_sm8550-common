@@ -440,6 +440,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.mbms.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.mbms.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml
 
+PRODUCT_PACKAGES += \
+    PhhIms \
+    PhhImsOverlay
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-phhims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-phhims.xml
+
 # Thermal
 PRODUCT_PACKAGES += \
     android.frameworks.cameraservice.service@2.2.vendor \
