@@ -263,6 +263,10 @@ PRODUCT_SOONG_NAMESPACES += \
     kernel/samsung/sm8550 \
     kernel/samsung/sm8550-modules
 
+# Memtrack
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.memtrack-service
+
 # Net
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
