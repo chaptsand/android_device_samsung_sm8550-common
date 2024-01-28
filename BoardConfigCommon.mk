@@ -49,8 +49,10 @@ BOARD_RAMDISK_USE_LZ4 := true
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := kalama
 
-# DTB
+# DTB / DTBO
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
+TARGET_NEEDS_DTBOIMAGE := true
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
@@ -75,13 +77,20 @@ BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
+    androidboot.selinux=permissive \
     androidboot.usbcontroller=a600000.dwc3
 
 BOARD_KERNEL_CMDLINE := \
+    printk.devkmsg=on \
+    firmware_class.path=/vendor/firmware_mnt/image \
     video=vfb:640x400,bpp=32,memsize=3072000
 
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
+
+TARGET_KERNEL_SOURCE := kernel/samsung/sm8550
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -129,6 +138,10 @@ TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/system_ext.prop
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 
 # Recovery
+BOARD_HAS_DOWNLOAD_MODE := true
+BOARD_INCLUDE_RECOVERY_DTBO := true
+BOARD_RECOVERY_MKBOOTIMG_ARGS := --header_version 2
+BOARD_USES_FULL_RECOVERY_IMAGE := true
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_EXT4 := true
