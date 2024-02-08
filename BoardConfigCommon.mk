@@ -66,8 +66,7 @@ DEVICE_MANIFEST_FILE := \
     $(COMMON_PATH)/vintf/manifest_kalama.xml \
     $(COMMON_PATH)/vintf/manifest_samsung.xml
 
-DEVICE_MATRIX_FILE := \
-    $(COMMON_PATH)/vintf/compatibility_matrix.xml
+DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
 # Init Boot
 BOARD_INIT_BOOT_HEADER_VERSION := 4
