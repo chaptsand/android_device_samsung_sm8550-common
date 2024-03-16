@@ -1,0 +1,234 @@
+<!--
+    Input:
+        vendor.samsung.hardware.radio.exclude.qcom.xml
+        vendor.samsung.hardware.radio_manifest_2_33.xml
+        vendor.samsung.hardware.sehradio_manifest_2_33.xml
+-->
+<manifest version="1.0" type="device">
+    <!-- << QCOM HAL RELATED RIL -->
+    <hal override="true" format="hidl">
+        <name>vendor.qti.hardware.radio.am</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <hal override="true" format="hidl">
+        <name>vendor.qti.hardware.radio.ims</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <hal override="true" format="hidl">
+        <name>vendor.qti.hardware.radio.qcrilhook</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <hal override="true" format="hidl">
+        <name>vendor.qti.hardware.radio.uim_remote_client</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <hal override="true" format="hidl">
+        <name>vendor.qti.hardware.radio.uim_remote_server</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <hal override="true" format="hidl">
+        <name>vendor.qti.hardware.radio.lpa</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <hal override="true" format="hidl">
+        <name>vendor.qti.hardware.radio.uim</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <hal override="true" format="hidl">
+        <name>vendor.qti.hardware.radio.qtiradio</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <hal override="true" format="hidl">
+        <name>vendor.qti.hardware.radio.internal.deviceinfo</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <hal override="true" format="hidl">
+        <name>vendor.qti.hardware.embmssl</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <!-- >> QCOM HAL RELATED RIL -->
+
+    <!-- << QCOM HAL RELATED IMS -->
+    <hal override="true" format="hidl">
+        <name>vendor.qti.imsrtpservice</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <hal override="true" format="hidl">
+        <name>vendor.qti.ims.callinfo</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <hal override="true" format="hidl">
+        <name>com.qualcomm.qti.imscmservice</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <hal override="true" format="hidl">
+        <name>com.qualcomm.qti.uceservice</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <!-- >> QCOM HAL RELATED IMS -->
+
+    <!-- << QCOM HAL RELATED DATA -->
+    <hal override="true" format="hidl">
+        <name>com.qualcomm.qti.dpm.api</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <hal override="true" format="hidl">
+        <name>vendor.qti.hardware.data.latency</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <hal override="true" format="hidl">
+        <name>vendor.qti.data.factory</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <hal override="true" format="hidl">
+        <name>vendor.qti.hardware.data.connection</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <hal override="true" format="hidl">
+        <name>vendor.qti.hardware.mwqemadapter</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <hal override="true" format="hidl">
+        <name>vendor.qti.hardware.dpmservice</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <!-- >> QCOM HAL RELATED DATA -->
+
+    <hal override="true" format="hidl">
+        <name>android.hardware.radio.deprecated</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <hal override="true" format="hidl">
+        <name>android.hardware.radio</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <hal override="true" format="hidl">
+        <name>android.hardware.radio</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.2::ISap/slot1</fqname>
+        <fqname>@1.2::ISap/slot2</fqname>
+    </hal>
+    <hal override="true" format="hidl">
+        <name>android.hardware.radio.config</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <hal override="true" format="aidl">
+        <name>android.hardware.radio.modem</name>
+        <version>1</version>
+        <interface>
+            <name>IRadioModem</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal override="true" format="aidl">
+        <name>android.hardware.radio.network</name>
+        <version>1</version>
+        <interface>
+            <name>IRadioNetwork</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal override="true" format="aidl">
+        <name>android.hardware.radio.voice</name>
+        <version>1</version>
+        <interface>
+            <name>IRadioVoice</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal override="true" format="aidl">
+        <name>android.hardware.radio.config</name>
+        <version>1</version>
+        <interface>
+            <name>IRadioConfig</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal override="true" format="aidl">
+        <name>android.hardware.radio.sim</name>
+        <version>1</version>
+        <interface>
+            <name>IRadioSim</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal override="true" format="aidl">
+        <name>android.hardware.radio.data</name>
+        <version>1</version>
+        <interface>
+            <name>IRadioData</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal override="true" format="aidl">
+        <name>android.hardware.radio.messaging</name>
+        <version>1</version>
+        <interface>
+            <name>IRadioMessaging</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.radio.network</name>
+        <version>1</version>
+        <interface>
+            <name>ISehRadioNetwork</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.radio.channel</name>
+        <version>1</version>
+        <interface>
+            <name>ISehRadioChannel</name>
+            <instance>imsd</instance>
+            <instance>imsd2</instance>
+            <instance>epdgd</instance>
+            <instance>epdgd2</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.radio.bridge</name>
+        <version>1</version>
+        <interface>
+            <name>ISehRadioBridge</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.radio.data</name>
+        <version>1</version>
+        <interface>
+            <name>ISehRadioData</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.radio.sim</name>
+        <version>1</version>
+        <interface>
+            <name>ISehRadioSim</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.radio.messaging</name>
+        <version>1</version>
+        <interface>
+            <name>ISehRadioMessaging</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+</manifest>
