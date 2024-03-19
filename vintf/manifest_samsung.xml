@@ -23,20 +23,6 @@
         </interface>
         <fqname>@4.0::IKeymasterDevice/strongbox</fqname>
     </hal>
-    <hal format="aidl" override="true">
-        <name>android.hardware.security.keymint</name>
-        <version>2</version>
-        <interface>
-            <name>IKeyMintDevice</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>IRemotelyProvisionedComponent</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>IKeyMintDevice/default</fqname>
-        <fqname>IRemotelyProvisionedComponent/default</fqname>
-    </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.bluetooth</name>
         <transport>hwbinder</transport>
