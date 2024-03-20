@@ -126,7 +126,7 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" 
 			  setprop persist.vendor.usb.config adb
 		      ;;
 	              "sm6150" | "trinket" | "lito" | "atoll" | "bengal" | "lahaina" | "holi" | "taro" | "parrot" | "ravelin" | "kalama" | "crow")
-			  setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,qdss,adb
+			  setprop persist.vendor.usb.config diag,adb
 		      ;;
 	              *)
 		          setprop persist.vendor.usb.config diag,adb
