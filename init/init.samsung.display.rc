@@ -285,6 +285,13 @@ on post-fs-data
 	chown system system /sys/class/lcd/panel1/hw_cursor
 	chmod 0660 /sys/class/lcd/panel1/hw_cursor
 
+# DSC CRC
+	chown system system /sys/class/lcd/panel/dsc_crc
+	chmod 0660 /sys/class/lcd/panel/dsc_crc
+
+	chown system system /sys/class/lcd/panel1/dsc_crc
+	chmod 0660 /sys/class/lcd/panel1/dsc_crc
+
 # Gram Checksum Test
 	chown system system /sys/class/lcd/panel/gct
 	chmod 0660 /sys/class/lcd/panel/gct
@@ -411,8 +418,14 @@ on post-fs-data
 	chown system system /sys/class/lcd/panel/self_mask
 	chmod 0660 /sys/class/lcd/panel/self_mask
 
+	chown system system /sys/class/lcd/panel/self_mask_udc
+	chmod 0660 /sys/class/lcd/panel/self_mask_udc
+
 	chown system system /sys/class/lcd/panel1/self_mask
 	chmod 0660 /sys/class/lcd/panel1/self_mask
+
+	chown system system /sys/class/lcd/panel1/self_mask_udc
+	chmod 0660 /sys/class/lcd/panel1/self_mask_udc
 
 	chown system system /sys/class/lcd/panel/self_mask_check
 	chmod 0660 /sys/class/lcd/panel/self_mask_check
@@ -479,6 +492,13 @@ on post-fs-data
 	chown system system /sys/class/lcd/panel1/dia
 	chmod 0660 /sys/class/lcd/panel1/dia
 
+# Finger Print Green Circle
+	chown system system /sys/class/lcd/panel/fp_green_circle
+	chmod 0660 /sys/class/lcd/panel/fp_green_circle
+
+	chown system system /sys/class/lcd/panel1/fp_green_circle
+	chmod 0660 /sys/class/lcd/panel1/fp_green_circle
+
 # dynamic_freq
 	chown system system /sys/class/lcd/panel/dynamic_freq
 	chmod 0660 /sys/class/lcd/panel/dynamic_freq
@@ -511,6 +531,10 @@ on post-fs-data
 	chown system system /sys/class/lcd/panel/ioctl_power_ctrl
 	chmod 0440 /sys/class/lcd/panel/ioctl_power_ctrl
 
+# Vlin1 test
+	chown system system /sys/class/lcd/panel/vlin1_test
+	chmod 0660 /sys/class/lcd/panel/vlin1_test
+
 # debug information for dumpstate
 	chown system system /dev/sec_display_debug
 	chmod 0660 /dev/sec_display_debug
@@ -521,7 +545,21 @@ on post-fs-data
 
 	chown system system /sys/class/lcd/panel1/night_dim
 	chmod 0660 /sys/class/lcd/panel1/night_dim
-	
+
+# factory pretest
+	chown system system /sys/class/lcd/panel/fac_pretest
+	chmod 0660 /sys/class/lcd/panel/fac_pretest
+
+	chown system system /sys/class/lcd/panel1/fac_pretest
+	chmod 0660 /sys/class/lcd/panel1/fac_pretest
+
+# tcon pre_emphasis
+	chown system system /sys/class/lcd/panel/tcon_pe
+	chmod 0660 /sys/class/lcd/panel/tcon_pe
+
+	chown system system /sys/class/lcd/panel1/tcon_pe
+	chmod 0660 /sys/class/lcd/panel1/tcon_pe
+
 # vendor graphics trace points - perfetto-trace
     chmod 0660 /sys/kernel/debug/tracing/events/drm/enable
     chmod 0660 /sys/kernel/tracing/events/drm/enable
@@ -549,6 +587,4 @@ on post-fs-data
     chmod 0660 /sys/kernel/debug/tracing/events/sde/sde_perf_update_bus/enable
     chmod 0660 /sys/kernel/tracing/events/sde/sde_perf_update_bus/enable
     chmod 0660 /sys/kernel/debug/tracing/events/sde/tracing_mark_write/enable
-    chmod 0660 /sys/kernel/tracing/events/sde/tracing_mark_write/enable	
-
-	setprop system.display_driver.ready true
+    chmod 0660 /sys/kernel/tracing/events/sde/tracing_mark_write/enable

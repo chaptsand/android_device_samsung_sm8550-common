@@ -1,5 +1,4 @@
-
-# Copyright (c) 2019-2022, The Linux Foundation. All rights reserved.
+# Copyright (c) 2019-2023, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -39,6 +38,14 @@ on init
     symlink /dev/block/bootdevice/by-name/param /dev/block/param
 
 on late-init
+
+on post-fs
+
+on late-fs
+
+on post-fs-data
+
+on boot
     # sec_qc_user_reset.ko
     chown system system /proc/auto_comment
     chmod 0400 /proc/auto_comment
@@ -58,6 +65,8 @@ on late-init
     chmod 0440 /proc/store_lastkmsg
     chown system system /sys/class/sec/sec_debug/recovery_cause
     chmod 0660 /sys/class/sec/sec_debug/recovery_cause
+    chown system system /sys/class/sec/sec_debug/FMM_lock
+    chmod 0660 /sys/class/sec/sec_debug/FMM_lock
 
     # sec_qc_hw_param.ko
     chown system system /proc/extra
@@ -87,19 +96,8 @@ on late-init
     chown system system /proc/rdx_bootdev
     chmod 0220 /proc/rdx_bootdev
 
-on post-fs
-
-on late-fs
-
-on post-fs-data
-
-on boot
     # PCIe
     chown radio system /sys/class/sec/pcie-wifi/pcie_l1ss_ctrl
-
-    # Permissions for FMM
-    chown system system /sys/class/sec/sec_debug/FMM_lock
-    chmod 0660 /sys/class/sec/sec_debug/FMM_lock
 
     # sec_reloc_gpio.ko - factory mode only
     chown root system /sys/class/sec/gpio/check_requested_gpio
