@@ -1,0 +1,36 @@
+on late-init
+# PVDD enable
+    write /sys/class/nfc_sec/pvdd "1"
+
+on post-fs-data
+    write /sys/class/nfc_sec/pvdd "2"
+# NFC KEY
+    mkdir /data/vendor/nfc 0770 nfc nfc
+
+# NFC driver permission
+    chmod 0660 /dev/p3
+    chown system system /dev/p3
+    chmod 0660 /dev/p61
+    chown system system /dev/p61
+    chmod 0660 /dev/st54spi
+    chown system system /dev/st54spi
+
+on boot
+    write /sys/class/nfc_sec/pvdd "3"
+# NFC driver permission
+    chmod 0660 /dev/sec-nfc
+    chown nfc nfc /dev/sec-nfc
+    chmod 0660 /dev/p3
+    chown system system /dev/p3
+    chmod 0660 /dev/pn547
+    chown nfc nfc /dev/pn547
+    chmod 0660 /dev/p61
+    chown system system /dev/p61
+    chmod 0660 /dev/st21nfc
+    chown nfc nfc /dev/st21nfc
+    chmod 0660 /dev/st54spi
+    chown system system /dev/st54spi
+
+# For NFC hardware SKU
+on boot && property:ro.boot.nfc.feature.chipname=*
+    setprop ro.vendor.nfc.feature.chipname ${ro.boot.nfc.feature.chipname}
