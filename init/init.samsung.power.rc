@@ -73,6 +73,14 @@ on boot
     chown radio system /sys/class/sec/ap_pmic/gpio_dump
     chmod 664 /sys/class/sec/ap_pmic/gpio_dump
 
+# Permissions for IAFT
+    chown radio system /sys/power/iaft/enable_code
+    chown radio system /sys/power/iaft/enable_tid
+    chown radio system /sys/power/iaft/sleep_time
+    chmod 664 /sys/power/iaft/enable_code
+    chmod 664 /sys/power/iaft/enable_tid
+    chmod 664 /sys/power/iaft/sleep_time
+
     # Display PMIC
     chown system system /sys/class/sec/disp_pmic/enable_fd
     chmod 664 /sys/class/sec/disp_pmic/enable_fd
