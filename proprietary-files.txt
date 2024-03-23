@@ -1203,7 +1203,14 @@ vendor/lib64/qti.video.utils.videobufferlayout.so
 -vendor/lib64/libvmmem.so
 
 # NFC
+vendor/bin/hw/nxp.android.hardware.nfc@1.2-service
+vendor/etc/init/nxp.android.hardware.nfc@1.2-service.rc
+vendor/etc/libese-nxp.conf
 vendor/etc/libnfc-nxp.conf
+vendor/etc/vintf/manifest/nxp.android.hardware.nfc@1.2-service.xml
+vendor/lib64/ese_spi_nxp.so
+vendor/lib64/nfc_nci_nxpsn.so
+vendor/lib64/vendor.samsung.hardware.nfc@2.0.so
 
 # NFC firmware
 vendor/firmware/nfc/libsn220u_fw.so
@@ -1391,6 +1398,7 @@ vendor/lib64/libengmode_client.so
 vendor/lib64/libqdpr.so
 vendor/lib64/libril_sem.so
 vendor/lib64/libsec-ril.so
+vendor/lib64/libsec_semRil.so
 vendor/lib64/libsecril-client.so
 vendor/lib64/libvkmanager_vendor.so
 vendor/lib64/vendor.qti.hardware.data.connectionfactory-V1-ndk.so
@@ -1432,6 +1440,10 @@ vendor/lib64/libqcbor.so
 vendor/bin/ssr_diag
 vendor/bin/ssr_setup
 vendor/bin/subsystem_ramdump
+
+# Secure element
+vendor/bin/hw/android.hardware.secure_element@1.2-service
+vendor/etc/init/android.hardware.secure_element@1.2-service.rc
 
 # Sensors
 vendor/bin/init.qcom.sensors.sh
