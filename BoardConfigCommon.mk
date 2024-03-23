@@ -197,7 +197,7 @@ BOARD_AVB_VENDOR_DLKM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 BOARD_AVB_ODM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 
 # Vibrator
-$(call soong_config_set,samsungVibratorVars,duration_amplitude,true)
+#$(call soong_config_set,samsungVibratorVars,duration_amplitude,true)
 
 # WiFi
 BOARD_WLAN_DEVICE := qcwcn
