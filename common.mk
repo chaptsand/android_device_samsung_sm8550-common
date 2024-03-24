@@ -213,7 +213,9 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
+    fstab.ramplus \
     init.nfc.samsung.rc \
+    init.ramplus.rc \
     init.samsung.bsp.rc \
     init.samsung.connector.rc \
     init.samsung.display.rc \
