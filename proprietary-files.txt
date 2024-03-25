@@ -598,7 +598,6 @@ vendor/lib64/libsamsungcamerahalutils.so
 vendor/lib64/libsamsungcamerahwl_impl.so
 vendor/lib64/libscaler_hw.unifunc.so
 vendor/lib64/libscenedetector.uniplugin@1.0.so
-vendor/lib64/libsec2imageformatfilter.so
 vendor/lib64/libsecfr_engine.so
 vendor/lib64/libsecfr_model.so
 vendor/lib64/libsegmentationeffect.uniplugin@1.0.so
@@ -1142,7 +1141,6 @@ vendor/lib/libqcodec2_platform.so
 vendor/lib/libqcodec2_utils.so
 vendor/lib/libqcodec2_v4l2codec.so
 vendor/lib/qti.video.utils.videobufferlayout.so
-vendor/lib64/libheifcapture.so
 vendor/lib64/libmmosal_vendor.so
 vendor/lib64/libqc2colorconvertfilter.so
 vendor/lib64/libqc2filter.so
@@ -1158,11 +1156,45 @@ vendor/lib64/libqcodec2_mockqc2filter.so
 vendor/lib64/libqcodec2_platform.so
 vendor/lib64/libqcodec2_utils.so
 vendor/lib64/libqcodec2_v4l2codec.so
+vendor/lib64/qti.video.utils.videobufferlayout.so
+
+# Media (Codec2_sec)
+vendor/bin/hw/samsung.software.media.c2@1.0-service
+vendor/etc/init/samsung.software.media.c2@1.0-service.rc
+vendor/etc/seccomp_policy/samsung.software.media.c2-base-policy
+vendor/etc/vintf/manifest/sec_c2_manifest_default0_1_0.xml
+vendor/lib64/libSecC2ComponentStore.so
+vendor/lib64/libcodec2_sec_aacdec.so
+vendor/lib64/libcodec2_sec_aacenc.so
+vendor/lib64/libcodec2_sec_amrnbdec.so
+vendor/lib64/libcodec2_sec_amrwbdec.so
+vendor/lib64/libcodec2_sec_apedec.so
+vendor/lib64/libcodec2_sec_flacdec.so
+vendor/lib64/libcodec2_sec_imadec.so
+vendor/lib64/libcodec2_sec_mp3dec.so
+vendor/lib64/libcodec2_sec_mp4vdec.so
+vendor/lib64/libcodec2_sec_soft_common.so
+vendor/lib64/libcodec2_sec_vc1dec.so
+vendor/lib64/libcodec2_simple_component.so
+vendor/lib64/libcodec2_soft_ac4dec.so
+vendor/lib64/libcodec2_soft_common.so
+vendor/lib64/libcodec2_soft_eac3dec.so
+vendor/lib64/libcodec2_vndk.so
+vendor/lib64/libdeccfg.so
+vendor/lib64/libheifcapture.so
+vendor/lib64/libsaped.so
+vendor/lib64/libsavsac.so
 vendor/lib64/libsavscmn.so
 vendor/lib64/libsavsvc.so
+vendor/lib64/libsec2imageformatfilter.so
+vendor/lib64/libsfplugin_ccodec_utils.so
 vendor/lib64/libsimba.media.samsung.so
+vendor/lib64/libsnaace.so
+vendor/lib64/libsnamrnb.so
+vendor/lib64/libsnamrwb.so
+vendor/lib64/libsomxcmn.so
+vendor/lib64/libstagefright_flacdec.so
 vendor/lib64/libstagefright_foundation_vendor.so
-vendor/lib64/qti.video.utils.videobufferlayout.so
 
 # Memory
 -vendor/lib/libvmmem.so

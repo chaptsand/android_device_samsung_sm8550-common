@@ -243,10 +243,10 @@ PRODUCT_COPY_FILES += \
 
 # Media
 PRODUCT_PACKAGES += \
+    android.hardware.media.c2@1.2.vendor \
     libavservices_minijail \
     libavservices_minijail.vendor \
     libcodec2_hidl@1.2.vendor \
-    libcodec2_vndk.vendor \
     libpalclient
 
 PRODUCT_COPY_FILES += \
