@@ -62,6 +62,7 @@ function blob_fixup() {
     case "${1}" in
         vendor/bin/hw/android.hardware.security.keymint-service)
             grep -q "android.hardware.security.rkp-V3-ndk.so" "${2}" || ${PATCHELF} --add-needed "android.hardware.security.rkp-V3-ndk.so" "${2}"
+            ${PATCHELF} --replace-needed libcrypto.so libcrypto-v33.so "${2}"
             ;;
         vendor/etc/vintf/manifest/sec_c2_manifest_default0_1_0.xml)
             sed -i 's/default0/software/g' "${2}"
