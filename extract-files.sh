@@ -67,6 +67,10 @@ function blob_fixup() {
         vendor/lib64/hw/gatekeeper.mdfpp.so)
             ${PATCHELF} --replace-needed libcrypto.so libcrypto-v33.so "${2}"
             ;;
+        vendor/lib64/libsec-ril.so)
+            xxd -p -c0 "${2}" | sed "s/600e40f9e10315aa820c8052e30314aa/600e40f9e10315aa820c8052030080d2/g" | xxd -r -p > "${2}".patched
+            mv "${2}".patched "${2}"
+            ;;
         vendor/etc/vintf/manifest/sec_c2_manifest_default0_1_0.xml)
             sed -i 's/default0/software/g' "${2}"
             ;;
