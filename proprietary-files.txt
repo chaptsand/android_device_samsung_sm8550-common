@@ -1370,12 +1370,14 @@ vendor/lib64/vendor.qti.qspmhal@1.0.so
 
 # RIL
 vendor/bin/hw/rild
+vendor/bin/cass
 vendor/bin/ipacm-diag
 vendor/bin/ks
 vendor/bin/mdm_helper
 vendor/bin/mdm_helper_proxy
 vendor/bin/qms
 vendor/bin/secril_config_svc
+vendor/etc/init/cass.rc
 vendor/etc/init/ipacm-diag.rc
 vendor/etc/init/qms.rc
 vendor/etc/locale/plmn_delta_eng.bin
@@ -1566,6 +1568,12 @@ vendor/firmware/vpu30_4v_16mb_unsigned.mbn
 vendor/firmware/vpu30_4v_unsigned.mbn
 vendor/firmware/vpu33_4v.mbn
 vendor/firmware/vpu33_4v_unsigned.mbn
+
+# VaultKeeper
+vendor/bin/vaultkeeperd
+vendor/etc/init/vaultkeeper_common.rc
+vendor/lib64/libstork_shared.so
+vendor/lib64/libvkservice.so
 
 # Vendor Firmware
 vendor/firmware/mfc/mfc_fw_flash.bin
