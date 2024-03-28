@@ -1,4 +1,4 @@
-# All unpinned blobs are extracted from S9160ZHS2BXAF
+# All unpinned blobs are extracted from S9160ZHU2CXCF
 
 # ADSP
 vendor/bin/adsprpcd
@@ -330,6 +330,10 @@ vendor/etc/init/android.hardware.camera.provider@2.7-external-service.rc
 vendor/etc/init/camera.unihal.rc
 vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc
 vendor/etc/permissions/vendor.android.hardware.camera.preview-dis.back.xml
+vendor/etc/portrait_data/LF_segmenter/LF_segmenter_cnn.dlc
+vendor/etc/portrait_data/LF_segmenter/LF_segmenter_cnn.info
+vendor/etc/portrait_data/SRIB_HumanSegVideo_INT8_V102_sm8550_snpe2213_vendor.dlc
+vendor/etc/portrait_data/single_bokeh_feature_vendor.json
 vendor/etc/portrait_data/single_portrait_feature_unihal.json
 vendor/etc/str/str_preference_data.dat
 vendor/etc/vintf/manifest/vendor.qti.camera.aon-impl-1.3.xml
@@ -570,6 +574,7 @@ vendor/lib64/liblivefocus_preview_interface.so
 vendor/lib64/liblocaltm_capture.uniplugin@1.0.so
 vendor/lib64/libmaskdetection.uniplugin@1.0.so
 vendor/lib64/libmcaimegpu.samsung.so
+vendor/lib64/libmcaimegpuSSM.samsung.so
 vendor/lib64/libmctfengine_stub.so
 vendor/lib64/libmeminfo.so
 vendor/lib64/libmfGhostDetection.so
@@ -591,13 +596,14 @@ vendor/lib64/libpadm.so
 vendor/lib64/libpantilt_detector.uniplugin@1.0.so
 vendor/lib64/libpersonalimprinting.uniplugin@1.0.so
 vendor/lib64/libpet_detector.uniplugin@1.0.so
+vendor/lib64/libpetcamera_engine.so
 vendor/lib64/libqll.so
 vendor/lib64/libqll10.so
 vendor/lib64/libqllengine.so
 vendor/lib64/libqsegnet.so
 vendor/lib64/libqshcamera.so
-vendor/lib64/librapidscorer.so
-vendor/lib64/librmengine.uniplugin@1.0.so
+vendor/lib64/librapidscorerplus.so
+vendor/lib64/librmengine_plus.uniplugin@1.0.so
 vendor/lib64/libsamsungcamerahal.so
 vendor/lib64/libsamsungcamerahalutils.so
 vendor/lib64/libsamsungcamerahwl_impl.so
@@ -721,6 +727,7 @@ vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/bin/hw/vendor.samsung.hardware.security.drk@2.0-service
 vendor/etc/init/vendor.samsung.hardware.security.drk@2.0-service.rc
 vendor/lib64/libdk_vnd_service_core.so
+vendor/lib64/vendor.samsung.hardware.security.drk-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.security.drk@2.0.so
 
 # DSP
@@ -1043,6 +1050,7 @@ vendor/lib64/vendor.samsung.hardware.health-V1-ndk.so
 # Hermes
 vendor/bin/hermesd
 vendor/etc/init/hermesd.rc
+vendor/etc/secnvm/k250a_00000301_c.img
 vendor/etc/secnvm/k250a_00000306.img
 vendor/lib/libhermes.so
 vendor/lib64/libese-grdg.so
@@ -1337,8 +1345,6 @@ vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_csvt_srvc.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmi_legacy.so
-vendor/lib64/libqmiservices-ext.so
-vendor/lib64/libqmiservices-sem-ext.so
 vendor/lib64/libqmiservices.so
 vendor/lib64/libqrtr.so
 vendor/lib64/libqsocket.so
