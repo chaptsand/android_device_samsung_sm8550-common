@@ -201,6 +201,7 @@ persist.vendor.radio.atfwd.start=true
 persist.vendor.radio.enableadvancedscan=true
 ro.radio.noril=no
 ro.telephony.default_cdma_sub=0
+ro.telephony.default_network=33,33
 ro.vendor.sec.radio.def_network=9
 ro.vendor.use_data_netmgrd=false
 
