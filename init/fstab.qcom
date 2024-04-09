@@ -62,9 +62,7 @@ odm                                                     /odm                   e
 /dev/block/bootdevice/by-name/hyp                       /hyp                   emmc    defaults                                             defaults,first_stage_mount
 /dev/block/bootdevice/by-name/xbl                       /xbl                   emmc    defaults                                             defaults,first_stage_mount
 /dev/block/bootdevice/by-name/vm-bootsys                /vendor/vm-system      ext4    ro,nosuid,nodev,barrier=1                            wait
-/dev/block/bootdevice/by-name/vm-persist                /mnt/product/vm-persist     ext4    noatime,nosuid,nodev,barrier=1                  wait
 /dev/block/bootdevice/by-name/bluetooth                 /vendor/bt_firmware    vfat    ro,shortname=lower,uid=1002,gid=3002,dmask=227,fmask=337,context=u:object_r:bt_firmware_file:s0 wait
-/dev/block/bootdevice/by-name/qmcs                      /mnt/vendor/qmcs       vfat    noatime,nosuid,nodev,context=u:object_r:vendor_qmcs_file:s0   wait,check,formattable
 
 /devices/platform/soc/*.ssusb/*.dwc3/xhci-hcd.*.auto*   /storage/usbotg        vfat    nosuid,nodev                                         wait,voldmanaged=usbotg:auto
 /devices/platform/soc/8804000.sdhci/mmc_host*           auto                   vfat    defaults                                             voldmanaged=sdcard:auto
