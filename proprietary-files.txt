@@ -1067,6 +1067,14 @@ product/priv-app/HotwordEnrollmentXGoogleEx4HEXAGON/HotwordEnrollmentXGoogleEx4H
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
+# HyPer
+vendor/bin/hw/vendor.samsung.hardware.hyper-service
+vendor/etc/init/hyper-default-sec.rc
+vendor/etc/vintf/manifest/hyper-default-sec.xml
+vendor/lib64/libhyper.so
+vendor/lib64/libhypervintf.so
+vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk.so
+
 # IMS
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
 system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
@@ -1524,10 +1532,7 @@ vendor/etc/init/init_thermal-engine-v2.rc
 vendor/etc/init/vendor.samsung.hardware.thermal@1.0-service.rc
 vendor/etc/thermal-engine.conf
 vendor/etc/vintf/manifest/vendor.samsung.hardware.thermal@1.0-manifest.xml
-vendor/lib/libhypervintf.so
-vendor/lib64/libhypervintf.so
 -vendor/lib64/libthermalclient.so
-vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk.so
 vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
 
 # Time services
