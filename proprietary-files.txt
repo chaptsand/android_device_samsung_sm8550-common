@@ -513,7 +513,6 @@ vendor/lib64/liblivefocus_preview_engine.so
 vendor/lib64/liblivefocus_preview_interface.so
 vendor/lib64/libmcaimegpu.samsung.so
 vendor/lib64/libmctfengine_stub.so
-vendor/lib64/libmeminfo.so
 vendor/lib64/libmfGhostDetection.so
 vendor/lib64/libmfec.so
 vendor/lib64/libmmcamera_bestats.so

@@ -97,6 +97,7 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     libgrallocusage.vendor \
     libgui_vendor \
+    libmeminfo.vendor \
     vendor.qti.hardware.camera.aon@1.3.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
