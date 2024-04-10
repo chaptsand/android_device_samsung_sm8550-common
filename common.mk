@@ -236,7 +236,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor \
     libkeymaster_messages.vendor \
-    libkeymaster4_1support.vendor
+    libkeymaster4_1support.vendor \
+    libkeymaster_portable.vendor
 
 # Keymint
 PRODUCT_PACKAGES += \
@@ -245,7 +246,8 @@ PRODUCT_PACKAGES += \
     android.hardware.security.keymint-V2-ndk.vendor \
     android.hardware.security.rkp-V3-ndk.vendor \
     android.hardware.security.secureclock-V1-ndk.vendor \
-    android.hardware.security.sharedsecret-V1-ndk.vendor
+    android.hardware.security.sharedsecret-V1-ndk.vendor \
+    libpuresoftkeymasterdevice.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
