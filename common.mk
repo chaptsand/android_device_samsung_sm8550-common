@@ -385,6 +385,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/ril/sehradiomanager.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sehradiomanager.conf
 
+# Recovery
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.recovery.qcom.rc:root/init.recovery.qcom.rc
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
