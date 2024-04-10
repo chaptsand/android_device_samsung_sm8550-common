@@ -896,23 +896,12 @@ vendor/lib/libfidoauthnr_v2.so
 vendor/lib64/libfidoauthnr_v2.so
 
 # Fingerprint
-vendor/etc/init/fingerprint_common.rc
-vendor/etc/init/init.fingerprint.rc
-vendor/lib/libegis_fp_normal_sensor_test.so
-vendor/lib/libgf_in_system_lib.so
-vendor/lib/libqfp_sensortest.so
-vendor/lib/libsfp_sensor.so
-vendor/lib/libsfp_teegw.so
-vendor/lib/libsynaFpSensorTestNwd.so
-vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
-vendor/lib64/android.hardware.biometrics.fingerprint-V2-ndk.so
 vendor/lib64/libegis_fp_normal_sensor_test.so
 vendor/lib64/libgf_in_system_lib.so
 vendor/lib64/libqfp_sensortest.so
 vendor/lib64/libsfp_sensor.so
 vendor/lib64/libsfp_teegw.so
 vendor/lib64/libsynaFpSensorTestNwd.so
-vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 vendor/lib64/vendor.samsung.hardware.biometrics.fingerprint-V1-ndk.so
 
 # Frcmc
