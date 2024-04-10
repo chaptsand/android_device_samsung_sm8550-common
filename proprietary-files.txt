@@ -821,16 +821,18 @@ vendor/etc/display/DPU9__.xml
 vendor/etc/display/advanced_sf_offsets.xml
 vendor/etc/display/thermallevel_to_fps.xml
 vendor/lib64/libbacklight-calib.so
-vendor/lib64/libclstc_algorithm_adapter.so
-vendor/lib64/libclstc_gcp_adapter.so
-vendor/lib64/libclstc_tm.so
 vendor/lib64/libdigital-dimming.so
-vendor/lib64/libdisplayqos.so
-vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libhdradaptivecustom.so
 vendor/lib64/libintervmipc.so
 vendor/lib64/libmm-hdcpmgr.so
 vendor/lib64/libqrtrclient.so
+
+# Display (SDM) - from rtwo rtwo_g-user 14 U1TR34.8-30-13-2-2 5b4b0d-dde58 release-keys - RETAIL
+vendor/lib64/libclstc_algorithm_adapter.so
+vendor/lib64/libclstc_gcp_adapter.so
+vendor/lib64/libclstc_tm.so
+vendor/lib64/libdisplayqos.so
+vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libqseed3.so
 vendor/lib64/librcmask.so
 vendor/lib64/libsdm-color.so
