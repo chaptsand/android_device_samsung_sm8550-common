@@ -1,0 +1,40 @@
+on init
+    write /sys/class/sec/tsp/cmd "fod_enable,1,1,0"
+
+on boot
+# Fingerprint sensor
+    chmod 0660 /dev/esfp0
+    chown system system /dev/esfp0
+
+    chmod 0660 /dev/goodix_fp
+    chown system system /dev/goodix_fp
+
+    chmod 0660 /dev/qbt2000_fd
+    chmod 0660 /dev/qbt2000_ipc
+    chmod 0660 /dev/qbtspi
+    chown system system /dev/qbt2000_fd
+    chown system system /dev/qbt2000_ipc
+    chown system system /dev/qbtspi
+
+    chown system radio /sys/class/fingerprint/fingerprint/type_check
+    chown system radio /sys/class/fingerprint/fingerprint/name
+    chown system radio /sys/class/fingerprint/fingerprint/vendor
+    chown system radio /sys/class/fingerprint/fingerprint/adm
+    chown system radio /sys/class/fingerprint/fingerprint/bfs_values
+    chown system radio /sys/class/fingerprint/fingerprint/position
+    chown system radio /sys/class/fingerprint/fingerprint/cbgecnt
+    chown system radio /sys/class/fingerprint/fingerprint/intcnt
+    chown system radio /sys/class/fingerprint/fingerprint/resetcnt
+    chown system radio /sys/class/fingerprint/fingerprint/wuhbtest
+    chown system radio /sys/class/fingerprint/fingerprint/rb
+
+    mkdir /data/vendor/misc 0770 system system
+    mkdir /data/vendor/misc/qti_fp 0770 system system
+    mkdir /data/vendor/misc/qti_fp/bg_estimation 0770 system system
+    mkdir /data/vendor/misc/qti_fp/calib_test 0770 system system
+    mkdir /data/vendor/misc/qti_fp/template 0770 system system
+
+    mkdir /data/vendor/biometrics 0770 system system
+    mkdir /data/vendor/fpSnrTest 0770 system system
+    mkdir /efs/biometrics 0770 system system
+    mkdir /efs/biometrics/meta 0770 system system
