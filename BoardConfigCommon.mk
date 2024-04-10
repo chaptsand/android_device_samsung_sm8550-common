@@ -140,6 +140,9 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
+BOARD_ROOT_EXTRA_FOLDERS := \
+    efs
+
 # Platform
 BOARD_VENDOR := samsung
 BOARD_USES_QCOM_HARDWARE := true
