@@ -81,6 +81,9 @@ function blob_fixup() {
         vendor/etc/vintf/manifest/sec_c2_manifest_default0_1_0.xml)
             sed -i 's/default0/software/g' "${2}"
             ;;
+        "vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc")
+            sed -i '/disabled/d' "${2}"
+            ;;
     esac
 }
 
