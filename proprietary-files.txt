@@ -4,10 +4,8 @@
 vendor/bin/adsprpcd
 vendor/bin/loadalgo
 vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
-vendor/etc/init/vendor.qti.audio-adsprpc-service.rc
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
-vendor/lib64/libdsphist_qc.so
 vendor/lib64/libloadalgo_stub.so
 
 # ADSP modules
@@ -73,8 +71,6 @@ vendor/lib/rfsa/adsp/libhdr_skel.so
 vendor/lib/rfsa/adsp/libmctfengine_skel.so
 vendor/lib/rfsa/adsp/libmobilenet_dsp_frc.so
 vendor/lib/rfsa/adsp/libmobilenet_dsp_frc_networks.so
-vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
-vendor/lib/rfsa/adsp/libscveT2T_skel.so
 vendor/lib/rfsa/adsp/libvpt_action_recognition.so
 vendor/lib/rfsa/adsp/snap/libQnnHtpV73Skel.so
 
@@ -83,13 +79,11 @@ vendor/etc/init/init.audio.samsung.rc
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
-vendor/lib/hw/audio.primary.kalama.so
 vendor/lib/libPeripheralStateUtils.so
 vendor/lib/lib_SoundAlive_3DPosition_ver202.so
 vendor/lib/lib_SoundAlive_AlbumArt_ver105.so
 vendor/lib/lib_SoundAlive_play_plus_ver500.so
 vendor/lib/lib_SoundBooster_ver1100.so
-vendor/lib/lib_lvacfs.so
 vendor/lib/libadm.so
 vendor/lib/libar-acdb.so
 vendor/lib/libar-gpr.so
@@ -97,13 +91,10 @@ vendor/lib/libar-gpr.so
 -vendor/lib/libar-pal.so
 -vendor/lib/libats.so
 vendor/lib/libaudio_log_utils.so
-vendor/lib/libbatterylistener.so
 vendor/lib/libcapiv2svacnnvendor.so
 vendor/lib/libcapiv2svarnnvendor.so
 vendor/lib/libcapiv2udk7vendor.so
 vendor/lib/libcapiv2uvvendor.so
-vendor/lib/libfmpal.so
-vendor/lib/libhfp_pal.so
 vendor/lib/liblistensoundmodel2vendor.so
 vendor/lib/liblx-ar_util.so
 -vendor/lib/liblx-osal.so
@@ -112,12 +103,9 @@ vendor/lib/libqtigefar.so
 vendor/lib/librecordalive.so
 vendor/lib/libsecaudiocoreutils.so
 vendor/lib/libsecaudioinfo.so
-vendor/lib/libsecaudiolevel.so
 vendor/lib/libspatializerparamstorage.so
 vendor/lib/libspeakercalibration.so
-vendor/lib/spatializer-aidl-cpp.so
 -vendor/lib/vendor.qti.hardware.pal@1.0-impl.so
-vendor/lib/vendor.samsung.hardware.audio@1.0.so
 vendor/lib64/hw/audio.primary.kalama.so
 vendor/lib64/hw/sound_trigger.primary.kalama.so
 vendor/lib64/libAlacSwDec.so
@@ -151,7 +139,6 @@ vendor/lib64/libsecaudioinfo.so
 vendor/lib64/libsecaudiolevel.so
 vendor/lib64/libspatializerparamstorage.so
 vendor/lib64/libspeakercalibration.so
-vendor/lib64/spatializer-aidl-cpp.so
 vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
 -vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
@@ -322,16 +309,11 @@ vendor/lib64/vendor.qti.latency@2.1.so
 vendor/lib64/vendor.qti.latency@2.2.so
 
 # Camera
-vendor/bin/hw/android.hardware.camera.provider@2.7-external-service
 vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
 vendor/etc/external_camera_config.xml
-vendor/etc/init/android.hardware.camera.provider@2.7-external-service.rc
 vendor/etc/init/camera.unihal.rc
 vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc
 vendor/etc/permissions/vendor.android.hardware.camera.preview-dis.back.xml
-vendor/etc/portrait_data/LF_segmenter/LF_segmenter_cnn.dlc
-vendor/etc/portrait_data/LF_segmenter/LF_segmenter_cnn.info
-vendor/etc/portrait_data/SRIB_HumanSegVideo_INT8_V102_sm8550_snpe2213_vendor.dlc
 vendor/etc/str/str_preference_data.dat
 vendor/etc/vintf/manifest/vendor.qti.camera.aon-impl-1.3.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.postproc-impl.xml
@@ -362,8 +344,6 @@ vendor/lib/libcamxtintlessalgo.so
 vendor/lib/libchilog.so
 vendor/lib/libcom.qti.chinodeutils.so
 vendor/lib/libface_landmark.arcsoft.so
-vendor/lib/libfloatingfeature_hal.so
-vendor/lib/libhypermotion_core.so
 vendor/lib/libhypermotion_interface.so
 vendor/lib/libimagecodec_native.quram.so
 vendor/lib/libipebpsstriping.so
@@ -385,7 +365,6 @@ vendor/lib/libscveObjectSegmentation_stub.so
 vendor/lib/libscveObjectTracker.so
 vendor/lib/libscveObjectTracker_stub.so
 vendor/lib/libsensorlistener.so
-vendor/lib/libsensorndkbridge.so
 vendor/lib/libswregistrationalgo.so
 vendor/lib/libsynx.so
 vendor/lib/libthreadutils.so
@@ -394,17 +373,8 @@ vendor/lib/libvdis_core.so
 vendor/lib/libvideobeauty.arcsoft.so
 vendor/lib/libvideobeauty_interface.so
 vendor/lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
-vendor/lib/vendor.qti.hardware.camera.postproc@1.0.so
-vendor/lib64/AIAwbModel_v2.2.tflite
-vendor/lib64/camera/com.samsung.sensor.hi1337.so
-vendor/lib64/camera/com.samsung.sensor.hi847.so
-vendor/lib64/camera/com.samsung.sensor.imx258.so
-vendor/lib64/camera/com.samsung.sensor.imx374.so
-vendor/lib64/camera/com.samsung.sensor.imx471.so
 vendor/lib64/camera/com.samsung.sensor.imx564.so
 vendor/lib64/camera/com.samsung.sensor.imx754.so
-vendor/lib64/camera/com.samsung.sensor.s5k2ld.so
-vendor/lib64/camera/com.samsung.sensor.s5k3j1.so
 vendor/lib64/camera/com.samsung.sensor.s5k3k1.so
 vendor/lib64/camera/com.samsung.sensor.s5k3lu.so
 vendor/lib64/camera/com.samsung.sensor.s5kgn3.so
@@ -416,7 +386,6 @@ vendor/lib64/camera/fdconfigsecure.bin
 vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
 vendor/lib64/cdsp_face.so
-vendor/lib64/com.qti.chiusecaseselector.so
 vendor/lib64/com.qti.qseeaon.so
 vendor/lib64/com.qti.qseeutils.so
 vendor/lib64/com.qti.settings.sm8550.so
@@ -433,7 +402,6 @@ vendor/lib64/libBeauty_v4.camera.samsung.so
 vendor/lib64/libBlurDetectionDeepLearning.camera.samsung.so
 vendor/lib64/libDLInterface.camera.samsung.so
 vendor/lib64/libDepthBokehVideo_interface.so
-vendor/lib64/libDeviceInfoProvider.so
 vendor/lib64/libEventFinder.camera.samsung.so
 vendor/lib64/libFace3DTA.so
 vendor/lib64/libFace3D_hlos.so
@@ -471,16 +439,12 @@ vendor/lib64/libSRIB_ARVL_HAP.camera.samsung.so
 vendor/lib64/libSSMAutoTrigger_interface.so
 vendor/lib64/libSSM_AutoTrigger.so
 vendor/lib64/libSceneDetector_v1.camera.samsung.so
-vendor/lib64/libSecJpegEncoder.uniplugin@1.0.so
 vendor/lib64/libSingleTakeBlurDetection.uniplugin@1.0.so
 vendor/lib64/libSnpeCpu.so
 vendor/lib64/libSnpeGpu.so
 vendor/lib64/libSnpeHtpV73Stub.so
 vendor/lib64/libTetraMFP10.camera.samsung.so
 vendor/lib64/libTetraMFP10Tuning.camera.samsung.so
-vendor/lib64/libUniPluginUtils.so
-vendor/lib64/libUniScaler.uniplugin@1.0.so
-vendor/lib64/libVideoSuperNight_interface.uniplugin@1.0.so
 vendor/lib64/lib_profiler.so
 vendor/lib64/libai_denoiser_interface.so
 vendor/lib64/libaidenoiser.so
@@ -496,8 +460,6 @@ vendor/lib64/libarcsoft_dualcam_portraitlighting_preview.so
 vendor/lib64/libarcsoft_object_tracking.so
 vendor/lib64/libarcsoft_video_super_night.so
 vendor/lib64/libatccore.so
-vendor/lib64/libauto_framing_arcsoft.uniplugin@1.0.so
-vendor/lib64/libauto_framing_lite.uniplugin@1.0.so
 vendor/lib64/libautotracking_interface.so
 vendor/lib64/libbeautyshot.arcsoft.so
 vendor/lib64/libbitmlengine.so
@@ -519,28 +481,21 @@ vendor/lib64/libdsmanager.so
 vendor/lib64/libdualcam_refocus_image.so
 vendor/lib64/libdualcam_refocus_video.so
 vendor/lib64/libengine_did.so
-vendor/lib64/libevent_finder.uniplugin@1.0.so
 vendor/lib64/libexifa.camera.samsung.so
 vendor/lib64/libface3d_dev.so
 vendor/lib64/libface_landmark.arcsoft.so
-vendor/lib64/libfast_uwdc.uniplugin@1.0.so
 vendor/lib64/libfeutils.so
 vendor/lib64/libfloatingfeature_hal.so
 vendor/lib64/libfocuspeaking.so
-vendor/lib64/libfocuspeaking.uniplugin@1.0.so
 vendor/lib64/libformatConverter.unifunc.so
-vendor/lib64/libfrc.quram.so
-vendor/lib64/libfrc_quram.uniplugin@1.0.so
 vendor/lib64/libhand_interaction.uniplugin@1.0.so
 vendor/lib64/libhandgesture.arcsoft.so
 vendor/lib64/libhdr10plus.so
 vendor/lib64/libhdr_stub.so
 vendor/lib64/libhdraid.gpu.arcsoft.so
-vendor/lib64/libhdraid.npu.arcsoft.so
 vendor/lib64/libhme.so
 vendor/lib64/libhypermotion_core.so
 vendor/lib64/libhypermotion_interface.so
-vendor/lib64/libiddqd.uniplugin@1.0.so
 vendor/lib64/libimage_enhancement.arcsoft.so
 vendor/lib64/libimagecodec_native.quram.so
 vendor/lib64/libimgproc_sw.unifunc@common.so
@@ -552,13 +507,10 @@ vendor/lib64/libjpegQtable_interface.so
 vendor/lib64/libjpege.so
 vendor/lib64/libjpegencoder_sw.unifunc.so
 vendor/lib64/libjpegsq.media.samsung.so
-vendor/lib64/libjump_shot.uniplugin@1.0.so
 vendor/lib64/liblivefocus_capture_engine.so
 vendor/lib64/liblivefocus_capture_interface.so
 vendor/lib64/liblivefocus_preview_engine.so
 vendor/lib64/liblivefocus_preview_interface.so
-vendor/lib64/liblocaltm_capture.uniplugin@1.0.so
-vendor/lib64/libmaskdetection.uniplugin@1.0.so
 vendor/lib64/libmcaimegpu.samsung.so
 vendor/lib64/libmctfengine_stub.so
 vendor/lib64/libmeminfo.so
@@ -577,9 +529,6 @@ vendor/lib64/libopencv3a.so
 vendor/lib64/libopestriping.so
 vendor/lib64/libos.so
 vendor/lib64/libpadm.so
-vendor/lib64/libpantilt_detector.uniplugin@1.0.so
-vendor/lib64/libpersonalimprinting.uniplugin@1.0.so
-vendor/lib64/libpet_detector.uniplugin@1.0.so
 vendor/lib64/libqll.so
 vendor/lib64/libqll10.so
 vendor/lib64/libqllengine.so
@@ -589,37 +538,14 @@ vendor/lib64/libsamsungcamerahal.so
 vendor/lib64/libsamsungcamerahalutils.so
 vendor/lib64/libsamsungcamerahwl_impl.so
 vendor/lib64/libscaler_hw.unifunc.so
-vendor/lib64/libscaler_sw.unifunc.so
 vendor/lib64/libscenedetector.uniplugin@1.0.so
 vendor/lib64/libsec2imageformatfilter.so
-vendor/lib64/libsecfr_engine.so
-vendor/lib64/libsecfr_model.so
 vendor/lib64/libsegmentationeffect.uniplugin@1.0.so
-vendor/lib64/libsegmentationeffect_capture.uniplugin@1.0.so
 vendor/lib64/libsensorlistener.so
-vendor/lib64/libsensorndkbridge.so
-vendor/lib64/libsfeShiftExtrapolation.so
-vendor/lib64/libshotsuggestion.so
-vendor/lib64/libshotsuggestion_engines.so
-vendor/lib64/libsmartfocus.uniplugin@1.0.so
-vendor/lib64/libsnap_compute.so
-vendor/lib64/libsnap_compute_secure.so
-vendor/lib64/libsnap_compute_wrapper.so
-vendor/lib64/libsnap_compute_wrapper_secure.so
-vendor/lib64/libsnap_qnn.so
 vendor/lib64/libsnap_vndk.so
-vendor/lib64/libsnap_vndk_secure.so
-vendor/lib64/libsnaplite_native.so
-vendor/lib64/libsnaplite_native_secure.so
-vendor/lib64/libsnaplite_wrapper.so
-vendor/lib64/libsnaplite_wrapper_secure.so
-vendor/lib64/libsnapmw.so
-vendor/lib64/libsnpe_dsp_domains_v3.so
-vendor/lib64/libsnpe_wrapper.so
 vendor/lib64/libsocial_image_enhancement.uniplugin@1.0.so
 vendor/lib64/libsrib_CNNInterface.camera.samsung.so
 vendor/lib64/libsrib_humanaware_engine.camera.samsung.so
-vendor/lib64/libssengine.uniplugin@1.0.so
 vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libsynx.so
 vendor/lib64/libtensorflowLite.singletake.camera.samsung.so
@@ -627,20 +553,15 @@ vendor/lib64/libtensorflowlite.camera.samsung.so
 vendor/lib64/libtensorflowlite_gpu.camera.samsung.so
 vendor/lib64/libtfestriping.so
 vendor/lib64/libtflitecore.so
-vendor/lib64/libthirdparty_zoomtranslator_imp.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/libtswrappercommon.so
 vendor/lib64/libubifocus.so
 vendor/lib64/libuniplugin.so
-vendor/lib64/libvdis.uniplugin@1.0.so
 vendor/lib64/libvdis_core.so
 vendor/lib64/libvideobeauty.arcsoft.so
 vendor/lib64/libvideobeauty.uniplugin@1.0.so
-vendor/lib64/libvideobeauty_capture.uniplugin@1.0.so
 vendor/lib64/libvideobeauty_interface.so
 vendor/lib64/libvideoml.so
-vendor/lib64/libzoomroi.samsung.so
-vendor/lib64/libzoomroi_lite.samsung.so
 vendor/lib64/unihal_android.so
 vendor/lib64/unihal_cutils.so
 vendor/lib64/unihal_entry.so
@@ -650,7 +571,6 @@ vendor/lib64/unihal_scenario.so
 vendor/lib64/unihal_uniplugin@1.0.so
 vendor/lib64/vendor.qti.hardware.camera.aon-service-impl.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
-vendor/lib64/vendor.qti.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.samsung.hardware.camera.device-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.camera.provider-V1-ndk.so
 
@@ -851,16 +771,11 @@ vendor/etc/gnss_antenna_info.conf
 vendor/etc/gps.conf
 vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
 vendor/etc/init/loc-launcher.rc
-vendor/etc/izat.conf
-vendor/etc/lowi.conf
-vendor/etc/sap.conf
-vendor/etc/sec_config
 vendor/etc/seccomp_policy/gnss@2.0-base.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtra-daemon.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtwifi-client.policy
 vendor/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml
 vendor/etc/vintf/manifest/vendor.qti.gnss-service.xml
-vendor/etc/xtwifi.conf
 vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so
 vendor/lib64/libbatching.so
 vendor/lib64/libcdfw.so
@@ -894,12 +809,10 @@ vendor/lib64/libpal_net_if.so
 vendor/lib64/libsynergy_loc_api.so
 vendor/lib64/libsys_info_cache.so
 vendor/lib64/libxtadapter.so
-vendor/lib64/vendor.qti.gnss-V4-ndk.so
 vendor/lib64/vendor.qti.gnss-service.so
 vendor/lib64/vendor.samsung.hardware.gnss-V2-ndk_platform.so
 
 # Gatekeeper
-vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
 vendor/lib64/hw/gatekeeper.mdfpp.so
 
 # Graphics (Adreno firmware)
@@ -927,7 +840,6 @@ vendor/lib/libkcl.so
 vendor/lib/libkernelmanager.so
 vendor/lib/libllvm-glnext.so
 vendor/lib/libllvm-qcom.so
-vendor/lib/libllvm-qgl.so
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so
 vendor/lib64/egl/libGLESv1_CM_adreno.so
@@ -1252,7 +1164,6 @@ vendor/etc/seccomp_policy/qti-systemd.policy
 vendor/lib64/libdiagjni.so
 vendor/lib64/libidl.so
 vendor/lib64/libmdmdetect.so
-vendor/lib64/libmdmimgload.so
 vendor/lib64/libqcci_legacy.so
 vendor/lib64/libqmi.so
 vendor/lib64/libqmi_cci.so
@@ -1335,7 +1246,6 @@ vendor/lib64/vendor.samsung.hardware.radio.bridge-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.radio.channel-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.radio.data-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.radio.messaging-V1-ndk.so
-vendor/lib64/vendor.samsung.hardware.radio.network-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.radio.sim-V1-ndk.so
 
 # RIL - UIM
@@ -1474,7 +1384,6 @@ vendor/lib64/libtrustedapploader.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.0.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.1.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.2.so
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # Vendor Firmware
 vendor/firmware/ss_dsi_panel_PBA_BOOTING_FHD.dat
@@ -1493,9 +1402,6 @@ vendor/lib/libvideotxr.so
 vendor/lib/libvideoutils.so
 vendor/lib64/libvideotxr.so
 vendor/lib64/libvideoutils.so
-
-# Weaver
-vendor/etc/vintf/manifest/iweaver_v1_manifest.xml
 
 # WiFi
 vendor/bin/cnss-daemon
