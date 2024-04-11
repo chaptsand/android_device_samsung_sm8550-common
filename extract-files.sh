@@ -77,6 +77,9 @@ function blob_fixup() {
             ;;
         vendor/etc/seccomp_policy/qwesd@2.0.policy)
             echo "pipe2: 1" >> "${2}"
+	    ;;
+	vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc)
+            sed -i '/disabled/d' "${2}"
             ;;
     esac
 }
