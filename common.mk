@@ -138,16 +138,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.class_main.sh \
-    init.mdm.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.rc \
-    init.qcom.sh \
-    init.recovery.qcom.rc \
     init.target.rc \
-    ueventd-odm.rc \
-    ueventd.qcom.rc
+    ueventd-odm.rc
 
 PRODUCT_PACKAGES += \
     fstab.ramplus \
@@ -227,6 +219,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 TARGET_BOARD_PLATFORM := kalama
 TARGET_COMMON_QTI_COMPONENTS := \
     display \
+    init \
     overlay \
     perf
 
