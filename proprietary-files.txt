@@ -1066,6 +1066,14 @@ vendor/bin/pd-mapper
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
 
+# Power
+vendor/bin/hw/android.hardware.power.samsung-service
+vendor/etc/init/power-default-sec.rc
+vendor/etc/vintf/manifest/power-samsung.xml
+vendor/lib64/hw/power.default.so
+vendor/etc/powerhint.xml
+vendor/etc/perf/powerhint.xml
+
 # Performance
 vendor/bin/hw/vendor.qti.hardware.perf-hal-service
 vendor/etc/init/poweropt-service.rc
