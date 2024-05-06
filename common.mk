@@ -152,6 +152,9 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
     android.hardware.drm-service.clearkey
 
+# eUICC
+PRODUCT_PACKAGES += OpenEUICC
+
 # Fastboot
 PRODUCT_PACKAGES += \
     fastbootd
