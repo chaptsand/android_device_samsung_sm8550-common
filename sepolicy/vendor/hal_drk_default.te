@@ -1,0 +1,6 @@
+# hal_drk_default.te
+
+type hal_drk_default, domain, halserverdomain;
+type hal_drk_default_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(hal_drk_default)

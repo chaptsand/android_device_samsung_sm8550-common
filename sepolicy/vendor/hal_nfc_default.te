@@ -1,0 +1,8 @@
+# /dev/sec-nfc
+allow hal_nfc_default nfc_device:chr_file { read write open ioctl };
+
+# /data/vendor/nfc
+allow hal_nfc_default vendor_nfc_vendor_data_file:dir { create_dir_perms create_file_perms search };
+
+# NFC properties
+get_prop(hal_nfc_default, vendor_nfc_prop)

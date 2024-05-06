@@ -1,0 +1,38 @@
+# audio
+vendor.audio_hal.                                u:object_r:vendor_audio_prop:s0
+
+# Bluetooth
+vendor.bluetooth_fw_ver                          u:object_r:vendor_bluetooth_prop:s0
+vendor.bluetooth_nv_ver                          u:object_r:vendor_bluetooth_prop:s0
+persist.vendor.bt.                               u:object_r:vendor_bluetooth_prop:s0
+
+# fastcharge
+persist.vendor.sec.fastchg_enabled               u:object_r:vendor_fastcharge_prop:s0
+
+# NFC
+ro.vendor.nfc.                                   u:object_r:vendor_nfc_prop:s0
+
+# Perf
+ro.vendor.extension_library                      u:object_r:vendor_mpctl_prop:s0
+
+# Power
+vendor.powerhal.                                 u:object_r:vendor_power_prop:s0
+
+# RIL
+ro.vendor.multisim.                              u:object_r:vendor_radio_prop:s0
+ro.vendor.radio.                                 u:object_r:vendor_radio_prop:s0
+vendor.sec.rild.                                 u:object_r:vendor_radio_prop:s0
+ro.vendor.sec.radio.                             u:object_r:vendor_radio_prop:s0
+ro.vendor.use_data_netmgrd                       u:object_r:vendor_radio_prop:s0
+ro.vendor.epdg.support                           u:object_r:vendor_radio_prop:s0
+
+vendor.calls                                     u:object_r:vendor_call_prop:s0
+
+# Sensors
+vendor.sensor.file.permission                    u:object_r:vendor_sensors_prop:s0
+
+# Tee
+vendor.sys.qseecomd.enable                       u:object_r:vendor_qseecomd_prop:s0
+
+# wifi
+vendor.wifi.                                     u:object_r:vendor_wifi_prop:s0

@@ -1,0 +1,6 @@
+allow netutils_wrapper drb_device:chr_file { read write };
+allow netutils_wrapper rild:fd use;
+allow netutils_wrapper rild:fifo_file { read write };
+allow netutils_wrapper rild:netlink_route_socket { read write };
+allow netutils_wrapper rild:udp_socket { read write };
+allow netutils_wrapper rild:unix_stream_socket { read write };

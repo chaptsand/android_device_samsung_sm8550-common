@@ -1,0 +1,4 @@
+# hal_frcmc_default.te
+
+type hal_frcmc_default, domain, halserverdomain;
+type hal_frcmc_default_exec, exec_type, vendor_file_type, file_type;

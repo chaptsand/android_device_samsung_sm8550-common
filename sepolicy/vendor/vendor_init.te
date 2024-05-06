@@ -1,0 +1,20 @@
+# EFS
+allow vendor_init tmpfs:dir rw_dir_perms;
+
+allow vendor_init cgroup:file getattr;
+
+allow vendor_init system_file:file { read getattr open };
+
+allow vendor_init block_device:lnk_file setattr;
+
+set_prop(vendor_init, vendor_power_prop)
+
+dontaudit vendor_init cache_file:dir search;
+
+dontaudit vendor_init default_prop:file read;
+
+allow vendor_init vts_status_prop:file read;
+
+allow vendor_init audio_prop:property_service set;
+allow vendor_init vendor_nfc_prop:property_service set;
+allow vendor_init vendor_ssr_prop:property_service set;

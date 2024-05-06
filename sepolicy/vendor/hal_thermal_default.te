@@ -1,0 +1,9 @@
+allow hal_thermal_default sysfs_thermal:file getattr;
+
+allow hal_thermal_default sysfs_battery:dir search;
+allow hal_thermal_default sysfs_battery:file { read open getattr };
+
+allow hal_thermal_default sysfs_power_writable:file { read open };
+
+allow hal_thermal_default hal_thermal_samsung_hwservice:hwservice_manager { add find };
+

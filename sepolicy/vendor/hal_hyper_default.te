@@ -1,0 +1,9 @@
+# hal_hyper_default.te
+
+type hal_hyper_default, domain, halserverdomain;
+type hal_hyper_default_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(hal_hyper_default)
+
+allow hal_hyper_default servicemanager:binder { call transfer };
+allow hal_hyper_default hal_hyper_service:service_manager add;

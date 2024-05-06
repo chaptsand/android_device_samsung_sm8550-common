@@ -1,0 +1,1 @@
+type sysfs_battery, sysfs_type, r_fs_type, fs_type;

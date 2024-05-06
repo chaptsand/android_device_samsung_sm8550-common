@@ -1,0 +1,36 @@
+# /mnt/vendor/efs/bluetooth/
+allow hal_bluetooth_default bluetooth_efs_file:file { read open getattr };
+allow hal_bluetooth_default efs_file:dir search;
+
+set_prop(hal_bluetooth_default, vendor_bluetooth_prop)
+get_prop(hal_bluetooth_default, exported_bluetooth_prop)
+
+allow hal_bluetooth_default self:file { read getattr map open };
+
+allow hal_bluetooth_default hci_attach_dev:chr_file { ioctl read write getattr lock append map open watch watch_reads };
+allow hal_bluetooth_default serial_device:chr_file { ioctl read write getattr lock append map open watch watch_reads };
+allow hal_bluetooth_default tun_device:chr_file { ioctl read write getattr lock append map open watch watch_reads };
+
+allow hal_bluetooth_default app_efs_file:dir { ioctl read getattr lock open watch watch_reads search };
+allow hal_bluetooth_default app_efs_file:file { ioctl read getattr lock map open watch watch_reads };
+
+allow hal_bluetooth_default conn_vendor_data_file:dir { ioctl read getattr lock open watch watch_reads search };
+allow hal_bluetooth_default conn_vendor_data_file:file { ioctl read write getattr lock append map open watch watch_reads };
+
+allow hal_bluetooth_default self:process ptrace;
+allow hal_bluetooth_default sysfs_wake_lock:file { ioctl read write getattr lock append map open watch watch_reads };
+allow hal_bluetooth_default system_app_data_file:file { read getattr };
+
+allow hal_bluetooth_default mediaextractor_service:service_manager find;
+allow hal_bluetooth_default hal_bluetooth_a2dp_hwservice:hwservice_manager find;
+
+allow hal_bluetooth_default kmsg_device:chr_file { ioctl read getattr lock map open watch watch_reads };
+
+allow hal_bluetooth_default property_socket:sock_file write;
+
+allow hal_bluetooth_default init:unix_stream_socket connectto;
+
+allow hal_bluetooth_default hwservicemanager_prop:file { read getattr map open };
+
+binder_call(hal_bluetooth_default, gpuservice)
+allow hal_bluetooth_default gpuservice:fd use;

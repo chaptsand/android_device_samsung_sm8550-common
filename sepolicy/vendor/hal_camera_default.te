@@ -1,0 +1,28 @@
+# /efs/FactoryApp/
+allow hal_camera_default app_efs_file:file { read open getattr };
+allow hal_camera_default app_efs_file:dir search;
+
+# /sys/devices/virtual/camera/
+allow hal_camera_default sysfs_camera:file { read write open getattr };
+allow hal_camera_default sysfs_camera:dir search;
+allow hal_camera_default sysfs_camera_writable:file { read write open getattr };
+allow hal_camera_default rild:unix_stream_socket connectto;
+
+binder_call(hal_camera_default, system_server)
+get_prop(hal_camera_default, vendor_mpctl_prop)
+
+# EFS
+allow hal_camera_default efs_file:dir search;
+
+allow hal_camera_default mnt_vendor_file:dir search;
+
+dontaudit hal_camera_default default_prop:file read;
+
+allow hal_camera_default camera_config_prop:file { read open getattr map };
+
+allow hal_camera_default hal_system_suspend_service:service_manager find;
+allow hal_camera_default hal_thermal_samsung_hwservice:hwservice_manager find;
+binder_call(hal_camera_default, hal_thermal_default)
+
+allow hal_camera_default sysfs_lcd_writable:file { read write open };
+allow hal_camera_default hal_hyper_service:service_manager find;

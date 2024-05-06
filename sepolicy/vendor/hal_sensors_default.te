@@ -1,0 +1,49 @@
+# hal_sensors_default.te
+
+binder_call(hal_sensors_default, system_server)
+
+# /dev/iio:device1
+allow hal_sensors_default iio_device:chr_file r_file_perms;
+
+# /efs
+allow hal_sensors_default efs_file:dir r_dir_perms;
+
+# /efs/FactoryApp/
+allow hal_sensors_default app_efs_file:dir rw_dir_perms;
+allow hal_sensors_default app_efs_file:file { setattr rw_file_perms };
+
+# /sys/bus/iio/devices
+allow hal_sensors_default sysfs_iio:dir r_dir_perms;
+allow hal_sensors_default sysfs_iio:file r_file_perms;
+
+# /sys/devices/virtual/sensors/
+allow hal_sensors_default sysfs_sensors:dir r_dir_perms;
+allow hal_sensors_default sysfs_sensors:file rw_file_perms;
+
+# /sys/devices/virtual/lcd/panel/window_type
+allow hal_sensors_default sysfs_lcd_writable:dir r_dir_perms;
+allow hal_sensors_default sysfs_lcd_writable:file r_file_perms;
+
+# /sys/class/input
+allow hal_sensors_default sysfs_input:dir r_dir_perms;
+allow hal_sensors_default sysfs_input:file { read write open };
+
+# /sys/devices/virtual/sec/sec_key/
+allow hal_sensors_default sysfs_sec_key:dir r_dir_perms;
+allow hal_sensors_default sysfs_sec_key:file r_file_perms;
+
+# /sys/class/sec/tsp/
+allow hal_sensors_default sysfs_sec_touchscreen:dir r_dir_perms;
+allow hal_sensors_default sysfs_sec_touchscreen:file rw_file_perms;
+allow hal_sensors_default sysfs_sec_touchscreen:lnk_file r_file_perms;
+allow hal_sensors_default sysfs_power_writable:dir search;
+allow hal_sensors_default sysfs_power_writable:file rw_file_perms;
+
+# /sys/class/sec/tsp/cmd
+allow hal_sensors_default sysfs_touchscreen_writable:file rw_file_perms;
+
+# props
+allow hal_sensors_default property_socket:sock_file write;
+unix_socket_connect(hal_sensors_default, property, init)
+
+dontaudit hal_sensors_default { default_prop build_bootimage_prop }:file { getattr map open read };

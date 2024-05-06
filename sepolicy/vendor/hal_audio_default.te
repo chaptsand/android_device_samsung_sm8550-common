@@ -1,0 +1,17 @@
+# /efs/cirrus and /efs/tas256x/
+allow hal_audio_default audio_efs_file:file r_file_perms;
+allow hal_audio_default audio_efs_file:dir search;
+
+allow hal_audio_default imei_efs_file:dir search;
+allow hal_audio_default imei_efs_file:file { read open getattr };
+
+allow hal_audio_default efs_file:dir search;
+
+get_prop(hal_audio_default, vendor_call_prop)
+
+# TAS256X sysfs
+allow hal_audio_default sysfs_audio_writable:file rw_file_perms;
+allow hal_audio_default sysfs_audio_writable:dir search;
+
+# ro.multisim*
+dontaudit hal_audio_default { default_prop radio_prop }:file { getattr map open read };

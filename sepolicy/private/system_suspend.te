@@ -1,0 +1,10 @@
+init_daemon_domain(system_suspend)
+
+# To serve ISuspendControlService.aidl.
+binder_use(system_suspend)
+add_service(system_suspend, system_suspend_control_service)
+
+allow system_suspend sysfs_wakeup:dir { open read };
+allow system_suspend sysfs_wakeup:file { getattr open read };
+allow system_suspend sysfs_battery:dir { open read };
+allow system_suspend sysfs_battery:file { getattr open read };

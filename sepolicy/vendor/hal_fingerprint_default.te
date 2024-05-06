@@ -1,0 +1,24 @@
+allow hal_fingerprint_default {
+    fp_sensor_device
+    tee_device
+}:chr_file rw_file_perms;
+
+allow hal_fingerprint_default fingerprint_vendor_data_file:dir { rw_dir_perms create rmdir };
+
+allow hal_fingerprint_default fingerprint_vendor_data_file:file { read write open getattr rename create unlink };
+
+allow hal_fingerprint_default biometrics_efs_file:file r_file_perms;
+allow hal_fingerprint_default biometrics_efs_file:dir search;
+allow hal_fingerprint_default efs_file:dir search;
+allow hal_fingerprint_default sysfs_fingerprint:dir r_dir_perms;
+allow hal_fingerprint_default sysfs_fingerprint:file r_file_perms;
+allow hal_fingerprint_default biometrics_vendor_data_file:file create_file_perms;
+allow hal_fingerprint_default biometrics_vendor_data_file:dir { read write open add_name create rmdir remove_name search };
+allow hal_fingerprint_default sysfs_battery:dir search;
+allow hal_fingerprint_default sysfs_battery:file { open read };
+allow hal_fingerprint_default uhid_device:chr_file rw_file_perms;
+allow hal_fingerprint_default sysfs_lcd_writable:file r_file_perms;
+
+allow hal_fingerprint_default self:netlink_socket { bind create read write };
+allow hal_fingerprint_default vendor_dmabuf_qseecom_heap_device:chr_file { ioctl open read };
+allow hal_fingerprint_default vendor_dmabuf_qseecom_ta_heap_device:chr_file { ioctl open read };

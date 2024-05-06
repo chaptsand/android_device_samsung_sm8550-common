@@ -1,0 +1,27 @@
+# secril_config_svc.te
+
+type secril_config_svc, domain, halserverdomain, hal_telephony, hal_telephony_server;
+type secril_config_svc_exec, exec_type, vendor_file_type, file_type;
+
+# secril_config_svc is started by init, type transit from init domain to secril_config_svc domain
+init_daemon_domain(secril_config_svc)
+
+unix_socket_connect(secril_config_svc, property, init)
+
+# /mnt/vendor/
+allow secril_config_svc mnt_vendor_file:dir search;
+
+# /mnt/vendor/efs/factory.prop
+# /mnt/vendor/efs/telephony.prop
+allow secril_config_svc efs_file:dir search;
+allow secril_config_svc efs_file:file r_file_perms;
+
+# ro.multisim.
+# ro.vendor.multisim.
+# ro.vendor.radio.default_network
+get_prop(secril_config_svc, exported_system_prop)
+set_prop(secril_config_svc, radio_prop)
+set_prop(secril_config_svc, vendor_radio_prop)
+
+# ro.multisim.*
+dontaudit secril_config_svc default_prop:property_service set;

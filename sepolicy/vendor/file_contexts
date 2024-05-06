@@ -1,0 +1,59 @@
+# data
+/data/vendor/biometrics(/.*)?                u:object_r:biometrics_vendor_data_file:s0
+/data/vendor/secradio(/.*)?                  u:object_r:radio_vendor_data_file:s0
+/data/vendor/gatekeeper(/.*)?                u:object_r:gatekeeper_vendor_data_file:s0
+
+# dev
+/dev/block/platform/soc/1d84000.ufshc/by-name/dsp            u:object_r:dsp_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/dtbo           u:object_r:dtbo_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/efs            u:object_r:efs_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/firmware       u:object_r:firmware_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/modem          u:object_r:vendor_modem_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/omr            u:object_r:omr_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/persistent     u:object_r:frp_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/sec_efs        u:object_r:sec_efs_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/bluetooth      u:object_r:vendor_modem_block_device:s0
+
+/dev/ttyGS[0-9]*	u:object_r:serial_device:s0
+
+/dev/k250a          u:object_r:hermes_device:s0
+# fingerprint
+/dev/goodix_fp                               u:object_r:fp_sensor_device:s0
+
+# radio
+/dev/drb                                     u:object_r:drb_device:s0
+
+# EFS
+/efs/Battery(/.*)?                           u:object_r:battery_efs_file:s0
+/efs/biometrics(/.*)?                        u:object_r:biometrics_efs_file:s0
+/efs/FactoryApp(/.*)?                        u:object_r:app_efs_file:s0
+/efs/cpk(/.*)?                               u:object_r:cpk_efs_file:s0
+/efs/imei(/.*)?                              u:object_r:imei_efs_file:s0
+/efs/pfw_data(/.*)?                          u:object_r:pfw_efs_file:s0
+/efs/cirrus(/.*)?                            u:object_r:audio_efs_file:s0
+
+/mnt/vendor/efs(/.*)?                        u:object_r:efs_file:s0
+/mnt/vendor/efs/bluetooth(/.*)?              u:object_r:bluetooth_efs_file:s0
+/mnt/vendor/efs/DAK(/.*)?                    u:object_r:prov_efs_file:s0
+/mnt/vendor/efs/prov(/.*)?                   u:object_r:prov_efs_file:s0
+/mnt/vendor/efs/prov_data(/.*)?              u:object_r:prov_efs_file:s0
+/mnt/vendor/efs/wifi(/.*)?                   u:object_r:wifi_efs_file:s0
+
+# VENDOR
+/(vendor|system/vendor)/bin/factory\.ssc                                                                    u:object_r:factory_ssc_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@[0-9]\.[0-9]-service\.widevine                        u:object_r:hal_drm_widevine_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.keymaster@[0-9]\.[0-9]-strongbox-service-qti              u:object_r:hal_keymaster_default_exec:s0
+/(vendor|system/vendor)/bin/secril_config_svc                                                               u:object_r:secril_config_svc_exec:s0
+/(vendor|system/vendor)/bin/hw/android.hardware.biometrics.fingerprint-service.samsung                      u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor.samsung.hardware.thermal@1.0-service                                  u:object_r:hal_thermal_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android.hardware.sensors-service.samsung-multihal                            u:object_r:hal_sensors_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator\-service\.samsung                                u:object_r:hal_vibrator_default_exec:s0
+/(vendor|system/vendor)/bin/hermesd                                                                         u:object_r:hermesd_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.camera\.provider-service_64                       u:object_r:hal_camera_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware.frcmc-service                                      u:object_r:hal_frcmc_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.health-service                                    u:object_r:hal_health_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.hyper-service                                     u:object_r:hal_hyper_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element@1\.2-service                               u:object_r:hal_secure_element_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.security\.drk@2\.0-service                        u:object_r:hal_drk_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.vibrator-service                                  u:object_r:hal_vibrator_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power\.samsung-service                                    u:object_r:hal_power_default_exec:s0

@@ -1,0 +1,12 @@
+# device.te
+type efs_block_device, dev_type;
+type modem_block_device, dev_type;
+type omr_block_device, dev_type;
+type firmware_block_device, dev_type;
+type dsp_block_device, dev_type;
+type sec_efs_block_device, dev_type;
+
+type drb_device, dev_type;
+type fp_sensor_device, dev_type;
+type radio_qos_device, dev_type;
+type hermes_device, dev_type;

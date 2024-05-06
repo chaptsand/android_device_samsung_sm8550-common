@@ -1,0 +1,12 @@
+allow hal_keymint_default efs_file:dir search;
+allow hal_keymint_default efs_file:file { getattr open read };
+allow hal_keymint_default mnt_vendor_file:dir search;
+allow hal_keymint_default prov_efs_file:dir { open read search watch };
+allow hal_keymint_default prov_efs_file:file { getattr open read };
+allow hal_keymint_default vendor_dmabuf_qseecom_heap_device:chr_file { ioctl open read };
+allow hal_keymint_default vendor_dmabuf_qseecom_ta_heap_device:chr_file { ioctl open read };
+allow hal_keymint_default vendor_dmabuf_secure_sp_tz_heap_device:chr_file { ioctl open read };
+allow hal_keymint_default vendor_skp_device:chr_file getattr;
+allow hal_keymint_default vendor_spcom_device:chr_file { getattr ioctl open read write };
+allow hal_keymint_default vendor_spcomlib_prop:file { getattr map open read };
+allow hal_keymint_default vendor_tee_listener_prop:file { getattr map open read };

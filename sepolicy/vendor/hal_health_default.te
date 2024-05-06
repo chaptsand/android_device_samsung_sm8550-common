@@ -1,0 +1,8 @@
+allow hal_health_default app_efs_file:dir { add_name search write };
+allow hal_health_default app_efs_file:file { create getattr open read setattr write };
+allow hal_health_default battery_efs_file:dir search;
+allow hal_health_default battery_efs_file:file { getattr open read write };
+allow hal_health_default efs_file:dir search;
+allow hal_health_default hal_thermal_default:binder call;
+allow hal_health_default sysfs_battery:dir search;
+allow hal_health_default sysfs_battery:file { getattr open read };

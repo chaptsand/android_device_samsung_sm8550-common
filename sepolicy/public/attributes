@@ -1,0 +1,8 @@
+# Tag for read only filesystem type
+attribute r_fs_type;
+
+# Tag for read/write filesystem type
+attribute rw_fs_type;
+
+# Tag for read/execute filesystem type
+attribute rx_fs_type;

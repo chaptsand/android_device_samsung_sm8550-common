@@ -1,0 +1,13 @@
+# Tee
+set_prop(tee, vendor_qseecomd_prop)
+
+allow tee gatekeeper_vendor_data_file:dir { write add_name read open search };
+allow tee gatekeeper_vendor_data_file:file { create write open read getattr };
+
+# This is for randomly generated TEE directories in /efs
+allow tee efs_file:dir { search read write open add_name };
+allow tee efs_file:file { read write open getattr create };
+
+allow tee boot_block_device:blk_file read;
+allow tee vendor_gpt_block_device:blk_file read;
+allow tee vendor_xbl_block_device:blk_file read;

@@ -1,0 +1,14 @@
+# hermesd.te
+
+type hermesd, domain, halserverdomain;
+type hermesd_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(hermesd)
+
+unix_socket_connect(hermesd, property, init)
+
+allow hermesd hermes_device:chr_file { read write open ioctl};
+allow hermesd gatekeeper_vendor_data_file:dir search;
+allow hermesd tee_device:chr_file { ioctl open read write };
+allow hermesd vendor_dmabuf_qseecom_heap_device:chr_file { ioctl open read };
+allow hermesd vendor_dmabuf_qseecom_ta_heap_device:chr_file { ioctl open read };

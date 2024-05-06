@@ -1,0 +1,26 @@
+allow system_app proc_pagetypeinfo:file { read open getattr };
+
+# Audio
+binder_call(system_app, hal_audio_default)
+
+# ZRAM
+allow system_app sysfs_zram:dir search;
+allow system_app sysfs_zram:file { read open getattr };
+
+binder_call(system_app, hal_power_default)
+binder_call(system_app, hal_vibrator_default)
+
+# MDNIE
+allow system_app sysfs_mdnie_writable:dir search;
+allow system_app sysfs_mdnie_writable:file { open write getattr };
+
+# Sensors
+binder_call(system_app, hal_sensors_default)
+
+# Wifi
+binder_call(system_app, hal_wifi_supplicant_default)
+
+# Misc
+binder_call(system_app, vold)
+
+dontaudit system_app vendor_default_prop:file { getattr open read map };

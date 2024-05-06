@@ -1,0 +1,3 @@
+# hal_vibrator_default.te
+
+allow hal_vibrator_default proc_input_devices:file { read open };

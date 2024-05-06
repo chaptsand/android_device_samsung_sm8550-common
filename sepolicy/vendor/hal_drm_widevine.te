@@ -1,0 +1,16 @@
+type hal_drm_widevine, domain;
+hal_server_domain(hal_drm_widevine, hal_drm);
+
+type hal_drm_widevine_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_drm_widevine);
+
+allow hal_drm_widevine vendor_mediadrm_vendor_data_file:dir { read write add_name create getattr search };
+allow hal_drm_widevine vendor_mediadrm_vendor_data_file:file { read write open create getattr };
+
+allow hal_drm_widevine vendor_qce_device:chr_file { read write ioctl open };
+
+allow hal_drm_widevine vendor_hal_display_config_hwservice:hwservice_manager find;
+binder_call(hal_drm_widevine, hal_graphics_composer_default)
+allow hal_drm_widevine hal_graphics_composer_default:binder transfer;
+
+allow hal_drm_widevine mediacodec:fd use;

@@ -1,0 +1,3 @@
+# hal_power_default.te
+
+allow hal_power_default hal_hyper_service:service_manager find;
