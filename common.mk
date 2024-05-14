@@ -119,14 +119,11 @@ PRODUCT_PACKAGES += \
     libdisplayconfig.system.qti \
     libqdMetaData \
     libqdMetaData.system \
-    libsdmcore \
-    libsdmutils \
     vendor.display.config@1.0 \
     vendor.display.config@1.11.vendor \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
     vendor.qti.hardware.display.allocator-service \
-    vendor.qti.hardware.display.composer-service \
     vendor.qti.hardware.display.config-V1-ndk.vendor \
     vendor.qti.hardware.display.config-V2-ndk.vendor \
     vendor.qti.hardware.display.config-V3-ndk.vendor \
