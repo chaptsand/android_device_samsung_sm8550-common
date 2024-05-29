@@ -63,7 +63,7 @@
     },
     {
       "Name": "CPUBigClusterUpRateLimit",
-      "Path": "/sys/devices/system/cpu/cpufreq/policy4/walt/up_rate_limit_us",
+      "Path": "/sys/devices/system/cpu/cpufreq/policy3/walt/up_rate_limit_us",
       "Values": [
         "500",
         "2000"
@@ -72,7 +72,7 @@
     },
     {
       "Name": "CPUBigClusterDownRateLimit",
-      "Path": "/sys/devices/system/cpu/cpufreq/policy4/walt/down_rate_limit_us",
+      "Path": "/sys/devices/system/cpu/cpufreq/policy3/walt/down_rate_limit_us",
       "Values": [
         "10000",
         "2000"
@@ -245,7 +245,7 @@
     },
     {
       "Name": "CPUBWHystTriggerCount",
-      "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/hyst_trigger_count",
+      "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/hyst_trigger_count",
       "Values": [
         "0",
         "3"
@@ -254,7 +254,7 @@
     },
     {
       "Name": "CPUBWHistMemory",
-      "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/hist_memory",
+      "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/hist_memory",
       "Values": [
         "0",
         "20"
@@ -263,7 +263,7 @@
     },
     {
       "Name": "CPUBWHystLength",
-      "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/hyst_length",
+      "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/hyst_length",
       "Values": [
         "0",
         "10"
@@ -282,7 +282,7 @@
     },
     {
       "Name": "LLCCBWHystTriggerCount",
-      "Path": "/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/hyst_trigger_count",
+      "Path": "/sys/devices/system/cpu/bus_dcvs/LLCC/240b6400.qcom,bwmon-llcc/hyst_trigger_count",
       "Values": [
         "0",
         "3"
@@ -291,7 +291,7 @@
     },
     {
       "Name": "LLCCBWHistMemory",
-      "Path": "/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/hist_memory",
+      "Path": "/sys/devices/system/cpu/bus_dcvs/LLCC/240b6400.qcom,bwmon-llcc/hist_memory",
       "Values": [
         "0",
         "20"
@@ -300,7 +300,7 @@
     },
     {
       "Name": "LLCCBWHystLength",
-      "Path": "/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/hyst_length",
+      "Path": "/sys/devices/system/cpu/bus_dcvs/LLCC/240b6400.qcom,bwmon-llcc/hyst_length",
       "Values": [
         "0",
         "10"
