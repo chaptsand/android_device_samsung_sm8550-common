@@ -1,4 +1,4 @@
-# All unpinned blobs are extracted from S9160ZHU2CXCF
+# All unpinned blobs are extracted from F946BXXS2CXE9
 
 # ADSP
 vendor/bin/adsprpcd
@@ -599,6 +599,7 @@ vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/bin/hw/vendor.samsung.hardware.security.drk@2.0-service
 vendor/etc/init/vendor.samsung.hardware.security.drk@2.0-service.rc
 vendor/lib64/libdk_vnd_service_core.so
+vendor/lib64/vendor.samsung.hardware.security.drk-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.security.drk@2.0.so
 
 # DSP
@@ -664,8 +665,8 @@ vendor/lib64/libmemutils.so
 vendor/lib64/libqdcm-algo.so
 vendor/lib64/libqdcm-json-mode-parser.so
 vendor/lib64/libqdcm-mode-parser.so
-vendor/lib64/libsdmcore.so
-vendor/lib64/libsdmdal.so
+vendor/lib64/libsdmcore.so|8e3417d8d9ef045fe8d302c381fc8975e90b02f5
+vendor/lib64/libsdmdal.so|df0ec54bcb4f5c4028dda2317068a8bfbb36b523
 vendor/lib64/libsdmutils.so
 vendor/lib64/libsnapdragoncolor-manager.so
 vendor/lib64/libsnapdragoncolor-qdcm.so
