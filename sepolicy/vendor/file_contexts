@@ -57,3 +57,4 @@
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.security\.drk@2\.0-service                        u:object_r:hal_drk_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.vibrator-service                                  u:object_r:hal_vibrator_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power\.samsung-service                                    u:object_r:hal_power_default_exec:s0
+/(vendor|system/vendor)/bin/hw/sehradiomanager                                                              u:object_r:sehradiomanager_exec:s0

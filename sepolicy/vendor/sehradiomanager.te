@@ -1,0 +1,13 @@
+# sehradiomanager.te
+
+type sehradiomanager, domain, halserverdomain;
+type sehradiomanager_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(sehradiomanager)
+binder_call(sehradiomanager, rild)
+hal_client_domain(sehradiomanager, hal_telephony)
+
+allow sehradiomanager servicemanager:binder call;
+allow sehradiomanager vendor_radio_prop:file { read open getattr map };
+allow sehradiomanager hal_telephony_hwservice:hwservice_manager find;
+allow sehradiomanager hal_radio_service:service_manager find;
