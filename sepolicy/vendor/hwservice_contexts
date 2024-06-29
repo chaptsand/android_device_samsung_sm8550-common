@@ -10,6 +10,9 @@ vendor.samsung.hardware.gnss::ISehGnss                                          
 # Health
 vendor.samsung.hardware.health::ISehHealth                                                  u:object_r:hal_health_hwservice:s0
 
+# NFC
+vendor.samsung.hardware.nfc::ISehNfc                                                        u:object_r:hal_nfc_hwservice:s0
+
 # RIL
 vendor.samsung.hardware.radio.bridge::ISehBridge                                            u:object_r:hal_telephony_hwservice:s0
 vendor.samsung.hardware.radio::ISehRadio                                                    u:object_r:hal_telephony_hwservice:s0

@@ -17,6 +17,13 @@
 /dev/ttyGS[0-9]*	u:object_r:serial_device:s0
 
 /dev/k250a          u:object_r:hermes_device:s0
+
+# NFC
+/dev/pn547          u:object_r:nfc_device:s0
+
+# Secure Element
+/dev/p61                                     u:object_r:secure_element_device:s0
+
 # fingerprint
 /dev/goodix_fp                               u:object_r:fp_sensor_device:s0
 
@@ -58,3 +65,4 @@
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.vibrator-service                                  u:object_r:hal_vibrator_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power\.samsung-service                                    u:object_r:hal_power_default_exec:s0
 /(vendor|system/vendor)/bin/hw/sehradiomanager                                                              u:object_r:sehradiomanager_exec:s0
+/(vendor|system/vendor)/bin/hw/nxp\.android\.hardware\.nfc@1\.2-service                                     u:object_r:hal_nfc_default_exec:s0

@@ -4,5 +4,7 @@ allow hal_nfc_default nfc_device:chr_file { read write open ioctl };
 # /data/vendor/nfc
 allow hal_nfc_default vendor_nfc_vendor_data_file:dir { create_dir_perms create_file_perms search };
 
+allow hal_nfc_default hal_nfc_hwservice:hwservice_manager { add find };
+
 # NFC properties
 get_prop(hal_nfc_default, vendor_nfc_prop)
