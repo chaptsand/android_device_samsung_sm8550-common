@@ -1,4 +1,4 @@
-# All unpinned blobs are extracted from S9160ZHU2CXCF
+# All unpinned blobs are extracted from S9160ZHS4CXG2
 
 # ADSP
 vendor/bin/adsprpcd
@@ -1050,7 +1050,6 @@ vendor/lib64/vendor.samsung.hardware.health-V1-ndk.so
 # Hermes
 vendor/bin/hermesd
 vendor/etc/init/hermesd.rc
-vendor/etc/secnvm/k250a_00000301_c.img
 vendor/etc/secnvm/k250a_00000306.img
 vendor/lib/libhermes.so
 vendor/lib64/libese-grdg.so
