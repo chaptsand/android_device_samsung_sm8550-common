@@ -242,8 +242,7 @@ PRODUCT_COPY_FILES += \
 
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH) \
-    hardware/samsung
+    $(LOCAL_PATH)
 
 # Memtrack
 PRODUCT_PACKAGES += \
@@ -296,8 +295,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.voice-V1-ndk.vendor \
     libprotobuf-cpp-full \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
-    librmnetctl \
-    secril_config_svc
+    librmnetctl
 
 # Sensors
 PRODUCT_PACKAGES += \

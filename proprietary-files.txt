@@ -1261,6 +1261,7 @@ vendor/bin/ks
 vendor/bin/mdm_helper
 vendor/bin/mdm_helper_proxy
 vendor/bin/qms
+vendor/bin/secril_config_svc
 vendor/etc/init/ipacm-diag.rc
 vendor/etc/init/qms.rc
 vendor/etc/locale/plmn_delta_eng.bin

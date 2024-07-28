@@ -128,9 +128,6 @@ TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 BOARD_ROOT_EXTRA_FOLDERS := \
     efs
 
-# Platform
-BOARD_VENDOR := samsung
-
 # Properties
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
