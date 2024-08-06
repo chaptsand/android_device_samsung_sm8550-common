@@ -557,8 +557,6 @@ vendor/etc/seccomp_policy/qwesd@2.0.policy
 vendor/etc/ssg/tz_whitelist.json
 
 # DPM
-system_ext/etc/init/tcmd.rc
-system_ext/etc/seccomp_policy/tcmd.policy
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 
 # DRK
@@ -602,7 +600,6 @@ vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
 
 # Diag
-system_ext/lib64/vendor.qti.diaghal@1.0.so
 vendor/bin/diag-router
 vendor/etc/init/vendor.qti.diag.rc
 vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
@@ -787,20 +784,6 @@ system_ext/framework/com.android.hotwordenrollment.common.util.jar
 vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk.so
 
 # IMS
-system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
-system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
-system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
-system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar
-system_ext/framework/vendor.qti.ims.factory-V2.2-java.jar
-system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar
-system_ext/framework/vendor.qti.ims.rcssip-V1.1-java.jar
-system_ext/framework/vendor.qti.ims.rcssip-V1.2-java.jar
-system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar
-system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar
-system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar
-system_ext/lib64/libdiag_system.so
-system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
-system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
 vendor/etc/init/ims_rtp_daemon.rc
 vendor/etc/init/imsdaemon.rc
 vendor/etc/seccomp_policy/imsrtp.policy
@@ -1029,10 +1012,6 @@ vendor/lib64/vendor.samsung.hardware.radio.channel-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.radio.data-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.radio.messaging-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.radio.sim-V1-ndk.so
-
-# RIL - UIM
-product/etc/permissions/UimService.xml
-product/framework/uimservicelibrary.jar
 
 # RemoteFS
 vendor/bin/rmt_storage
