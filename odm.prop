@@ -1,0 +1,6 @@
+# Audio
+ro.config.vc_call_vol_steps=8
+vendor.audio.adm.buffering.ms=3
+vendor.audio.feature.compr_voip.enable=true
+vendor.audio.feature.deepbuffer_as_primary.enable=true
+vendor.audio.feature.multi_voice_session.enable=false
