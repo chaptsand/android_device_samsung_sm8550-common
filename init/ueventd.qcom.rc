@@ -588,3 +588,6 @@ subsystem mem_buf_vm
 
 # RemoteProc state
 /sys/class/remoteproc/remoteproc*   state    0660    root  system
+
+# IPA Events
+/dev/ipa_events         0660   radio      radio
