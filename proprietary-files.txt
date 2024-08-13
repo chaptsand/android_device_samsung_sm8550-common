@@ -1,4 +1,4 @@
-# All unpinned blobs are extracted from S9160ZHS4CXG2
+# All unpinned blobs are extracted from S916BXXS6CXFE
 
 # ADSP
 vendor/bin/adsprpcd
@@ -1389,7 +1389,10 @@ vendor/etc/locale/plmn_delta_zh-rHK.bin
 vendor/etc/locale/plmn_delta_zh-rTW.bin
 vendor/etc/mtu-conf.xml
 vendor/etc/pdpcnt-conf.xml
+vendor/etc/plmn_delta_attaio.bin
+vendor/etc/plmn_delta.bin
 vendor/etc/plmn_delta_hktw.bin
+vendor/etc/plmn_delta_usagsm.bin
 vendor/etc/plmn_se13.bin
 vendor/etc/qms_log_config
 vendor/etc/sec_config_oem
