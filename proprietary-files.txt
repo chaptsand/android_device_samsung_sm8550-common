@@ -83,41 +83,6 @@ vendor/etc/init/init.audio.samsung.rc
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
-vendor/lib/hw/audio.primary.kalama.so
-vendor/lib/libPeripheralStateUtils.so
-vendor/lib/lib_SoundAlive_3DPosition_ver202.so
-vendor/lib/lib_SoundAlive_AlbumArt_ver105.so
-vendor/lib/lib_SoundAlive_play_plus_ver500.so
-vendor/lib/lib_SoundBooster_ver1100.so
-vendor/lib/lib_lvacfs.so
-vendor/lib/libadm.so
-vendor/lib/libar-acdb.so
-vendor/lib/libar-gpr.so
--vendor/lib/libar-gsl.so
--vendor/lib/libar-pal.so
--vendor/lib/libats.so
-vendor/lib/libaudio_log_utils.so
-vendor/lib/libbatterylistener.so
-vendor/lib/libcapiv2svacnnvendor.so
-vendor/lib/libcapiv2svarnnvendor.so
-vendor/lib/libcapiv2udk7vendor.so
-vendor/lib/libcapiv2uvvendor.so
-vendor/lib/libfmpal.so
-vendor/lib/libhfp_pal.so
-vendor/lib/liblistensoundmodel2vendor.so
-vendor/lib/liblx-ar_util.so
--vendor/lib/liblx-osal.so
-vendor/lib/libprofileparamstorage.so
-vendor/lib/libqtigefar.so
-vendor/lib/librecordalive.so
-vendor/lib/libsecaudiocoreutils.so
-vendor/lib/libsecaudioinfo.so
-vendor/lib/libsecaudiolevel.so
-vendor/lib/libspatializerparamstorage.so
-vendor/lib/libspeakercalibration.so
-vendor/lib/spatializer-aidl-cpp.so
--vendor/lib/vendor.qti.hardware.pal@1.0-impl.so
-vendor/lib/vendor.samsung.hardware.audio@1.0.so
 vendor/lib64/hw/audio.primary.kalama.so
 vendor/lib64/hw/sound_trigger.primary.kalama.so
 vendor/lib64/libAlacSwDec.so
@@ -158,8 +123,6 @@ vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
 vendor/lib64/vendor.samsung.hardware.audio@1.0.so
 
 # Audio AGM
--vendor/lib/libagm.so
--vendor/lib/vendor.qti.hardware.AGMIPC@1.0-impl.so
 -vendor/lib64/libagm.so
 -vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
 
