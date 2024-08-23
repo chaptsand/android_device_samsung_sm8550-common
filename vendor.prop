@@ -156,8 +156,6 @@ ro.security.keystore.keytype=sakv2,gak,sgak,rkp
 
 # Media
 debug.c2.use_dmabufheaps=1
-debug.stagefright.ccodec=4
-debug.stagefright.omx_default_rank=0
 
 # NFC
 ro.camera.notify_nfc=1
