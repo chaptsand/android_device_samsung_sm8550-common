@@ -75,6 +75,9 @@ function blob_fixup() {
         vendor/etc/vintf/manifest/sec_c2_manifest_default0_1_0.xml)
             sed -i 's/default0/software/g' "${2}"
             ;;
+        vendor/etc/media_codecs_kalama.xml|vendor/etc/media_codecs_kalama_vendor.xml)
+            sed -Ei "/media_codecs_(google_audio|google_telephony|google_video|vendor_audio)/d" "${2}"
+            ;;
         vendor/etc/seccomp_policy/qwesd@2.0.policy)
             echo "pipe2: 1" >> "${2}"
 	    ;;
