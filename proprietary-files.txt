@@ -98,9 +98,9 @@ vendor/lib64/lib_lvacfs.so
 vendor/lib64/libadm.so
 vendor/lib64/libar-acdb.so
 vendor/lib64/libar-gpr.so
--vendor/lib64/libar-gsl.so
--vendor/lib64/libar-pal.so;DISABLE_CHECKELF
--vendor/lib64/libats.so
+vendor/lib64/libar-gsl.so
+vendor/lib64/libar-pal.so;DISABLE_CHECKELF
+vendor/lib64/libats.so
 vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libcapiv2svacnnvendor.so
 vendor/lib64/libcapiv2svarnnvendor.so
@@ -109,7 +109,7 @@ vendor/lib64/libcapiv2uvvendor.so
 vendor/lib64/libdsd2pcm.so
 vendor/lib64/liblistensoundmodel2vendor.so
 vendor/lib64/liblx-ar_util.so
--vendor/lib64/liblx-osal.so
+vendor/lib64/liblx-osal.so
 vendor/lib64/libprofileparamstorage.so
 vendor/lib64/libqtigefar.so
 vendor/lib64/librecordalive.so
@@ -120,12 +120,12 @@ vendor/lib64/libspatializerparamstorage.so
 vendor/lib64/libspeakercalibration.so
 vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
--vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
 vendor/lib64/vendor.samsung.hardware.audio@1.0.so
 
 # Audio AGM
--vendor/lib64/libagm.so
--vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
+vendor/lib64/libagm.so
+vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
 
 # Audio FX modules
 vendor/lib64/lib_SamsungRec_08020.so
@@ -744,7 +744,7 @@ vendor/firmware/evass.b18
 
 # FASTCV
 vendor/lib64/libfastcvdsp_stub.so
--vendor/lib64/libfastcvopt.so
+vendor/lib64/libfastcvopt.so
 
 # Feature
 vendor/lib64/libfloatingfeature.so
@@ -986,7 +986,7 @@ vendor/lib64/libstagefright_foundation_vendor.so
 vendor/lib64/qti.video.utils.videobufferlayout.so
 
 # Memory
--vendor/lib64/libvmmem.so
+vendor/lib64/libvmmem.so
 
 # NFC
 vendor/bin/hw/nxp.android.hardware.nfc@1.2-service
@@ -1237,7 +1237,7 @@ vendor/etc/init/init_thermal-engine-v2.rc
 vendor/etc/init/vendor.samsung.hardware.thermal@1.0-service.rc
 vendor/etc/thermal-engine.conf
 vendor/etc/vintf/manifest/vendor.samsung.hardware.thermal@1.0-manifest.xml
--vendor/lib64/libthermalclient.so
+vendor/lib64/libthermalclient.so
 vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
 
 # Time services
