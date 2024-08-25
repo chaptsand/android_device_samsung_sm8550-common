@@ -828,20 +828,20 @@ vendor/lib64/libmm-hdcpmgr.so
 vendor/lib64/libqrtrclient.so
 
 # Display (SDM) - from rtwo rtwo_g-user 14 U1TR34.8-30-13-2-2 5b4b0d-dde58 release-keys - RETAIL
-vendor/lib64/libclstc_algorithm_adapter.so
-vendor/lib64/libclstc_gcp_adapter.so
-vendor/lib64/libclstc_tm.so
-vendor/lib64/libdisplayqos.so
-vendor/lib64/libdisplayskuutils.so
-vendor/lib64/libqseed3.so
-vendor/lib64/librcmask.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-colormgr-algo.so
-vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libtestutils.so
-vendor/lib64/libtinyxml2_1.so
-vendor/lib64/libvmfilexfer.so
+vendor/lib64/libclstc_algorithm_adapter.so|83c9312dc159fb7b26f209771c9af0a4765abaaa
+vendor/lib64/libclstc_gcp_adapter.so|b79dadb2a1f01fbd9247ce2d9eb2623f2bb09f45
+vendor/lib64/libclstc_tm.so|4493a709d717985b50c70c6a3be26d59fa8e367f
+vendor/lib64/libdisplayqos.so|b5a09fcc1069997513b76f55cc3f6a3066994956
+vendor/lib64/libdisplayskuutils.so|4335b456d8228a4eaa9a9a2bd8777879159607a1
+vendor/lib64/libqseed3.so|3f3540f90ddafc814d86bb04c95446e4623ffa2e
+vendor/lib64/librcmask.so|b5c7dd55f9a517f61dba444662996ee551224257
+vendor/lib64/libsdm-color.so|c36b857c03f1ac8e89882fd59812ae501e4c9772
+vendor/lib64/libsdm-colormgr-algo.so|e869abec7e7a19898e8263c1f20721121f068e14
+vendor/lib64/libsdm-disp-vndapis.so|5fa6bcf6d84109034e9375eaeaec01fcbf048d48
+vendor/lib64/libsdmextension.so|8d0310509ee086408322a25499ad5c6b155e21dd
+vendor/lib64/libtestutils.so|c08a0c89b3102badf6eb58cb38df608d70a43877
+vendor/lib64/libtinyxml2_1.so|2b1b8300b0fd7a6059d13dae00f60735445725f9
+vendor/lib64/libvmfilexfer.so|8520a88db5dedc1a7226be4b3aeb7e6bef6d4dce
 
 # Dolby
 vendor/etc/dax3_media_codecs_dolby_audio.xml
