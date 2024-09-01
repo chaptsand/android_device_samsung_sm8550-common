@@ -9,6 +9,7 @@ import /vendor/etc/init/hw/init.samsung.power.rc
 import /vendor/etc/init/hw/init.samsung.display.rc
 import /vendor/etc/init/hw/init.samsung.dp.rc
 import /vendor/etc/init/hw/init.samsung.connector.rc
+import /vendor/etc/init/hw/init.samsung.firmware.rc
 
 on early-init
     mkdir /mnt/vendor/efs 0771 radio system

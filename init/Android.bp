@@ -86,6 +86,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.samsung.firmware.rc",
+    src: "init.samsung.firmware.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.samsung.power.rc",
     src: "init.samsung.power.rc",
     sub_dir: "init/hw",
