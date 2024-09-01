@@ -581,10 +581,7 @@ vendor/firmware/CAMERA_ICP.b16
 vendor/firmware/CAMERA_ICP.b17
 vendor/firmware/CAMERA_ICP.b18
 vendor/firmware/CAMERA_ICP.b19
-vendor/firmware/CAMERA_ICP.b20
 vendor/firmware/CAMERA_ICP.elf
-vendor/firmware/CAMERA_ICP.mbn
-vendor/firmware/CAMERA_ICP.mdt
 vendor/firmware/CAMERA_ICP_170.elf
 
 # Charger
@@ -759,9 +756,6 @@ vendor/firmware/evass.b15
 vendor/firmware/evass.b16
 vendor/firmware/evass.b17
 vendor/firmware/evass.b18
-vendor/firmware/evass.b19
-vendor/firmware/evass.mbn
-vendor/firmware/evass.mdt
 
 # FASTCV
 vendor/lib64/libfastcvdsp_stub.so
@@ -857,10 +851,7 @@ vendor/lib64/hw/gatekeeper.mdfpp.so
 vendor/firmware/a740_sqe.fw
 vendor/firmware/a740_zap.b00
 vendor/firmware/a740_zap.b01
-vendor/firmware/a740_zap.b02
 vendor/firmware/a740_zap.elf
-vendor/firmware/a740_zap.mbn
-vendor/firmware/a740_zap.mdt
 vendor/firmware/gmu_gen70200.bin
 vendor/gpu/kbc/sequence_manifest.bin
 vendor/gpu/kbc/unified_kbcs_64.bin
@@ -1320,7 +1311,6 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 # VPU firmware
 vendor/firmware/vpu20_4v.mbn
 vendor/firmware/vpu20_4v_unsigned.mbn
-vendor/firmware/vpu30_4v.mbn
 vendor/firmware/vpu30_4v_16mb.mbn
 vendor/firmware/vpu30_4v_16mb_unsigned.mbn
 vendor/firmware/vpu30_4v_unsigned.mbn
