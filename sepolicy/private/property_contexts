@@ -1,0 +1,30 @@
+# Camera
+service.camera.                                  u:object_r:sec_camera_prop:s0
+
+# CSC
+persist.sys.omcnw_path                           u:object_r:exported_config_prop:s0
+persist.sys.omcnw_path2                          u:object_r:exported_config_prop:s0
+ro.omc.region                                    u:object_r:exported_config_prop:s0
+ro.csc.                                          u:object_r:exported_config_prop:s0
+mdc.                                             u:object_r:exported_config_prop:s0
+
+# Hermesd
+security.securehw.                               u:object_r:vendor_securehw_prop:s0
+security.securenvm.available                     u:object_r:vendor_securenvm_prop:s0
+
+# Product
+ro.product_ship                                  u:object_r:product_ship_prop:s0
+
+# Radio
+persist.ril.                                     u:object_r:radio_prop:s0
+ro.multisim.                                     u:object_r:radio_prop:s0
+ril.NwNmId                                       u:object_r:telephony_config_prop:s0
+ril.NwNmId2                                      u:object_r:telephony_config_prop:s0
+ro.simbased.changetype                           u:object_r:telephony_config_prop:s0
+
+# Sensor
+persist.dm.passive.                              u:object_r:system_sensor_prop:s0
+ro.factory.sensor.                               u:object_r:exported_system_prop:s0
+
+# Thermal
+dev.sdhms.thermal.hv                             u:object_r:exported_system_prop:s0

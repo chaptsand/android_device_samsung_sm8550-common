@@ -1,0 +1,45 @@
+# Allow rild to read/write proc file
+allow rild proc_net:file rw_file_perms;
+allow rild proc_qtaguid_stat:file r_file_perms;
+
+# Allow rild to read/write app_efs_file
+allow rild app_efs_file:dir create_dir_perms;
+allow rild app_efs_file:file create_file_perms;
+
+# Allow rild to read/write dak_efs_file
+allow rild dak_efs_file:dir create_dir_perms;
+allow rild dak_efs_file:file create_file_perms;
+
+# Allow rild to read/write efs_file
+allow rild efs_file:dir rw_dir_perms;
+
+# Allow rild to read/write imei_efs_file
+allow rild imei_efs_file:dir create_dir_perms;
+allow rild imei_efs_file:file create_file_perms;
+
+# Allow rild to read/write sec_efs_file
+allow rild sec_efs_file:dir create_dir_perms;
+allow rild sec_efs_file:file create_file_perms;
+
+# Allow rild to access drb_device
+allow rild drb_device:chr_file rw_file_perms;
+
+# Allow rild to access tun_device
+allow rild tun_device:chr_file rw_file_perms;
+allow rild self:tun_socket { create relabelfrom relabelto };
+allowxperm rild tun_device:chr_file ioctl { 0x54ca 0x54cb };
+
+# Allow rild to access data files
+allow rild mnt_vendor_file:dir r_dir_perms;
+allow rild system_data_file:dir { getattr search };
+allow rild vendor_radio_vendor_data_file:dir create_dir_perms;
+allow rild vendor_radio_vendor_data_file:file create_file_perms;
+
+# Allow rild to access vendor hals
+r_dir_file(rild, hal_audio_default)
+r_dir_file(rild, hal_camera_default)
+
+set_prop(rild, vendor_data_ko_prop)
+set_prop(rild, vendor_data_shsusr_prop)
+
+dontaudit rild { default_prop system_prop }:file { read open getattr map };

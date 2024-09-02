@@ -1,0 +1,5 @@
+system_public_prop(sec_camera_prop)
+system_public_prop(system_sensor_prop)
+system_public_prop(product_ship_prop)
+vendor_restricted_prop(vendor_securehw_prop)
+vendor_restricted_prop(vendor_securenvm_prop)

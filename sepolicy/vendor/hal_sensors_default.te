@@ -1,0 +1,30 @@
+# Allow sensor HAL to to read/write app_efs_file
+allow hal_sensors_default app_efs_file:dir rw_dir_perms;
+allow hal_sensors_default app_efs_file:file create_file_perms;
+
+# Allow sensor HAL to to read/write efs_file
+allow hal_sensors_default efs_file:dir rw_dir_perms;
+allow hal_sensors_default efs_file:file create_file_perms;
+
+# Allow sensor HAL to access iio device
+allow hal_sensors_default iio_device:chr_file r_file_perms;
+
+# Allow sensor HAL to read/write vendor_sysfs_input
+allow hal_sensors_default vendor_sysfs_input:dir r_dir_perms;
+allow hal_sensors_default vendor_sysfs_input:file rw_file_perms;
+
+# Allow sensor HAL to read/write vendor_sysfs_sensors_writable
+allow hal_sensors_default vendor_sysfs_sensors_writable:dir r_dir_perms;
+allow hal_sensors_default vendor_sysfs_sensors_writable:file rw_file_perms;
+
+# Allow sensor HAL to to read/wite sec touchscreen
+r_dir_file(hal_sensors_default, vendor_sysfs_touchscreen)
+
+# Allow sensor HAL to to read/write vendor_sysfs_touchscreen_writable
+allow hal_sensors_default vendor_sysfs_touchscreen_writable:file rw_file_perms;
+
+binder_call(hal_sensors_default, system_server)
+
+get_prop(hal_sensors_default, build_bootimage_prop)
+
+get_prop(hal_sensors_default, system_sensor_prop)

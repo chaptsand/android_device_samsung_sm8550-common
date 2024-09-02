@@ -1,0 +1,34 @@
+# Allow camera HAL to read app_efs_file
+r_dir_file(hal_camera_default, app_efs_file)
+
+# Allow camera HAL to read efs_file
+r_dir_file(hal_camera_default, efs_file)
+
+# Allow camera HAL to read/write camera_efs_file
+allow hal_camera_default camera_efs_file:dir create_dir_perms;
+allow hal_camera_default camera_efs_file:file create_file_perms;
+
+# Allow camera HAL to read vendor_sysfs_camera
+r_dir_file(hal_camera_default, vendor_sysfs_camera)
+
+# Allow camera HAL to write vendor_sysfs_camera_writable
+allow hal_camera_default vendor_sysfs_camera_writable:file rw_file_perms;
+
+# Allow camera HAL to read /mnt/vendor/
+r_dir_file(hal_camera_default, mnt_vendor_file)
+
+# Allow camera HAL to read vendor_sysfs_sensors
+r_dir_file(hal_camera_default, vendor_sysfs_sensors)
+
+# Allow camera HAL to read proc_meminfo
+allow hal_camera_default proc_meminfo:file r_file_perms;
+
+hal_client_domain(hal_camera_default, hal_hyper)
+hal_client_domain(hal_camera_default, hal_thermal)
+
+get_prop(hal_camera_default, sec_camera_prop)
+set_prop(hal_camera_default, sec_camera_prop)
+
+allow hal_camera_default system_server:binder call;
+
+allow hal_camera_default rild:unix_stream_socket connectto;

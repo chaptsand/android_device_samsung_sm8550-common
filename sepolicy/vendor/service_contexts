@@ -1,0 +1,25 @@
+# Hyper
+vendor.samsung.hardware.hyper.ISehHyPer/default                     u:object_r:hal_hyper_service:s0
+
+# Gnss
+vendor.samsung.hardware.gnss.ISehGnss/default                       u:object_r:hal_gnss_service:s0
+
+# Keymint
+vendor.samsung.hardware.keymint.ISehKeyMintExtension/default        u:object_r:hal_keymint_service:s0
+vendor.samsung.hardware.keymint.ISehKeyMintFactory/default          u:object_r:hal_keymint_service:s0
+
+# Radio
+vendor.samsung.hardware.radio.bridge.ISehRadioBridge/slot1          u:object_r:hal_radio_service:s0
+vendor.samsung.hardware.radio.bridge.ISehRadioBridge/slot2          u:object_r:hal_radio_service:s0
+vendor.samsung.hardware.radio.channel.ISehRadioChannel/epdgd        u:object_r:hal_radio_service:s0
+vendor.samsung.hardware.radio.channel.ISehRadioChannel/epdgd2       u:object_r:hal_radio_service:s0
+vendor.samsung.hardware.radio.channel.ISehRadioChannel/imsd         u:object_r:hal_radio_service:s0
+vendor.samsung.hardware.radio.channel.ISehRadioChannel/imsd2        u:object_r:hal_radio_service:s0
+vendor.samsung.hardware.radio.data.ISehRadioData/slot1              u:object_r:hal_radio_service:s0
+vendor.samsung.hardware.radio.data.ISehRadioData/slot2              u:object_r:hal_radio_service:s0
+vendor.samsung.hardware.radio.messaging.ISehRadioMessaging/slot1    u:object_r:hal_radio_service:s0
+vendor.samsung.hardware.radio.messaging.ISehRadioMessaging/slot2    u:object_r:hal_radio_service:s0
+vendor.samsung.hardware.radio.network.ISehRadioNetwork/slot1        u:object_r:hal_radio_service:s0
+vendor.samsung.hardware.radio.network.ISehRadioNetwork/slot2        u:object_r:hal_radio_service:s0
+vendor.samsung.hardware.radio.sim.ISehRadioSim/slot1                u:object_r:hal_radio_service:s0
+vendor.samsung.hardware.radio.sim.ISehRadioSim/slot2                u:object_r:hal_radio_service:s0

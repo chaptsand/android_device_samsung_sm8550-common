@@ -1,0 +1,4 @@
+allow vendor_time_daemon rild:dir search;
+allow vendor_time_daemon rild:file { read open };
+allow vendor_time_daemon tee:dir { search };
+allow vendor_time_daemon tee:file { read open };

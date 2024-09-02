@@ -1,0 +1,5 @@
+allow init efs_file:dir mounton;
+
+allow init sec_efs_file:dir mounton;
+
+allow init vendor_firmware_file:file mounton;

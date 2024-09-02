@@ -1,0 +1,11 @@
+# Bluetooth
+vendor.samsung.hardware.bluetooth.a2dp::ISehBluetoothAudioOffload		                u:object_r:hal_bluetooth_a2dp_hwservice:s0
+vendor.samsung.hardware.bluetooth.a2dpsink::ISehBluetoothA2dpSinkProvidersFactory		u:object_r:hal_bluetooth_a2dp_hwservice:s0
+vendor.samsung.hardware.bluetooth.audio::ISehBluetoothAudioProviderFactory			    u:object_r:hal_audio_hwservice:s0
+vendor.samsung.hardware.bluetooth::ISehBluetooth                                        u:object_r:hal_bluetooth_hwservice:s0
+
+# NFC
+vendor.samsung.hardware.nfc::ISehNfc                                                    u:object_r:hal_nfc_hwservice:s0
+
+# Thermal
+vendor.samsung.hardware.thermal::ISehThermal                                            u:object_r:hal_thermal_samsung_hwservice:s0

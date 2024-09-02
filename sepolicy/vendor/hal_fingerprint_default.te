@@ -1,0 +1,24 @@
+# Allow fingerprint HAL to read efs_file
+r_dir_file(hal_fingerprint_default, efs_file)
+
+# Allow fingerprint HAL to read sec_efs_file
+allow hal_fingerprint_default sec_efs_file:dir create_dir_perms;
+allow hal_fingerprint_default sec_efs_file:file create_file_perms;
+
+# Allow fingerprint HAL to access qbt device
+allow hal_fingerprint_default vendor_qbt_device:chr_file rw_file_perms;
+
+# Allow fingerprint HAL to access tee device
+allow hal_fingerprint_default tee_device:chr_file rw_file_perms;
+allow hal_fingerprint_default vendor_dmabuf_qseecom_heap_device:chr_file rw_file_perms;
+allow hal_fingerprint_default vendor_dmabuf_qseecom_ta_heap_device:chr_file rw_file_perms;
+
+# Allow fingerprint HAL to search tee_efs_file
+allow hal_fingerprint_default tee_efs_file:dir search;
+
+# Allow fingerprint HAL to read/write vendor_biometrics_data_file
+allow hal_fingerprint_default vendor_biometrics_data_file:dir create_dir_perms;
+allow hal_fingerprint_default vendor_biometrics_data_file:file create_file_perms;
+
+# Allow fingerprint HAL to search vendor_sysfs_battery files
+allow hal_fingerprint_default vendor_sysfs_battery:dir search;

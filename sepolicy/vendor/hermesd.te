@@ -1,0 +1,29 @@
+type hermesd, domain;
+type hermesd_exec, exec_type, file_type, vendor_file_type;
+hal_server_domain(hermesd, hal_weaver)
+hal_client_domain(hermesd, hal_keymint)
+
+init_daemon_domain(hermesd)
+unix_socket_connect(hermesd, property, init)
+
+# Allow hermesd to access k250a device
+allow hermesd k250a_device:chr_file rw_file_perms;
+
+# Allow hermesd to access tee device
+allow hermesd tee_device:chr_file rw_file_perms;
+
+# Allow hermesd to search tee_efs_file
+allow hermesd tee_efs_file:dir search;
+
+# Allow hermesd to access TZ device
+allow hermesd vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;
+allow hermesd vendor_dmabuf_qseecom_ta_heap_device:chr_file r_file_perms;
+
+# Allow hermesd to read/write vendor_gatekeeper_data_file
+allow hermesd vendor_gatekeeper_data_file:dir create_dir_perms;
+allow hermesd vendor_gatekeeper_data_file:file create_file_perms;
+
+allow hermesd hal_keymint_default:binder transfer;
+
+set_prop(hermesd, vendor_securenvm_prop)
+set_prop(hermesd, vendor_securehw_prop)

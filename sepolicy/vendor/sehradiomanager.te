@@ -1,0 +1,11 @@
+type sehradiomanager, domain;
+type sehradiomanager_exec, exec_type, file_type, vendor_file_type;
+
+init_daemon_domain(sehradiomanager)
+
+get_prop(sehradiomanager, vendor_radio_prop)
+get_prop(sehradiomanager, hwservicemanager_prop)
+binder_call(sehradiomanager, hwservicemanager)
+binder_call(sehradiomanager, servicemanager)
+binder_call(servicemanager, sehradiomanager)
+hal_client_domain(sehradiomanager, hal_telephony)

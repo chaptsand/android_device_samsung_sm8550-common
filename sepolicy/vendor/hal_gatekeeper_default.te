@@ -1,0 +1,2 @@
+# Allow gatekeeper HAL to access sqeecom device
+allow hal_gatekeeper_default vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;

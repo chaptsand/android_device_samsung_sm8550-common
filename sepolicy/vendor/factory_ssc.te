@@ -1,0 +1,19 @@
+type factory_ssc, domain;
+type factory_ssc_exec, exec_type, file_type, vendor_file_type;
+
+init_daemon_domain(factory_ssc)
+
+allow factory_ssc self:netlink_socket { bind create read write };
+allow factory_ssc factory_ssc:qipcrtr_socket create_socket_perms_no_ioctl;
+allow factory_ssc property_socket:sock_file { append getattr ioctl read write };
+
+# Allow factory_ssc to read/write app_efs_file
+allow factory_ssc app_efs_file:dir create_dir_perms;
+allow factory_ssc app_efs_file:file create_file_perms;
+
+# Allow factory_ssc to read/write efs_file
+allow factory_ssc efs_file:dir create_dir_perms;
+allow factory_ssc efs_file:file create_file_perms;
+
+# Allow factory_ssc to read sec_efs_file
+allow factory_ssc sec_efs_file:dir r_dir_perms;

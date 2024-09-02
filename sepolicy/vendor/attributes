@@ -1,0 +1,4 @@
+# Hyper
+attribute hal_hyper;
+attribute hal_hyper_server;
+attribute hal_hyper_client;

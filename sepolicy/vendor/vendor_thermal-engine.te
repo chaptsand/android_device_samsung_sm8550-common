@@ -1,0 +1,2 @@
+# Allow thermal-engine to read vendor_sysfs_battery
+r_dir_file(vendor_thermal-engine, vendor_sysfs_battery)

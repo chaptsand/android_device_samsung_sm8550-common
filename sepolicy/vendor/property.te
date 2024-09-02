@@ -1,0 +1,12 @@
+# NFC
+vendor_internal_prop(vendor_sec_nfc_prop)
+
+# Secure Element
+vendor_internal_prop(vendor_sehal_init_prop)
+
+# Tee
+vendor_internal_prop(vendor_qseecomd_prop)
+
+# Thermal
+vendor_internal_prop(vendor_thermal_prop)
+vendor_internal_prop(vendor_thermal_test_prop)

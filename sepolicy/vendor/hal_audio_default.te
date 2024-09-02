@@ -1,0 +1,20 @@
+# Allow audio HAL to read sec_efs_file
+r_dir_file(hal_audio_default, sec_efs_file)
+
+# Allow audio HAL to read imei_efs_file
+r_dir_file(hal_audio_default, imei_efs_file)
+
+# Allow audio HAL to search efs_file
+allow hal_audio_default efs_file:dir search;
+
+# Allow audio HAL to read/write vendor_sysfs_cirrus_cal
+allow hal_audio_default vendor_sysfs_cirrus_cal:dir r_dir_perms;
+allow hal_audio_default vendor_sysfs_cirrus_cal:file rw_file_perms;
+
+# Allow audio HAL to read vendor_radio_prop
+get_prop(hal_audio_default, vendor_radio_prop)
+
+# Allow audio HAL to access hal_bluetooth_a2dp_hwservice
+allow hal_audio_default hal_bluetooth_a2dp_hwservice:hwservice_manager find;
+
+dontaudit hal_audio_default default_prop:file { read open getattr map };

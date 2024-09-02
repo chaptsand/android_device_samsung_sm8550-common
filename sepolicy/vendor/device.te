@@ -1,0 +1,12 @@
+# Block Device
+type carrier_block_device, dev_type;
+type dsp_block_device, dev_type;
+type efs_block_device, dev_type;
+type omr_block_device, dev_type;
+type sec_efs_block_device, dev_type;
+
+# Hermesd Device
+type k250a_device, dev_type;
+
+# Radio Device
+type drb_device, dev_type;

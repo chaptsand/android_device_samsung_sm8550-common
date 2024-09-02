@@ -1,0 +1,21 @@
+# Allow thermal HAL to read/write vendor_sysfs_thermal files
+r_dir_file(hal_thermal_default, vendor_sysfs_thermal)
+allow hal_thermal_default vendor_sysfs_thermal:file w_file_perms;
+
+# Allow thermal HAL to read vendor_sysfs_battery files
+r_dir_file(hal_thermal_default, vendor_sysfs_battery)
+
+# Allow hwservice_manager to find fwk_camera_hwservice
+allow hal_thermal_default fwk_camera_hwservice:hwservice_manager find;
+
+# Allow hal_thermal_default to call cameraserver
+binder_call(hal_thermal_default, cameraserver)
+
+hal_client_domain(hal_thermal_default, hal_audio)
+hal_client_domain(hal_thermal_default, hal_hyper)
+
+unix_socket_connect(hal_thermal_default, property, rild)
+get_prop(hal_thermal_default, vendor_thermal_prop)
+set_prop(hal_thermal_default, vendor_thermal_test_prop)
+
+add_hwservice(hal_thermal_server, hal_thermal_samsung_hwservice)

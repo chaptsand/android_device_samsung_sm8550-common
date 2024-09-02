@@ -1,0 +1,7 @@
+# Allow gnss HAL to read/write vendor_sysfs_battery
+allow vendor_hal_gnss_qti vendor_sysfs_battery:file rw_file_perms;
+allow vendor_hal_gnss_qti vendor_sysfs_battery:dir r_dir_perms;
+
+allow vendor_hal_gnss_qti hal_gnss_service:service_manager add;
+
+dontaudit vendor_hal_gnss_qti { default_prop system_prop }:file { read open getattr map };

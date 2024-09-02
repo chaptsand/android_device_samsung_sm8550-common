@@ -1,0 +1,22 @@
+# Bluetooth
+vendor.bluetooth_fw_ver u:object_r:vendor_bluetooth_prop:s0
+vendor.bluetooth_nv_ver u:object_r:vendor_bluetooth_prop:s0
+
+# NFC
+ro.vendor.nfc.          u:object_r:vendor_sec_nfc_prop:s0
+
+# Radio
+ro.vendor.multisim.     u:object_r:vendor_radio_prop:s0
+ro.vendor.radio.        u:object_r:vendor_radio_prop:s0
+ro.vendor.sec.radio.    u:object_r:vendor_radio_prop:s0
+vendor.calls.           u:object_r:vendor_radio_prop:s0
+
+# Secure Element
+vendor.seHal.init       u:object_r:vendor_sehal_init_prop:s0
+
+# Tee
+vendor.sys.qseecomd.    u:object_r:vendor_qseecomd_prop:s0
+
+# Thermal
+vendor.thermal.          u:object_r:vendor_thermal_prop:s0
+vendor.thermal.amb.      u:object_r:vendor_thermal_test_prop:s0

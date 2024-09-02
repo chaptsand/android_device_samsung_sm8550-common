@@ -1,0 +1,52 @@
+# Audio
+type vendor_sysfs_cirrus_cal, fs_type, sysfs_type;
+
+# Battery
+type vendor_sysfs_battery, fs_type, sysfs_type;
+
+# Blutooth
+type vendor_convergence_data_file, file_type, data_file_type;
+
+# Camera
+type vendor_sysfs_camera_writable, fs_type, sysfs_type;
+
+# EFS
+type app_efs_file, file_type;
+type battery_efs_file, file_type;
+type camera_efs_file, file_type;
+type dak_efs_file, file_type;
+type imei_efs_file, file_type;
+type sec_efs_file, file_type;
+type tee_efs_file, file_type;
+
+# Fingerprint
+type vendor_biometrics_data_file, file_type, data_file_type;
+
+# Gatekeeper
+type vendor_gatekeeper_data_file, file_type, data_file_type;
+
+# Input
+type proc_bus_input, fs_type, proc_type;
+type vendor_sysfs_input, fs_type, sysfs_type;
+
+# Proc
+type proc_simslot_count, fs_type, proc_type;
+
+# Qms
+type vendor_qms_config_data_file, file_type, data_file_type;
+type vendor_qms_main_data_file, file_type, data_file_type;
+type vendor_qms_other_data_file, file_type, data_file_type;
+
+# Sensor
+type vendor_sysfs_sensors_writable, fs_type, sysfs_type;
+
+# Thermal
+type vendor_sysfs_thermal, fs_type, sysfs_type;
+
+# Touchscreen
+type vendor_sysfs_touchscreen, fs_type, sysfs_type;
+type vendor_sysfs_touchscreen_writable, fs_type, sysfs_type;
+
+# Vibrator
+type vendor_sysfs_vib_support, fs_type, sysfs_type;
+type vendor_sysfs_vib_writable, fs_type, sysfs_type;

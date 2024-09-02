@@ -1,0 +1,8 @@
+# Allow vibrator HAL to search sec_efs files
+allow hal_nfc_default sec_efs_file:dir search;
+
+# Allow NFC HAL to use nfc devices
+allow hal_nfc_default nfc_device:chr_file rw_file_perms;
+
+# Allow NFC HAL to read NFC properties
+get_prop(hal_nfc_default, vendor_sec_nfc_prop)

@@ -1,0 +1,88 @@
+# Proc
+genfscon proc "/simslot_count"                               u:object_r:proc_simslot_count:s0
+
+# Audio
+genfscon sysfs "/devices/virtual/cirrus/cirrus_bd"           u:object_r:vendor_sysfs_cirrus_cal:s0
+genfscon sysfs "/devices/virtual/cirrus/cirrus_cal"          u:object_r:vendor_sysfs_cirrus_cal:s0
+
+# Battery
+genfscon sysfs "/devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply"                                                  u:object_r:vendor_sysfs_battery:s0
+genfscon sysfs "/devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/battery/batt_factory_mode"                        u:object_r:vendor_sysfs_battery:s0
+genfscon sysfs "/devices/platform/samsung_mobile_device/samsung_mobile_device:sec-direct-charger/power_supply/sec-direct-charger"                    u:object_r:vendor_sysfs_battery:s0
+genfscon sysfs "/devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/994000.i2c/i2c-36/36-005b/power_supply/mfc-charger"                              u:object_r:vendor_sysfs_battery:s0
+genfscon sysfs "/devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/9a0000.i2c/i2c-37/37-0057/power_supply/pca9481-charger"                          u:object_r:vendor_sysfs_battery:s0
+genfscon sysfs "/devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/9a0000.i2c/i2c-37/37-0066/max77705-charger/power_supply/max77705-charger"        u:object_r:vendor_sysfs_battery:s0
+genfscon sysfs "/devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/9a0000.i2c/i2c-37/37-0066/max77705-charger/power_supply/max77705-otg"            u:object_r:vendor_sysfs_battery:s0
+genfscon sysfs "/devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/9a0000.i2c/i2c-37/37-0066/max77705-fuelgauge/power_supply/max77705-fuelgauge"    u:object_r:vendor_sysfs_battery:s0
+
+# Camera
+genfscon sysfs "/devices/virtual/camera"                          u:object_r:vendor_sysfs_camera:s0
+genfscon sysfs "/devices/virtual/camera/flash/rear_flash"         u:object_r:vendor_sysfs_camera_writable:s0
+genfscon sysfs "/devices/virtual/camera/rear/ssrm_camera_info"    u:object_r:vendor_sysfs_camera_writable:s0
+
+# Input
+genfscon proc "/bus/input/devices"                                u:object_r:proc_bus_input:s0
+genfscon sysfs "/class/input"                                     u:object_r:vendor_sysfs_input:s0
+genfscon sysfs "/devices/virtual/input"                           u:object_r:vendor_sysfs_input:s0
+
+# Wakeup
+genfscon sysfs "/devices/platform/i2c@31/i2c-31/31-0059/wakeup"                                                                                             u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/i2c@33/i2c-33/33-0028/wakeup"                                                                                             u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/ac/wakeup"                                               u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/battery/wakeup"                                          u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/otg/wakeup"                                              u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/pogo/wakeup"                                             u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/usb/wakeup"                                              u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/wireless/wakeup"                                         u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/samsung_mobile_device/samsung_mobile_device:battery/wakeup"                                                               u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/samsung_mobile_device/samsung_mobile_device:hall_ic/wakeup"                                                               u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/samsung_mobile_device/samsung_mobile_device:sec-direct-charger/power_supply/sec-direct-charger/wakeup"                    u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/samsung_mobile_device/samsung_mobile_device:sec-direct-charger/wakeup"                                                    u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/soc/1c00000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/mhi_1103_00.01.00/wakeup"                                      u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/994000.i2c/i2c-36/36-005b/power_supply/mfc-charger/wakeup"                              u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/994000.i2c/i2c-36/36-005b/wakeup"                                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/998000.i2c/i2c-18/18-0040/wakeup"                                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/998000.i2c/i2c-18/18-0041/wakeup"                                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/9a0000.i2c/i2c-37/37-0057/power_supply/pca9481-charger/wakeup"                          u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/9a0000.i2c/i2c-37/37-0057/wakeup"                                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/9a0000.i2c/i2c-37/37-0066/max77705-charger/power_supply/max77705-charger/wakeup"        u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/9a0000.i2c/i2c-37/37-0066/max77705-charger/power_supply/max77705-otg/wakeup"            u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/9a0000.i2c/i2c-37/37-0066/max77705-charger/wakeup"                                      u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/9a0000.i2c/i2c-37/37-0066/max77705-fuelgauge/power_supply/max77705-fuelgauge/wakeup"    u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/9a0000.i2c/i2c-37/37-0066/max77705-fuelgauge/wakeup"                                    u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/9a0000.i2c/i2c-37/37-0066/max77705-usbc/wakeup"                                         u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/9a0000.i2c/i2c-37/37-0066/wakeup"                                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/wakeup"                                                 u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi1/spi1.0/wakeup"                                                 u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/soc/ae90000.qcom,dp_display/wakeup"                                                                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs "/devices/platform/soc/soc:qcom,qbt2000/wakeup"                                                                                              u:object_r:sysfs_wakeup:s0
+
+# Sensor
+genfscon sysfs "/devices/virtual/sensor_event"                                               u:object_r:vendor_sysfs_sensors:s0
+genfscon sysfs "/devices/virtual/sensors"                                                    u:object_r:vendor_sysfs_sensors:s0
+genfscon sysfs "/devices/virtual/sensors/flip_cover_detector_sensor/factory_cover_status"    u:object_r:vendor_sysfs_sensors_writable:s0
+genfscon sysfs "/devices/virtual/sensors/flip_cover_detector_sensor/nfc_cover_status"        u:object_r:vendor_sysfs_sensors_writable:s0
+
+# Hall
+genfscon sysfs "/devices/virtual/sec/hall_ic/hall_detect"                     u:object_r:vendor_sysfs_sensors_writable:s0
+
+# Thermal
+genfscon sysfs "/devices/virtual/audio/amp"                                   u:object_r:vendor_sysfs_thermal:s0
+genfscon sysfs "/devices/virtual/sec/sec-ap-thermistor"                       u:object_r:vendor_sysfs_thermal:s0
+genfscon sysfs "/devices/virtual/sec/sec-cf-thermistor"                       u:object_r:vendor_sysfs_thermal:s0
+genfscon sysfs "/devices/virtual/sec/sec-cp-thermistor"                       u:object_r:vendor_sysfs_thermal:s0
+genfscon sysfs "/devices/virtual/sec/sec-pa-thermistor"                       u:object_r:vendor_sysfs_thermal:s0
+genfscon sysfs "/devices/virtual/sec/sec-wf-thermistor"                       u:object_r:vendor_sysfs_thermal:s0
+
+# Touchscreen
+genfscon sysfs "/class/sec/tsp"                                               u:object_r:vendor_sysfs_touchscreen:s0
+genfscon sysfs "/class/sec/tsp/input/enabled"                                 u:object_r:vendor_sysfs_touchscreen_writable:s0
+genfscon sysfs "/devices/virtual/sec/tsp"                                     u:object_r:vendor_sysfs_touchscreen:s0
+genfscon sysfs "/devices/virtual/sec/tsp/cmd"                                 u:object_r:vendor_sysfs_touchscreen_writable:s0
+genfscon sysfs "/devices/virtual/sec/tsp/ear_detect_enable"                   u:object_r:vendor_sysfs_touchscreen_writable:s0
+genfscon sysfs "/devices/virtual/sec/tsp/input/enabled"                       u:object_r:vendor_sysfs_touchscreen_writable:s0
+genfscon sysfs "/devices/virtual/sec/tsp/prox_power_off"                      u:object_r:vendor_sysfs_touchscreen_writable:s0
+
+# Vibrator
+genfscon sysfs "/devices/virtual/sec_vib_inputff/control/use_sep_index"       u:object_r:vendor_sysfs_vib_writable:s0
+genfscon sysfs "/devices/virtual/vib_info_class/vib_support_info/functions"   u:object_r:vendor_sysfs_vib_support:s0

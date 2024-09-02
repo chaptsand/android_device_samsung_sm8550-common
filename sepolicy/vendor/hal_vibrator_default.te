@@ -1,0 +1,18 @@
+# Allow vibrator HAL to read input_device files
+allow hal_vibrator_default input_device:dir r_dir_perms;
+
+# Allow vibrator HAL to access input device
+allow hal_vibrator_default input_device:chr_file rw_file_perms;
+
+# Allow vibrator HAL to read app_efs_file files
+allow hal_vibrator_default app_efs_file:dir rw_dir_perms;
+allow hal_vibrator_default app_efs_file:file create_file_perms;
+
+# Allow vibrator HAL to search efs files
+allow hal_vibrator_default efs_file:dir search;
+
+# Allow vibrator HAL to read proc_bus_input files
+r_dir_file(hal_vibrator_default, proc_bus_input)
+
+allow hal_vibrator_default vendor_sysfs_vib_support:file rw_file_perms;
+allow hal_vibrator_default vendor_sysfs_vib_writable:file rw_file_perms;
