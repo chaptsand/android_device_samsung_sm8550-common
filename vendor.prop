@@ -21,9 +21,6 @@ ro.fuse.bpf.enabled=false
 # Gatekeeper
 ro.hardware.gatekeeper=mdfpp
 
-# HDM status
-ro.vendor.hdm.supported.swblock=0x100
-
 # Incremental FS
 ro.incremental.enable=yes
 
@@ -70,9 +67,6 @@ vendor.dynamic_sensor.setup.timeout.ms=2000
 
 # SoC
 ro.soc.manufacturer=QTI
-
-# UWB
-ro.vendor.uwb.feature.chipname=sr200
 
 # WiFi
 wifi.aware.interface=wifi-aware0

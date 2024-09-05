@@ -268,10 +268,8 @@ vendor/lib64/vendor.qti.latency@2.1.so
 vendor/lib64/vendor.qti.latency@2.2.so
 
 # Camera
-vendor/bin/hw/android.hardware.camera.provider@2.7-external-service
 vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
 vendor/etc/external_camera_config.xml
-vendor/etc/init/android.hardware.camera.provider@2.7-external-service.rc
 vendor/etc/init/camera.unihal.rc
 vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc
 vendor/etc/permissions/vendor.android.hardware.camera.preview-dis.back.xml
@@ -607,9 +605,6 @@ vendor/etc/ssg/tz_whitelist.json
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 
 # DRK
-vendor/bin/hw/vendor.samsung.hardware.security.drk@2.0-service
-vendor/etc/init/vendor.samsung.hardware.security.drk@2.0-service.rc
-vendor/lib64/libdk_vnd_service_core.so
 vendor/lib64/vendor.samsung.hardware.security.drk-V1-ndk.so
 vendor/lib64/vendor.samsung.hardware.security.drk@2.0.so
 
@@ -733,14 +728,6 @@ vendor/lib64/libsynaFpSensorTestNwd.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 vendor/lib64/vendor.samsung.hardware.biometrics.fingerprint-V1-ndk.so
 
-# Frcmc
-vendor/bin/hw/vendor.samsung.hardware.frcmc-service
-vendor/etc/init/vendor.samsung.hardware.frcmc-service.rc
-vendor/etc/vintf/manifest/vendor.samsung.hardware.frcmc-service.xml
-vendor/lib64/libdspmc_qc.so
-vendor/lib64/libdspmc_wrapper.so
-vendor/lib64/vendor.samsung.hardware.frcmc-V1-ndk.so
-
 # GNSS
 vendor/bin/hw/android.hardware.gnss-aidl-service-qti
 vendor/bin/loc_launcher
@@ -863,15 +850,11 @@ vendor/etc/init/hw/init.qti.kernel.rc
 
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti
-vendor/bin/vendor.samsung.hardware.security.fkeymaster-service
 vendor/etc/init/android.hardware.keymaster@4.0-strongbox-service-qti.rc
-vendor/etc/init/vendor.samsung.hardware.security.fkeymaster-service.rc
-vendor/etc/vintf/manifest/vendor.samsung.hardware.security.fkeymaster-service.xml
 vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqtikeymaster4.so
 vendor/lib64/libspcom.so
-vendor/lib64/vendor.samsung.hardware.security.fkeymaster-V1-ndk.so
 
 # Keymint
 vendor/bin/hw/android.hardware.security.keymint-service
