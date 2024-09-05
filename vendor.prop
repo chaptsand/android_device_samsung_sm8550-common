@@ -143,9 +143,6 @@ ro.surface_flinger.use_color_management=true
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
 
-# HDM status
-ro.vendor.hdm.supported.swblock=0x100
-
 # Incremental FS
 ro.incremental.enable=yes
 
@@ -219,9 +216,6 @@ vendor.usb.rmnet.inst.name=rmnet
 vendor.usb.rndis.func.name=gsi
 vendor.usb.use_ffs_mtp=1
 vendor.usb.use_gadget_hal=1
-
-# UWB
-ro.vendor.uwb.feature.chipname=sr200
 
 # WiFi
 wifi.aware.interface=wifi-aware0
