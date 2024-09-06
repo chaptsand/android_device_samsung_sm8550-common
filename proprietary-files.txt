@@ -799,12 +799,6 @@ vendor/firmware/a740_zap.mbn
 vendor/firmware/a740_zap.mdt
 vendor/firmware/gmu_gen70200.bin
 
-# Health
-vendor/bin/hw/vendor.samsung.hardware.health-service
-vendor/etc/init/vendor.samsung.hardware.health-service.rc
-vendor/etc/vintf/manifest/vendor.samsung.hardware.health-service.xml
-vendor/lib64/vendor.samsung.hardware.health-V1-ndk.so
-
 # Hermes
 vendor/bin/hermesd
 vendor/etc/init/hermesd.rc
