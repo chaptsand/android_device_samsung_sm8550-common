@@ -49,20 +49,4 @@
         <item>/vendor/lib64/egl/libGLESv2_adreno.so</item>
     </string-array>
 
-    <!-- Low zone brightness thresholds in the range [0, 255] -->
-    <integer-array name="config_brightnessThresholdsOfPeakRefreshRate" translatable="false">
-        <item>7</item>
-        <item>11</item>
-    </integer-array>
-
-    <!-- Low zone lux thresholds -->
-    <integer-array name="config_ambientThresholdsOfPeakRefreshRate" translatable="false">
-        <item>-1</item>
-        <item>15</item>
-    </integer-array>
-
-    <!-- Default refresh rate in the zone defined by brightness and ambient thresholds.
-         If non-positive, then the refresh rate is unchanged even if thresholds are configured. -->
-    <integer name="config_defaultRefreshRateInZone">120</integer>
-
 </resources>

@@ -1,0 +1,12 @@
+<!--
+     Copyright (C) 2024 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="android.overlay.samsung">
+
+    <overlay
+        android:isStatic="true"
+        android:priority="600"
+        android:targetPackage="android" />
+</manifest>
