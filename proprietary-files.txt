@@ -868,12 +868,6 @@ vendor/lib64/libllvm-qgl.so
 # Graphics (Vulkan)
 vendor/lib64/hw/vulkan.adreno.so
 
-# Health
-vendor/bin/hw/vendor.samsung.hardware.health-service
-vendor/etc/init/vendor.samsung.hardware.health-service.rc
-vendor/etc/vintf/manifest/vendor.samsung.hardware.health-service.xml
-vendor/lib64/vendor.samsung.hardware.health-V1-ndk.so
-
 # Hermes
 vendor/bin/hermesd
 vendor/etc/init/hermesd.rc

@@ -1,14 +1,3 @@
-# Allow health HAL to read/write app_efs_file
-allow hal_health_default app_efs_file:dir rw_dir_perms;
-allow hal_health_default app_efs_file:file create_file_perms;
-
-# Allow health HAL to read/write battery_efs_file
-allow hal_health_default battery_efs_file:dir create_dir_perms;
-allow hal_health_default battery_efs_file:file create_file_perms;
-
-# Allow health HAL to search efs_file
-allow hal_health_default efs_file:dir search;
-
 # Allow health HAL to read/write vendor_sysfs_battery
 r_dir_file(hal_health_default, vendor_sysfs_battery)
 allow hal_health_default vendor_sysfs_battery:file w_file_perms;

@@ -78,7 +78,6 @@
 /(vendor|system/vendor)/bin/hw/nxp\.android\.hardware\.nfc@1\.2-service                                      u:object_r:hal_nfc_default_exec:s0
 /(vendor|system/vendor)/bin/hw/sehradiomanager                                                               u:object_r:sehradiomanager_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.camera\.provider-service_64                        u:object_r:hal_camera_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.health-service                                     u:object_r:hal_health_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.hyper-service                                      u:object_r:hal_hyper_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.thermal@1\.0-service                               u:object_r:hal_thermal_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.vibrator-service                                   u:object_r:hal_vibrator_default_exec:s0
