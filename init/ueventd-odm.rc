@@ -468,7 +468,7 @@ firmware_directories /vendor/firmware-modem/image/ /vendor/vm-system/
 #
 
 # TSP
-/sys/class/sec/tsp				cmd							0660	system radio
+/sys/class/sec/tsp				cmd							0660	system system
 /sys/class/sec/tsp				enabled						0660	system system
 /sys/class/sec/tsp/input		enabled						0660	system system
 /sys/class/sec/tsp				sensitivity_mode			0664	system system
