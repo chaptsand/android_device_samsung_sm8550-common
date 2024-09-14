@@ -23,14 +23,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.samsung.usb.rc",
-    filename: "init.qcom.usb.rc",
-    src: "init.samsung.usb.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.ramplus.rc",
     src: "init.ramplus.rc",
     sub_dir: "init",
@@ -91,11 +83,4 @@ prebuilt_etc {
     filename: "ueventd.rc",
     src: "ueventd-odm.rc",
     device_specific: true,
-}
-
-sh_binary {
-    name: "init.samsung.usb.sh",
-    filename: "init.qcom.usb.sh",
-    src: "init.samsung.usb.sh",
-    vendor: true,
 }
