@@ -288,10 +288,6 @@ PRODUCT_PACKAGES += \
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# Power
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.perf@2.3.vendor
-
 # QMI
 PRODUCT_PACKAGES += \
     libjson
@@ -299,7 +295,8 @@ PRODUCT_PACKAGES += \
 # QTI components
 TARGET_BOARD_PLATFORM := kalama
 TARGET_COMMON_QTI_COMPONENTS := \
-    display
+    display \
+    perf
 
 # RIL
 PRODUCT_PACKAGES += \
