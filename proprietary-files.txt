@@ -776,72 +776,13 @@ vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
 vendor/lib64/libdiag.so
 vendor/lib64/vendor.qti.diaghal@1.0.so
 
-# Display (HDR)
-vendor/lib64/libhdr_backlight_adapter.so
-vendor/lib64/libhdr_tm.so
+# Display
+vendor/etc/clstc_config_library.xml
+vendor/etc/snapdragon_color_libs_config.xml
+vendor/lib64/libhdradaptivecustom.so
 vendor/lib64/libhdrdynamic.so
 vendor/lib64/libhdrdynamicootf.so
-
-# Display (HWC)
-vendor/bin/qdcmss
-vendor/etc/init/qdcmss.rc
-vendor/etc/snapdragon_color_libs_config.xml
-vendor/lib64/libdpps.so
-vendor/lib64/libgame_enhance.so
-vendor/lib64/libmemutils.so
-vendor/lib64/libqdcm-algo.so
-vendor/lib64/libqdcm-json-mode-parser.so
-vendor/lib64/libqdcm-mode-parser.so
-vendor/lib64/libsnapdragoncolor-manager.so
-vendor/lib64/libsnapdragoncolor-qdcm.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
-
-# Display (Postprocessing)
-vendor/bin/ppd
-vendor/lib64/libdisp-aba.so
-vendor/lib64/vendor.display.color@1.0.so
-vendor/lib64/vendor.display.color@1.1.so
-vendor/lib64/vendor.display.color@1.2.so
-vendor/lib64/vendor.display.color@1.3.so
-vendor/lib64/vendor.display.color@1.4.so
-vendor/lib64/vendor.display.color@1.5.so
-vendor/lib64/vendor.display.color@1.6.so
-vendor/lib64/vendor.display.color@1.7.so
-vendor/lib64/vendor.display.postproc@1.0.so
-
-# Display (SDM)
-vendor/etc/clstc_config_library.xml
-vendor/etc/display/DPU660.xml
-vendor/etc/display/DPU670.xml
-vendor/etc/display/DPU720.xml
-vendor/etc/display/DPU7__.xml
-vendor/etc/display/DPU820.xml
-vendor/etc/display/DPU8__.xml
-vendor/etc/display/DPU9__.xml
-vendor/etc/display/advanced_sf_offsets.xml
-vendor/etc/display/thermallevel_to_fps.xml
-vendor/lib64/libbacklight-calib.so
-vendor/lib64/libdigital-dimming.so
-vendor/lib64/libhdradaptivecustom.so
-vendor/lib64/libintervmipc.so
-vendor/lib64/libmm-hdcpmgr.so
-vendor/lib64/libqrtrclient.so
-
-# Display (SDM) - from rtwo rtwo_g-user 14 U1TR34.8-30-13-2-2 5b4b0d-dde58 release-keys - RETAIL
-vendor/lib64/libclstc_algorithm_adapter.so
-vendor/lib64/libclstc_gcp_adapter.so
-vendor/lib64/libclstc_tm.so
-vendor/lib64/libdisplayqos.so
-vendor/lib64/libdisplayskuutils.so
-vendor/lib64/libqseed3.so
-vendor/lib64/librcmask.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-colormgr-algo.so
-vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libtestutils.so
-vendor/lib64/libtinyxml2_1.so
-vendor/lib64/libvmfilexfer.so
 
 # Dolby
 vendor/etc/dax3_media_codecs_dolby_audio.xml

@@ -68,36 +68,11 @@ ro.camera.enableCamera1MaxZsl=1
 ro.crypto.metadata_init_delete_all_keys.enabled=true
 
 # Display
-persist.sys.sf.color_mode=0
 persist.sys.sf.hs_mode=0
 ro.camera.disableJpegR=true
 vendor.display.allow_3d_adaptive_tm_external=1
 vendor.display.defer_fps_frame_count=4
-vendor.display.disable_3d_adaptive_tm=0
 vendor.display.disable_dynamic_fps=1
-vendor.display.disable_excl_rect=0
-vendor.display.disable_excl_rect_partial_fb=1
-vendor.display.disable_hw_recovery_dump=1
-vendor.display.disable_offline_rotator=1
-vendor.display.disable_scaler=0
-vendor.display.disable_sdr_dimming=1
-vendor.display.disable_sdr_histogram=1
-vendor.display.disable_stc_dimming=1
-vendor.display.enable_display_extensions=1
-vendor.display.enable_async_powermode=0
-vendor.display.enable_async_vds_creation=0
-vendor.display.enable_dpps_dynamic_fps=0
-vendor.display.enable_early_wakeup=1
-vendor.display.enable_hdr10_gpu_target=1
-vendor.display.enable_optimize_refresh=0
-vendor.display.enable_rc_support=0
-vendor.display.enable_rounded_corner=0
-vendor.display.idle_time=0
-vendor.display.idle_time_inactive=0
-vendor.display.use_frame_scheduler_extension=1
-vendor.display.use_smooth_motion=0
-vendor.display.vds_allow_hwc=1
-vendor.gralloc.disable_ubwc=0
 
 # DRM
 drm.service.enabled=true
@@ -110,38 +85,9 @@ ro.fuse.bpf.enabled=false
 ro.hardware.gatekeeper=mdfpp
 
 # Graphics
-debug.sf.disable_client_composition_cache=1
-debug.sf.early_app_phase_offset_ns=100000
-debug.sf.early_gl_app_phase_offset_ns=100000
-debug.sf.early_gl_phase_offset_ns=100000
-debug.sf.early_phase_offset_ns=100000
-debug.sf.enable_advanced_sf_phase_offset=0
-debug.sf.enable_gl_backpressure=1
-debug.sf.enable_hwc_vds=0
-debug.sf.gpu_freq_index=7
-debug.sf.high_fps_early_gl_phase_offset_ns=100000
-debug.sf.high_fps_early_phase_offset_ns=100000
-debug.sf.high_fps_late_app_phase_offset_ns=100000
-debug.sf.high_fps_late_sf_phase_offset_ns=100000
-debug.sf.latch_unsignaled=1
-debug.sf.predict_hwc_composition_strategy=0
-debug.sf.use_phase_offsets_as_durations=0
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
-ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
-ro.surface_flinger.has_HDR_display=true
-ro.surface_flinger.has_wide_color_display=true
-ro.surface_flinger.max_frame_buffer_acquired_buffers=3
-ro.surface_flinger.max_virtual_display_dimension=4096
-ro.surface_flinger.enable_frame_rate_override=false
-ro.surface_flinger.protected_contents=true
-ro.surface_flinger.set_display_power_timer_ms=300
-ro.surface_flinger.set_idle_timer_ms=4000
-ro.surface_flinger.set_touch_timer_ms=4000
-ro.surface_flinger.use_color_management=true
-ro.surface_flinger.use_content_detection_for_refresh_rate=true
-ro.surface_flinger.wcg_composition_dataspace=143261696
 
 # HDM status
 ro.vendor.hdm.supported.swblock=0x100
