@@ -531,7 +531,6 @@ vendor/lib64/libtensorflowlite.camera.samsung.so
 vendor/lib64/libtensorflowlite_gpu.camera.samsung.so
 vendor/lib64/libtfestriping.so
 vendor/lib64/libtflitecore.so
-vendor/lib64/libthirdparty_zoomtranslator_imp.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/libtswrappercommon.so
 vendor/lib64/libubifocus.so
