@@ -1,4 +1,4 @@
-# All unpinned blobs are extracted from S916BXXS6CXFE
+# All unpinned blobs are extracted from S916BXXS6CXHA
 
 # ADSP
 vendor/bin/adsprpcd
@@ -130,7 +130,7 @@ vendor/lib64/vendor.samsung.hardware.audio@1.0.so
 vendor/lib64/lib_SamsungRec_08020.so
 vendor/lib64/lib_SoundAlive_3DPosition_ver202.so
 vendor/lib64/lib_SoundAlive_AlbumArt_ver105.so
-vendor/lib64/lib_SoundAlive_play_plus_ver500.so
+vendor/lib64/lib_SoundAlive_play_plus_ver800.so
 vendor/lib64/lib_SoundBooster_ver1100.so
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libaudioeffectoffload.so
@@ -870,7 +870,8 @@ vendor/lib64/hw/vulkan.adreno.so
 # Hermes
 vendor/bin/hermesd
 vendor/etc/init/hermesd.rc
-vendor/etc/secnvm/k250a_00000306.img
+vendor/etc/secnvm/k250a_47000301_0.img
+vendor/etc/secnvm/k250a_47000306_1.img
 vendor/lib64/libese-grdg.so
 vendor/lib64/libhermes.so
 vendor/lib64/libhermes_bdbridge.so

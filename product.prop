@@ -31,3 +31,4 @@ bluetooth.profile.sap.server.enabled=true
 bluetooth.profile.vcp.controller.enabled=true
 persist.bluetooth.bqr.event_mask=0
 persist.bluetooth.bqr.min_interval_ms=0
+persist.bluetooth.samsung.a2dp_offload.cap=sbc-aptx-ssc-hifi
