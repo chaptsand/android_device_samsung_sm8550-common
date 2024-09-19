@@ -56,7 +56,7 @@
 /dev/ttyHS[0-9]*                             u:object_r:serial_device:s0
 
 # Touchscreen
-/sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi[0-9]/spi[0-9].[0-9]/input/input[0-9]/enabled  u:object_r:vendor_sysfs_touchscreen_writable:s0
+/sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi[0-9]/spi[0-9].[0-9]/wakeup(/.*)? u:object_r:sysfs_wakeup:s0
 
 # UFS Devices
 /dev/block/platform/soc/1d84000.ufshc/by-name/bluetooth      u:object_r:vendor_modem_block_device:s0

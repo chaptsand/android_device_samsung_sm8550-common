@@ -52,8 +52,6 @@ genfscon sysfs "/devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/9a0000.i2c/i
 genfscon sysfs "/devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/9a0000.i2c/i2c-37/37-0066/max77705-fuelgauge/wakeup"                                    u:object_r:sysfs_wakeup:s0
 genfscon sysfs "/devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/9a0000.i2c/i2c-37/37-0066/max77705-usbc/wakeup"                                         u:object_r:sysfs_wakeup:s0
 genfscon sysfs "/devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/9a0000.i2c/i2c-37/37-0066/wakeup"                                                       u:object_r:sysfs_wakeup:s0
-genfscon sysfs "/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/wakeup"                                                 u:object_r:sysfs_wakeup:s0
-genfscon sysfs "/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi1/spi1.0/wakeup"                                                 u:object_r:sysfs_wakeup:s0
 genfscon sysfs "/devices/platform/soc/ae90000.qcom,dp_display/wakeup"                                                                                       u:object_r:sysfs_wakeup:s0
 genfscon sysfs "/devices/platform/soc/soc:qcom,qbt2000/wakeup"                                                                                              u:object_r:sysfs_wakeup:s0
 
@@ -75,13 +73,11 @@ genfscon sysfs "/devices/virtual/sec/sec-pa-thermistor"                       u:
 genfscon sysfs "/devices/virtual/sec/sec-wf-thermistor"                       u:object_r:vendor_sysfs_thermal:s0
 
 # Touchscreen
-genfscon sysfs "/class/sec/tsp"                                               u:object_r:vendor_sysfs_touchscreen:s0
-genfscon sysfs "/class/sec/tsp/input/enabled"                                 u:object_r:vendor_sysfs_touchscreen_writable:s0
-genfscon sysfs "/devices/virtual/sec/tsp"                                     u:object_r:vendor_sysfs_touchscreen:s0
-genfscon sysfs "/devices/virtual/sec/tsp/cmd"                                 u:object_r:vendor_sysfs_touchscreen_writable:s0
-genfscon sysfs "/devices/virtual/sec/tsp/ear_detect_enable"                   u:object_r:vendor_sysfs_touchscreen_writable:s0
-genfscon sysfs "/devices/virtual/sec/tsp/input/enabled"                       u:object_r:vendor_sysfs_touchscreen_writable:s0
-genfscon sysfs "/devices/virtual/sec/tsp/prox_power_off"                      u:object_r:vendor_sysfs_touchscreen_writable:s0
+genfscon sysfs "/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi" u:object_r:vendor_sysfs_touchscreen:s0
+genfscon sysfs "/devices/virtual/sec/tsp"                                                    u:object_r:vendor_sysfs_touchscreen:s0
+genfscon sysfs "/devices/virtual/sec/tsp/cmd"                                                u:object_r:vendor_sysfs_touchscreen_writable:s0
+genfscon sysfs "/devices/virtual/sec/tsp/ear_detect_enable"                                  u:object_r:vendor_sysfs_touchscreen_writable:s0
+genfscon sysfs "/devices/virtual/sec/tsp/prox_power_off"                                     u:object_r:vendor_sysfs_touchscreen_writable:s0
 
 # Vibrator
 genfscon sysfs "/devices/virtual/sec_vib_inputff/control/use_sep_index"       u:object_r:vendor_sysfs_vib_writable:s0
