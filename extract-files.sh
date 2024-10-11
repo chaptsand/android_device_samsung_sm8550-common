@@ -102,6 +102,10 @@ function blob_fixup() {
             grep -q "gettid: 1" "${2}" || echo -e "\ngettid: 1" >> "${2}"
             grep -q "pipe2: 1" "${2}" || echo -e "\npipe2: 1" >> "${2}"
             ;;
+        vendor/lib64/libqcodec2_core.so)
+            [ "$2" = "" ] && return 0
+            grep -q "libcodec2_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcodec2_shim.so" "${2}"
+            ;;
         vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc)
             [ "$2" = "" ] && return 0
             sed -i '/disabled/d' "${2}"
