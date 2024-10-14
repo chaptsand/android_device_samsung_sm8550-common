@@ -366,8 +366,8 @@ vendor/lib64/libSWNDFilterPreview.camera.samsung.so
 vendor/lib64/libSceneDetector_v1.camera.samsung.so
 vendor/lib64/libSecJpegEncoder.uniplugin@1.0.so
 vendor/lib64/libSingleTakeBlurDetection.uniplugin@1.0.so
-vendor/lib64/libSnpeCpu.so
-vendor/lib64/libSnpeGpu.so
+vendor/lib64/libSnpeCpu.so;FIX_SONAME
+vendor/lib64/libSnpeGpu.so;FIX_SONAME
 vendor/lib64/libSnpeHtpV73Stub.so
 vendor/lib64/libTetraMFP10.camera.samsung.so
 vendor/lib64/libTetraMFP10Tuning.camera.samsung.so
