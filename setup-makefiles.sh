@@ -31,6 +31,7 @@ function vendor_imports() {
 		"vendor/qcom/opensource/commonsys/display",
 		"vendor/qcom/opensource/commonsys-intf/display",
 		"vendor/qcom/opensource/dataservices",
+		"vendor/samsung/sm8550-common",
 EOF
 }
 
