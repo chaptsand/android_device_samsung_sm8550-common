@@ -70,7 +70,7 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        vendor/bin/hw/android.hardware.security.keymint-service)
+        vendor/bin/hw/android.hardware.security.keymint-service|vendor/lib64/libskeymint10device.so|vendor/lib64/libskeymint_cli.so)
             [ "$2" = "" ] && return 0
             grep -q "android.hardware.security.rkp-V3-ndk.so" "${2}" || ${PATCHELF} --add-needed "android.hardware.security.rkp-V3-ndk.so" "${2}"
             ${PATCHELF} --replace-needed libcrypto.so libcrypto-v33.so "${2}"

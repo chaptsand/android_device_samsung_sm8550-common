@@ -261,7 +261,6 @@ PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.xml \
     android.hardware.security.keymint-V1-ndk.vendor \
     android.hardware.security.keymint-V2-ndk.vendor \
-    android.hardware.security.rkp-V3-ndk.vendor \
     android.hardware.security.secureclock-V1-ndk.vendor \
     android.hardware.security.sharedsecret-V1-ndk.vendor
 
@@ -479,10 +478,6 @@ PRODUCT_COPY_FILES += \
 # Weaver
 PRODUCT_PACKAGES += \
     android.hardware.weaver@1.0.vendor
-
-# VNDK
-PRODUCT_PACKAGES += \
-    libcrypto-v33
 
 # Vibrator
 PRODUCT_PACKAGES += \
