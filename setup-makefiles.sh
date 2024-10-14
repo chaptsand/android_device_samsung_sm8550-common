@@ -41,7 +41,9 @@ function lib_to_package_fixup_vendor_variants() {
     fi
 
     case "$1" in
-        vendor.qti.diaghal@1.0)
+        vendor.qti.diaghal@1.0 | \
+            libsecril-client | \
+            libhyper)
             echo "$1_vendor"
             ;;
         libagmclient | \

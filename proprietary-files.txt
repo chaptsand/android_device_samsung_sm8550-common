@@ -878,7 +878,7 @@ system_ext/framework/com.android.hotwordenrollment.common.util.jar
 vendor/bin/hw/vendor.samsung.hardware.hyper-service
 vendor/etc/init/hyper-default-sec.rc
 vendor/etc/vintf/manifest/hyper-default-sec.xml
-vendor/lib64/libhyper.so
+vendor/lib64/libhyper.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libhypervintf.so
 vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk.so
 
@@ -925,7 +925,7 @@ vendor/lib64/libqtikeymaster4.so
 vendor/lib64/libspcom.so
 
 # Keymint
-vendor/bin/hw/android.hardware.security.keymint-service
+vendor/bin/hw/android.hardware.security.keymint-service;MODULE_SUFFIX=.samsung
 vendor/etc/init/android.hardware.security.keymint-service.rc
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml:vendor/etc/vintf/manifest/android.hardware.security.keymint-service.xml
 vendor/lib64/libskeymint10device.so
@@ -1119,7 +1119,7 @@ vendor/lib64/libqdpr.so
 vendor/lib64/libril_sem.so
 vendor/lib64/libsec-ril.so
 vendor/lib64/libsec_semRil.so
-vendor/lib64/libsecril-client.so
+vendor/lib64/libsecril-client.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libvkmanager_vendor.so
 vendor/lib64/vendor.qti.hardware.data.connectionfactory-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.data.dataactivity-V1-ndk.so
