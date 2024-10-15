@@ -169,6 +169,9 @@
         <item>255</item>
     </integer-array>
 
+    <!-- The name of the package that will hold the SMS role by default. -->
+    <string name="config_defaultSms" translatable="false">com.android.mms</string>
+
     <!-- The restoring is handled by modem if it is true-->
     <bool name="skip_restoring_network_selection" translatable="false">true</bool>
 
@@ -224,11 +227,6 @@
 
     <!-- Whether UI for multi user should be shown -->
     <bool name="config_enableMultiUserUI">true</bool>
-
-    <!-- Safe headphone volume index. When music stream volume is below this index
-    the SPL on headphone output is compliant to EN 60950 requirements for portable music
-    players. -->
-    <integer name="config_safe_media_volume_index">100</integer>
 
     <!-- Configure mobile tcp buffer sizes in the form:
          rat-name:rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max
@@ -303,9 +301,6 @@
     <!-- Flag indicating which package name can access the persistent data partition -->
     <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
 
-    <!--  Define optional package verifier name -->
-    <string name="config_optionalPackageVerifierName" translatable="false">seemp.service</string>
-
     <!-- Flag specifying whether VoLTE is available on device -->
     <bool name="config_device_volte_available">true</bool>
 
@@ -317,13 +312,12 @@
     <!-- Flag specifying whether VT is available on device -->
     <bool name="config_device_vt_available">true</bool>
 
-    <!-- Flag specifying whether WFC over IMS should be available for carrier: independent of
-    carrier provisioning. If false: hard disabled. If true: then depends on carrier
-    provisioning, availability etc -->
-    <bool name="config_carrier_wfc_ims_available">true</bool>
-
     <!-- Flag specifying whether WFC over IMS is available on device -->
     <bool name="config_device_wfc_ims_available">true</bool>
+
+    <!-- Support decoding the user data payload as pack GSM 8-bit (a GSM alphabet
+        string that's stored in 8-bit unpacked format) characters.-->
+    <bool name="config_sms_decode_gsm_8bit_data" translatable="false">true</bool>
 
     <!-- Config determines whether to update phone object when voice registration
          state changes. Voice radio tech change will always trigger an update of
@@ -339,7 +333,7 @@
     <integer name="config_default_cellular_usage_setting">-1</integer>
 
     <!-- Whether the Unprocessed audio source supports the required frequency range and level -->
-    <bool name="config_supportAudioSourceUnprocessed">false</bool>
+    <bool name="config_supportAudioSourceUnprocessed">true</bool>
 
     <!-- The default refresh rate for a given device. Change this value to set a higher default
          refresh rate. If the hardware composer on the device supports display modes with a higher
@@ -388,31 +382,5 @@
          re-established on the target transport when condition is allowed for bringing up a
          new network. -->
     <bool name="config_enhanced_iwlan_handover_check">false</bool>
-
-    <!-- Default files to pin via Pinner Service -->
-    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
-        <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
-        <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
-        <item>"/system/bin/surfaceflinger"</item>
-        <item>"/system/framework/framework.jar"</item>
-        <item>"/system/framework/services.jar"</item>
-        <item>"/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
-        <item>"/vendor/lib64/libcamxexternalformatutils.so"</item>
-        <item>"/vendor/lib64/libipebpsstriping.so"</item>
-        <item>"/vendor/lib64/libCB.so"</item>
-        <item>"/vendor/lib64/libgsl.so"</item>
-    </string-array>
-
-    <!-- True if camera app should be pinned via Pinner Service -->
-    <bool name="config_pinnerCameraApp">true</bool>
-
-    <!-- True if home app should be pinned via Pinner Service -->
-    <bool name="config_pinnerHomeApp">true</bool>
-
-    <!-- Whether the new Auto Selection Network UI should be shown -->
-    <bool name="config_enableNewAutoSelectNetworkUI">true</bool>
-
-    <!-- If this is true, device supports Sustained Performance Mode. -->
-    <bool name="config_sustainedPerformanceModeSupported">true</bool>
 
 </resources>

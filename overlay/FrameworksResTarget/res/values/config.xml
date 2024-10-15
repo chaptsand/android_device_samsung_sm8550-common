@@ -5,6 +5,30 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Note: This config is deprecated, use BluetoothProperties instead.
+         Idle current for bluetooth controller. 0 by default
+    -->
+    <integer name="config_bluetooth_idle_cur_ma" translatable="false">4</integer>
+
+    <!-- Note: This config is deprecated, use BluetoothProperties instead.
+         Rx current for bluetooth controller. 0 by default
+    -->
+    <integer name="config_bluetooth_rx_cur_ma" translatable="false">18</integer>
+
+    <!-- Note: This config is deprecated, use BluetoothProperties instead.
+         Tx current for bluetooth controller. 0 by default
+    -->
+    <integer name="config_bluetooth_tx_cur_ma" translatable="false">33</integer>
+
+    <!-- Note: This config is deprecated, use BluetoothProperties instead.
+         Operating volatage for bluetooth controller. 0 by default
+    -->
+    <integer name="config_bluetooth_operating_voltage_mv" translatable="false">4000</integer>
+
+    <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
+         autodetected from the Configuration. -->
+    <bool name="config_showNavigationBar">true</bool>
+
     <!-- Control whether the always on display mode is available. This should only be enabled on
          devices where the display has been tuned to be power efficient in DOZE and/or DOZE_SUSPEND
          states. -->
@@ -40,13 +64,15 @@
 
     <!-- Default files to pin via Pinner Service -->
     <string-array name="config_defaultPinnerServiceFiles" translatable="false">
-        <item>/system/framework/arm64/boot-QPerformance.oat</item>
-        <item>/system/framework/arm64/boot-UxPerformance.oat</item>
-        <item>/system/lib64/libsurfaceflinger.so</item>
-        <item>/vendor/lib64/libllvm-qgl.so</item>
-        <item>/system/lib64/libhwui.so</item>
-        <item>/system/lib64/libEGL.so</item>
-        <item>/vendor/lib64/egl/libGLESv2_adreno.so</item>
+        <item>/system/framework/framework.jar</item>
+        <item>/system/framework/services.jar</item>
+        <item>/system/bin/surfaceflinger</item>
     </string-array>
+
+    <!-- Whether the device enable the standalone (SA) mode of 5G NR.-->
+    <bool name="config_telephony5gStandalone">true</bool>
+
+    <!-- Whether the device enable the non-standalone (NSA) mode of 5G NR.-->
+    <bool name="config_telephony5gNonStandalone">true</bool>
 
 </resources>

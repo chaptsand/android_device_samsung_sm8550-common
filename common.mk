@@ -232,12 +232,14 @@ PRODUCT_PACKAGES += \
     FrameworksResCommon \
     FrameworksResSamsung \
     FrameworksResTarget \
+    SettingsResCommon \
     SettingsResSamsung \
     SystemUIResCommon \
     TelecommResCommon \
     TelephonyResCommon \
     WifiResCommon \
-    WifiResTarget
+    WifiResTarget \
+    WifiResTarget_spf
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
