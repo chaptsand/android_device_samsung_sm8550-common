@@ -12,7 +12,7 @@ on fs && property:ro.boot.em.model=SM-S911B
     mount none vendor/firmware/evass.mdt /odm/firmware/evass.mdt bind
     mount none vendor/firmware/vpu30_4v.mbn /odm/firmware/vpu30_4v.mbn bind
 
-on fs && property:ro.boot.em.model=SM-S916B
+on fs && property:ro.boot.em.model=SM-S9160
     mount none vendor/firmware/CAMERA_ICP.b20 /odm/firmware/CAMERA_ICP.b20  bind
     mount none vendor/firmware/CAMERA_ICP.mbn /odm/firmware/CAMERA_ICP.mbn bind
     mount none vendor/firmware/CAMERA_ICP.mdt /odm/firmware/CAMERA_ICP.mdt bind

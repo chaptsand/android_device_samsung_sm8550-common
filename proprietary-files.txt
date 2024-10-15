@@ -1,4 +1,4 @@
-# All unpinned blobs are extracted from S916BXXS6CXHA
+# All unpinned blobs are extracted from S9160ZHS4CXJ1
 
 # Current blobs with ELF checks disabled:
 # libar-pal depends on libagmclient, which is a gnu makefile target
@@ -1103,10 +1103,10 @@ vendor/etc/locale/plmn_delta_zh-rHK.bin
 vendor/etc/locale/plmn_delta_zh-rTW.bin
 vendor/etc/mtu-conf.xml
 vendor/etc/pdpcnt-conf.xml
-vendor/etc/plmn_delta.bin
-vendor/etc/plmn_delta_attaio.bin
+vendor/etc/plmn_delta.bin|dbcc4d73dca31bd132b042e36be988701c42a552
+vendor/etc/plmn_delta_attaio.bin|751a1c7105f1c03fc196689c2a71e2c69aa14e1f
 vendor/etc/plmn_delta_hktw.bin
-vendor/etc/plmn_delta_usagsm.bin
+vendor/etc/plmn_delta_usagsm.bin|9a25ec9e9da16ed2f8a9db07f037fe08283b24e5
 vendor/etc/plmn_se13.bin
 vendor/etc/qms_log_config
 vendor/etc/sec_config_oem
