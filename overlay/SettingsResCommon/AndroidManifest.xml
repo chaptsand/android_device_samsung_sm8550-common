@@ -1,0 +1,11 @@
+<!--
+     Copyright (C) 2024 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.settings.overlay.common">
+
+    <overlay
+        android:isStatic="true"
+        android:targetPackage="com.android.settings" />
+</manifest>
