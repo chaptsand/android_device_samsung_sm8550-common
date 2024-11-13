@@ -5,12 +5,19 @@
  */
 
 #include <string>
+#include <vector>
 
-void hyper_init()
-{}
+struct HyPerToken {
+};
 
-void hyper_checkSysfsIdExist(int)
-{}
+void hyper_acquire(HyPerToken token, std::vector<int, std::allocator<int>> &vec) {
+}
 
-void hyper_writeSysfs(int, std::string)
-{}
+void hyper_getNewHyPerToken(void) {
+}
+
+void hyper_setTokenProcName(HyPerToken *token, std::string &proc_name) {
+}
+
+void hyper_checkResourceExist(int arg1) {
+}
