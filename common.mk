@@ -34,15 +34,16 @@ PRODUCT_PACKAGES += \
     libagm_compress_plugin \
     libagm_mixer_plugin \
     libagm_pcm_plugin \
+    libats \
     libbatterylistener \
     libfmpal \
     libhfp_pal \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libsndcardparser \
     libvolumelistener \
-    sound_trigger.primary.kalama
+    sound_trigger.primary.kalama \
+    vendor.qti.hardware.AGMIPC@1.0-impl
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8550/audio/primary-hal
 
@@ -64,6 +65,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
 # Bluetooth
+PRODUCT_PACKAGES += \
+    lib_bt_aptx \
+    lib_bt_ble \
+    lib_bt_bundle
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml

@@ -41,8 +41,13 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.hardware.fm@1.0',
     ): lib_fixup_vendor_suffix,
     (
+        'libar-acdb',
+        'libar-gsl',
+        'liblx-osal',
+        'libats',
         'libagmclient',
         'libpalclient',
+        'vendor.qti.hardware.AGMIPC@1.0-impl',
     ): lib_fixup_remove,
 }
 
