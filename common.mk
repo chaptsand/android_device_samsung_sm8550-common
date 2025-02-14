@@ -231,18 +231,11 @@ PRODUCT_PACKAGES += \
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service.lineage-libperfmgr \
-    libqti-perfd-client
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-
 # QTI components
 TARGET_BOARD_PLATFORM := kalama
 TARGET_COMMON_QTI_COMPONENTS := \
-    display
+    display \
+    perf
 
 # RIL
 PRODUCT_PACKAGES += \

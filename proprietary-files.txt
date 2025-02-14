@@ -807,9 +807,6 @@ vendor/etc/seccomp_policy/imsrtp.policy
 vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
 
-# IRQ balance
-vendor/etc/msm_irqbalance.conf
-
 # Kernel
 vendor/bin/init.kernel.post_boot-kalama.sh
 vendor/bin/init.kernel.post_boot.sh
@@ -987,9 +984,6 @@ vendor/lib64/librpmb.so
 vendor/lib64/libspl.so
 vendor/lib64/libssd.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
-
-# QSPM
-vendor/lib64/vendor.qti.qspmhal@1.0.so
 
 # RIL
 vendor/bin/hw/rild
