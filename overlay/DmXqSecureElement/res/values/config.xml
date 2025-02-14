@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2025 Paranoid Android
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- To enable vendor stable service, set this to true and
+         make sure its vntf manifest entry is also configured. -->
+    <bool name="secure_element_vintf_enabled">false</bool>
+
+</resources>
