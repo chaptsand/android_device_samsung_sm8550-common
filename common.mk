@@ -215,18 +215,10 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
-    CarrierConfigResCommon \
-    FrameworksResCommon \
-    FrameworksResSamsung \
-    FrameworksResTarget \
-    SettingsResCommon \
-    SettingsResSamsung \
-    SystemUIResCommon \
-    TelecommResCommon \
-    TelephonyResCommon \
-    WifiResCommon \
-    WifiResTarget \
-    WifiResTarget_spf
+    DmXqCarrierConfigRes \
+    DmXqFrameworksRes \
+    DmXqSecureElement \
+    DmXqSettingsRes
 
 # Partitions
 PRODUCT_PACKAGES += \
@@ -241,6 +233,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 TARGET_BOARD_PLATFORM := kalama
 TARGET_COMMON_QTI_COMPONENTS := \
     display \
+    overlay \
     perf
 
 # RIL
