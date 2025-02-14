@@ -1,0 +1,12 @@
+<!--
+     Copyright (C) 2025 Paranoid Android
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.se.overlay.dmxq">
+
+    <overlay
+        android:isStatic="true"
+        android:priority="800"
+        android:targetPackage="com.android.se" />
+</manifest>
