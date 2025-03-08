@@ -3,7 +3,6 @@
 # Current blobs with ELF checks disabled:
 # libar-pal depends on libagmclient, which is a gnu makefile target
 # libqc2audio_hwaudiocodec depends on libpalclient, which is a gnu makefile target
-# lowi-server, qms depend on libwpa_client, which is a gnu makefile target
 
 # ADSP
 vendor/bin/adsprpcd
@@ -732,7 +731,7 @@ vendor/lib64/vendor.samsung.hardware.biometrics.fingerprint-V1-ndk.so
 # GNSS
 vendor/bin/hw/android.hardware.gnss-aidl-service-qti
 vendor/bin/loc_launcher
-vendor/bin/lowi-server;DISABLE_CHECKELF
+vendor/bin/lowi-server
 vendor/bin/xtra-daemon
 vendor/etc/batching.conf
 vendor/etc/gnss_antenna_info.conf
@@ -1059,7 +1058,7 @@ vendor/bin/ipacm-diag
 vendor/bin/ks
 vendor/bin/mdm_helper
 vendor/bin/mdm_helper_proxy
-vendor/bin/qms;DISABLE_CHECKELF
+vendor/bin/qms
 vendor/etc/init/ipacm-diag.rc
 vendor/etc/init/qms.rc
 vendor/etc/locale/plmn_delta_eng.bin
