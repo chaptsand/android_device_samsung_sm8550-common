@@ -1,2 +1,2 @@
 # Allow network_stack to read proc_net file
-allow network_stack proc_net:file rw_file_perms;
+allow network_stack proc_net:file { read getattr open };
