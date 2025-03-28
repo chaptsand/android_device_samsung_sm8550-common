@@ -5,3 +5,6 @@ allow vendor_init cgroup:file rw_file_perms;
 allow vendor_init block_device:lnk_file setattr;
 
 allow vendor_init vendor_ssr_prop:property_service set;
+
+# Allow vendor_init to set vendor_thermal_prop properties
+allow vendor_init vendor_thermal_prop:property_service set;

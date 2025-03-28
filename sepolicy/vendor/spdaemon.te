@@ -1,0 +1,2 @@
+# Allow vendor_spdaemon to find hal_system_suspend_service
+allow vendor_spdaemon hal_system_suspend_service:service_manager find;
