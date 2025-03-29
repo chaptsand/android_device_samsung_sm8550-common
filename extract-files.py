@@ -73,7 +73,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libui_shim.so'),
     'vendor/lib64/libsamsungcamerahal.so': blob_fixup()
         .sig_replace('E0 8A', '94 8B'),
-    'vendor/etc/init/android.hardware.security.keymint-service.rc': blob_fixup()
+    'vendor/etc/init/android.hardware.security.keymint-service-qti.rc': blob_fixup()
         .regex_replace('android.hardware.security.keymint-service', 'android.hardware.security.keymint-service-qti'),
 }  # fmt: skip
 
