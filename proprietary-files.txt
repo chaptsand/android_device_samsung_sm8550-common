@@ -9,7 +9,6 @@
 vendor/bin/adsprpcd
 vendor/bin/loadalgo
 vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
-vendor/etc/init/vendor.qti.audio-adsprpc-service.rc
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
 vendor/lib64/libdsphist_qc.so
@@ -787,7 +786,6 @@ vendor/lib64/vendor.qti.gnss-service.so
 vendor/lib64/vendor.samsung.hardware.gnss-V2-ndk_platform.so
 
 # Gatekeeper
-vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
 vendor/lib64/hw/gatekeeper.mdfpp.so
 
 # Graphics (Adreno firmware)
@@ -875,7 +873,6 @@ vendor/etc/msm_irqbalance.conf
 vendor/bin/init.kernel.post_boot-kalama.sh
 vendor/bin/init.kernel.post_boot.sh
 vendor/bin/init.qcom.class_core.sh
-vendor/bin/init.qcom.post_boot.sh
 vendor/bin/init.qti.kernel.sh
 vendor/bin/system_dlkm_modprobe.sh
 vendor/bin/vendor_modprobe.sh
@@ -891,7 +888,7 @@ vendor/lib64/libspcom.so
 
 # Keymint
 vendor/bin/hw/android.hardware.security.keymint-service:vendor/bin/hw/android.hardware.security.keymint-service-qti;FIX_SONAME
-vendor/etc/init/android.hardware.security.keymint-service.rc
+vendor/etc/init/android.hardware.security.keymint-service.rc:vendor/etc/init/android.hardware.security.keymint-service-qti.rc
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml
 vendor/lib64/libskeymint10device.so
 vendor/lib64/libskeymint_cli.so
