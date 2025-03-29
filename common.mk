@@ -152,8 +152,10 @@ TARGET_USES_KERNEL_PLATFORM := false
 TARGET_KERNEL_VERSION := 5.15
 
 # Keymint
+PRODUCT_PACKAGES += \
+    android.hardware.hardware_keystore.xml
+
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/android.hardware.hardware_keystore_v200.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.hardware_keystore.xml \
     $(LOCAL_PATH)/configs/permissions/android.hardware.strongbox_keystore_v4.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.strongbox_keystore.xml
 
 # Media
