@@ -23,6 +23,8 @@ allow hermesd vendor_dmabuf_qseecom_ta_heap_device:chr_file r_file_perms;
 allow hermesd vendor_gatekeeper_data_file:dir create_dir_perms;
 allow hermesd vendor_gatekeeper_data_file:file create_file_perms;
 
+allow hermesd self:capability2 wake_alarm;
+
 allow hermesd vendor_hal_keymint_qti:binder transfer;
 
 set_prop(hermesd, vendor_securenvm_prop)
