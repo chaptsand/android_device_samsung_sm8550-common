@@ -69,9 +69,6 @@ TARGET_KERNEL_SOURCE := kernel/samsung/sm8550
 # Kernel modules
 TARGET_KERNEL_EXT_MODULE_ROOT := kernel/samsung/sm8550-modules
 
-# Lights
-$(call soong_config_set,samsungVars,target_specific_header_path,$(COMMON_PATH)/include)
-
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
