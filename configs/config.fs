@@ -40,6 +40,12 @@ value:2913
 [AID_VENDOR_THALES_WEAVER]
 value:2914
 
+[AID_VENDOR_SECDIR]
+value:5050
+
+[AID_VENDOR_SYSTEM_RESERVED_STORAGE]
+value:5678
+
 [vendor/bin/hw/android.hardware.security.keymint-service.strongbox-thales]
 mode: 0755
 user: AID_VENDOR_THALES_STRONGBOX
