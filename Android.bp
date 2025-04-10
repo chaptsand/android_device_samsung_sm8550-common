@@ -6,3 +6,10 @@ soong_namespace {
         "hardware/qcom-caf/common/libqti-perfd-client",
     ],
 }
+
+prebuilt_hidl_interfaces {
+    name: "hidl_samsung_nfc_interface",
+    interfaces: [
+        "vendor.samsung.hardware.nfc@2.0::ISehNfc",
+    ],
+}
