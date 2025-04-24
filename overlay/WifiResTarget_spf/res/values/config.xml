@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2024 The LineageOS Project
+     SPDX-FileCopyrightText: 2025 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
     <!-- boolean indicating whether the WiFi chipset has 5GHz band support.
          Note: This config is replacing the config_wifi_dual_band_support
          since more bands may now be supported (such as 6GHz), the naming dual_band
@@ -22,6 +21,15 @@
 
     <!-- Boolean indicating performing a partial initial scan is enabled -->
     <bool name="config_wifiEnablePartialInitialScan" translatable="false">true</bool>
+
+    <!-- Boolean indicating connected frequency enhancement is enabled/disabled -->
+    <bool name="config_wifiConnectedFrequencyEnhancementEnabled" translatable="false">true</bool>
+
+    <!-- Wifi driver supports Beacon Protection for SoftAp -->
+    <bool name="config_vendor_softap_beacon_protection_supported" translatable="false">true</bool>
+
+    <!-- Wifi driver supports Ocv for SoftAp -->
+    <bool name="config_vendor_softap_ocv_supported" translatable="false">true</bool>
 
     <!-- Wifi driver supports Automatic channel selection (ACS) for softap -->
     <bool name="config_wifi_softap_acs_supported" translatable="false">true</bool>
@@ -84,5 +92,4 @@
 
     <!-- Indicates whether the network-centric QoS policy feature is enabled. -->
     <bool name="config_wifiNetworkCentricQosPolicyFeatureEnabled" translatable="false">true</bool>
-
 </resources>

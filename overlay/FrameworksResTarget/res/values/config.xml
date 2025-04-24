@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2023 The LineageOS Project
+     SPDX-FileCopyrightText: 2025 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>
@@ -47,6 +46,9 @@
         <item>/system/framework/framework.jar</item>
         <item>/system/framework/services.jar</item>
         <item>/system/bin/surfaceflinger</item>
+        <item>/system/lib64/libhwui.so</item>
+        <item>/vendor/lib64/libllvm-qgl.so</item>
+        <item>/vendor/lib64/libllvm-glnext.so</item>
     </string-array>
 
     <!-- Whether the device enable the standalone (SA) mode of 5G NR.-->
@@ -54,5 +56,4 @@
 
     <!-- Whether the device enable the non-standalone (NSA) mode of 5G NR.-->
     <bool name="config_telephony5gNonStandalone">true</bool>
-
 </resources>
