@@ -6,7 +6,6 @@
 
 # Add common symlinks definitions for Qualcomm
 $(call soong_config_set,rfs,mpss_firmware_symlink_target,firmware_modem)
-$(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
@@ -117,6 +116,8 @@ PRODUCT_PACKAGES += \
     init.samsung.power.rc \
     init.samsung.rc
 
+TARGET_USES_KERNEL_PLATFORM := false
+
 # Keymint
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/android.hardware.strongbox_keystore_v4.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.strongbox_keystore.xml
@@ -149,10 +150,6 @@ PRODUCT_COPY_FILES += \
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/google/interfaces \
-    hardware/google/pixel \
-    hardware/lineage/interfaces/power-libperfmgr \
-    hardware/qcom-caf/common/libqti-perfd-client \
     hardware/samsung \
     kernel/samsung/sm8550 \
     kernel/samsung/sm8550-modules
