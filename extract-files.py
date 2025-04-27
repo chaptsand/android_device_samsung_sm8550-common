@@ -28,9 +28,14 @@ namespace_imports = [
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_{partition}' if partition == 'vendor' else None
 
+def lib_fixup_sm8550_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_sm8550' if partition in 'vendor' else None
 
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
+    (
+        'audio.primary.kalama',
+    ): lib_fixup_sm8550_suffix,
     (
         'vendor.qti.diaghal@1.0',
         'libsecril-client',
@@ -73,6 +78,7 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.ims.rcsconfig@1.0',
         'vendor.qti.ims.rcsconfig@1.1',
         'vendor.qti.qspmhal@1.0',
+        'vendor.qti.hardware.ListenSoundModel@1.0',
     ): lib_fixup_vendor_suffix,
     (
         'libagmclient',

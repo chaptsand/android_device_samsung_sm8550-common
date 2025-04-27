@@ -87,7 +87,7 @@ vendor/etc/init/init.audio.samsung.rc
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
-vendor/lib64/hw/audio.primary.kalama.so
+vendor/lib64/hw/audio.primary.kalama.so;MODULE_SUFFIX=_sm8550;OVERRIDES=audio.primary.kalama
 vendor/lib64/libAlacSwDec.so
 vendor/lib64/libApeSwDec.so
 vendor/lib64/libEvrcSwCodec.so
@@ -118,7 +118,7 @@ vendor/lib64/libsecaudiolevel.so
 vendor/lib64/libspatializerparamstorage.so
 vendor/lib64/libspeakercalibration.so
 vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
+vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
 vendor/lib64/vendor.samsung.hardware.audio@1.0.so
 
@@ -385,7 +385,6 @@ vendor/lib64/libexifa.camera.samsung.so
 vendor/lib64/libface3d_dev.so
 vendor/lib64/libface_landmark.arcsoft.so
 vendor/lib64/libfast_uwdc.uniplugin@1.0.so
-vendor/lib64/libfeutils.so
 vendor/lib64/libfloatingfeature_hal.so
 vendor/lib64/libfocuspeaking.so
 vendor/lib64/libfocuspeaking.uniplugin@1.0.so
