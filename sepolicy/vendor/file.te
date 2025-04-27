@@ -33,11 +33,6 @@ type vendor_sysfs_input, fs_type, sysfs_type;
 type proc_last_kmsg, fs_type, proc_type;
 type proc_simslot_count, fs_type, proc_type;
 
-# Qms
-type vendor_qms_config_data_file, file_type, data_file_type;
-type vendor_qms_main_data_file, file_type, data_file_type;
-type vendor_qms_other_data_file, file_type, data_file_type;
-
 # Sensor
 type vendor_sysfs_sensors_writable, fs_type, sysfs_type;
 
