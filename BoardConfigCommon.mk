@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+BUILD_BROKEN_DUP_RULES := true
+
 COMMON_PATH := device/samsung/sm8550-common
 
 # Architecture
@@ -67,11 +69,13 @@ BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
+    androidboot.selinux=permissive \
     androidboot.usbcontroller=a600000.dwc3
 
 BOARD_KERNEL_CMDLINE := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
+    androidboot.selinux=permissive \
     androidboot.usbcontroller=a600000.dwc3 \
     printk.devkmsg=on \
     firmware_class.path=/vendor/firmware_mnt/image \
