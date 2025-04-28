@@ -50,22 +50,16 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
 TARGET_NEEDS_DTBOIMAGE := true
 
-# Filesystem
-TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
-
 # HIDL
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(COMMON_PATH)/vintf/device_framework_matrix.xml \
-    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    $(COMMON_PATH)/vintf/device_framework_matrix.xml
 
 DEVICE_MANIFEST_FILE := \
     $(COMMON_PATH)/vintf/manifest_kalama.xml \
     $(COMMON_PATH)/vintf/manifest_samsung.xml \
     $(COMMON_PATH)/vintf/radio_manifest.xml \
-    hardware/qcom-caf/sm8550/audio/primary-hal/configs/common/manifest_non_qmaa.xml \
-    hardware/qcom-caf/sm8550/audio/primary-hal/configs/common/manifest_non_qmaa_extn.xml
-
-DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
+    vendor/qcom/opensource/audio-hal/primary-hal/configs/common/manifest_non_qmaa.xml \
+    vendor/qcom/opensource/audio-hal/primary-hal/configs/common/manifest_non_qmaa_extn.xml
 
 # Init Boot
 BOARD_INIT_BOOT_HEADER_VERSION := 4
@@ -140,14 +134,11 @@ BOARD_ROOT_EXTRA_FOLDERS := \
 
 # Platform
 BOARD_VENDOR := samsung
-BOARD_USES_QCOM_HARDWARE := true
-TARGET_BOARD_PLATFORM := kalama
 
 # Properties
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
 TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/system_ext.prop
-TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 
 # Recovery
 BOARD_HAS_DOWNLOAD_MODE := true
@@ -170,7 +161,6 @@ BOOT_SECURITY_PATCH := 2025-03-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # SEPolicy
-include device/qcom/sepolicy_vndr/SEPolicy.mk
 include device/lineage/sepolicy/libperfmgr/sepolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
