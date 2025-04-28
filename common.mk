@@ -216,6 +216,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # QTI components
 TARGET_BOARD_PLATFORM := kalama
 TARGET_COMMON_QTI_COMPONENTS := \
+    av \
     display \
     init \
     overlay \
