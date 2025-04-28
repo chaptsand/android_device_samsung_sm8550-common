@@ -219,6 +219,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     av \
     display \
     init \
+    media \
     overlay \
     perf \
     telephony
