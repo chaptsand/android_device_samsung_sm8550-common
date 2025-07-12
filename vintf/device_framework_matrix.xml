@@ -116,4 +116,12 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.audio</name>
+        <version>1</version>
+        <interface>
+            <name>ISecAudioHal</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </compatibility-matrix>
