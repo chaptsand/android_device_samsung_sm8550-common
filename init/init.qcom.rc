@@ -560,7 +560,7 @@ on property:sys.shutdown.requested=*
     write /sys/kernel/shutdown_wlan/shutdown 1
     stop cnss-daemon
 
-service ssgqmigd /vendor/bin/ssgqmigd64
+service ssgqmigd /vendor/bin/ssgqmigd
     class late_start
     user radio
     group radio gps system
