@@ -237,9 +237,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client \
-    hardware/samsung \
-    kernel/samsung/sm8550 \
-    kernel/samsung/sm8550-modules
+    hardware/samsung
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
