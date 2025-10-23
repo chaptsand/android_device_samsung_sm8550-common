@@ -191,6 +191,9 @@ PRODUCT_PACKAGES += \
     init.samsung.power.rc \
     init.samsung.rc
 
+# Kernel
+PRODUCT_ENABLE_UFFD_GC := true
+
 # Keymint
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.xml
